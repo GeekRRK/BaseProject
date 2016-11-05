@@ -12,7 +12,6 @@
 		AE9D850E1DCDA60300CAF67F /* NSObject+Caculator.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D84F71DCDA60300CAF67F /* NSObject+Caculator.m */; };
 		AE9D850F1DCDA60300CAF67F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9D84F91DCDA60300CAF67F /* Assets.xcassets */; };
 		AE9D85101DCDA60300CAF67F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9D84FA1DCDA60300CAF67F /* LaunchScreen.storyboard */; };
-		AE9D85111DCDA60300CAF67F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9D84FC1DCDA60300CAF67F /* Main.storyboard */; };
 		AE9D85121DCDA60300CAF67F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE9D84FE1DCDA60300CAF67F /* Info.plist */; };
 		AE9D85131DCDA60300CAF67F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D84FF1DCDA60300CAF67F /* main.m */; };
 		AE9D85141DCDA60300CAF67F /* DB.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85021DCDA60300CAF67F /* DB.m */; };
@@ -20,6 +19,11 @@
 		AE9D85161DCDA60300CAF67F /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85071DCDA60300CAF67F /* UserModel.m */; };
 		AE9D85171DCDA60300CAF67F /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85091DCDA60300CAF67F /* Utils.m */; };
 		AE9D85181DCDA60300CAF67F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D850B1DCDA60300CAF67F /* ViewController.m */; };
+		AE9D851C1DCDCA7000CAF67F /* HookUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D851B1DCDCA7000CAF67F /* HookUtility.m */; };
+		AE9D851E1DCDCD8800CAF67F /* GlobalUserStatisticConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE9D851D1DCDCD8800CAF67F /* GlobalUserStatisticConfig.plist */; };
+		AE9D85231DCDCDFD00CAF67F /* UIControl+InjectStatisticMaiDian.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85201DCDCDFD00CAF67F /* UIControl+InjectStatisticMaiDian.m */; };
+		AE9D85241DCDCDFD00CAF67F /* UIViewController+InjectStatisticMaiDian.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85221DCDCDFD00CAF67F /* UIViewController+InjectStatisticMaiDian.m */; };
+		AE9D85271DCDD5BA00CAF67F /* CatchCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85261DCDD5BA00CAF67F /* CatchCrash.m */; };
 		B066CBE43F852159EAE0676A /* libPods-BaseProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB59F262626700FB9A0D14FB /* libPods-BaseProject.a */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +40,6 @@
 		AE9D84F71DCDA60300CAF67F /* NSObject+Caculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Caculator.m"; sourceTree = "<group>"; };
 		AE9D84F91DCDA60300CAF67F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE9D84FB1DCDA60300CAF67F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AE9D84FD1DCDA60300CAF67F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE9D84FE1DCDA60300CAF67F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE9D84FF1DCDA60300CAF67F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AE9D85011DCDA60300CAF67F /* DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DB.h; sourceTree = "<group>"; };
@@ -50,6 +53,15 @@
 		AE9D85091DCDA60300CAF67F /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		AE9D850A1DCDA60300CAF67F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AE9D850B1DCDA60300CAF67F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AE9D851A1DCDCA7000CAF67F /* HookUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HookUtility.h; sourceTree = "<group>"; };
+		AE9D851B1DCDCA7000CAF67F /* HookUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HookUtility.m; sourceTree = "<group>"; };
+		AE9D851D1DCDCD8800CAF67F /* GlobalUserStatisticConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GlobalUserStatisticConfig.plist; sourceTree = "<group>"; };
+		AE9D851F1DCDCDFD00CAF67F /* UIControl+InjectStatisticMaiDian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+InjectStatisticMaiDian.h"; sourceTree = "<group>"; };
+		AE9D85201DCDCDFD00CAF67F /* UIControl+InjectStatisticMaiDian.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+InjectStatisticMaiDian.m"; sourceTree = "<group>"; };
+		AE9D85211DCDCDFD00CAF67F /* UIViewController+InjectStatisticMaiDian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+InjectStatisticMaiDian.h"; sourceTree = "<group>"; };
+		AE9D85221DCDCDFD00CAF67F /* UIViewController+InjectStatisticMaiDian.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+InjectStatisticMaiDian.m"; sourceTree = "<group>"; };
+		AE9D85251DCDD5BA00CAF67F /* CatchCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatchCrash.h; sourceTree = "<group>"; };
+		AE9D85261DCDD5BA00CAF67F /* CatchCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatchCrash.m; sourceTree = "<group>"; };
 		B65624F93622BF05654EF4B6 /* libPods-RAC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RAC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB59F262626700FB9A0D14FB /* libPods-BaseProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29A755539674D67924F4186 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +117,7 @@
 				AE9D84F21DCDA60300CAF67F /* AppDelegate.m */,
 				AE9D850A1DCDA60300CAF67F /* ViewController.h */,
 				AE9D850B1DCDA60300CAF67F /* ViewController.m */,
+				AE9D85191DCDCA4200CAF67F /* AOP */,
 				AE9D84F31DCDA60300CAF67F /* Chain */,
 				AE9D85001DCDA60300CAF67F /* Util */,
 				AE9D84F81DCDA60300CAF67F /* Supporting Files */,
@@ -128,7 +141,6 @@
 			children = (
 				AE9D84F91DCDA60300CAF67F /* Assets.xcassets */,
 				AE9D84FA1DCDA60300CAF67F /* LaunchScreen.storyboard */,
-				AE9D84FC1DCDA60300CAF67F /* Main.storyboard */,
 				AE9D84FE1DCDA60300CAF67F /* Info.plist */,
 				AE9D84FF1DCDA60300CAF67F /* main.m */,
 			);
@@ -149,6 +161,22 @@
 				AE9D85091DCDA60300CAF67F /* Utils.m */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		AE9D85191DCDCA4200CAF67F /* AOP */ = {
+			isa = PBXGroup;
+			children = (
+				AE9D851D1DCDCD8800CAF67F /* GlobalUserStatisticConfig.plist */,
+				AE9D851A1DCDCA7000CAF67F /* HookUtility.h */,
+				AE9D851B1DCDCA7000CAF67F /* HookUtility.m */,
+				AE9D851F1DCDCDFD00CAF67F /* UIControl+InjectStatisticMaiDian.h */,
+				AE9D85201DCDCDFD00CAF67F /* UIControl+InjectStatisticMaiDian.m */,
+				AE9D85211DCDCDFD00CAF67F /* UIViewController+InjectStatisticMaiDian.h */,
+				AE9D85221DCDCDFD00CAF67F /* UIViewController+InjectStatisticMaiDian.m */,
+				AE9D85251DCDD5BA00CAF67F /* CatchCrash.h */,
+				AE9D85261DCDD5BA00CAF67F /* CatchCrash.m */,
+			);
+			path = AOP;
 			sourceTree = "<group>";
 		};
 		B61EDA4E8931488C1615D15E /* Pods */ = {
@@ -227,9 +255,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE9D85121DCDA60300CAF67F /* Info.plist in Resources */,
-				AE9D85111DCDA60300CAF67F /* Main.storyboard in Resources */,
 				AE9D850F1DCDA60300CAF67F /* Assets.xcassets in Resources */,
 				AE9D85101DCDA60300CAF67F /* LaunchScreen.storyboard in Resources */,
+				AE9D851E1DCDCD8800CAF67F /* GlobalUserStatisticConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,12 +316,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE9D85241DCDCDFD00CAF67F /* UIViewController+InjectStatisticMaiDian.m in Sources */,
 				AE9D85181DCDA60300CAF67F /* ViewController.m in Sources */,
 				AE9D850C1DCDA60300CAF67F /* AppDelegate.m in Sources */,
+				AE9D85271DCDD5BA00CAF67F /* CatchCrash.m in Sources */,
 				AE9D850E1DCDA60300CAF67F /* NSObject+Caculator.m in Sources */,
+				AE9D851C1DCDCA7000CAF67F /* HookUtility.m in Sources */,
 				AE9D85161DCDA60300CAF67F /* UserModel.m in Sources */,
 				AE9D85171DCDA60300CAF67F /* Utils.m in Sources */,
 				AE9D85131DCDA60300CAF67F /* main.m in Sources */,
+				AE9D85231DCDCDFD00CAF67F /* UIControl+InjectStatisticMaiDian.m in Sources */,
 				AE9D85151DCDA60300CAF67F /* Interface.m in Sources */,
 				AE9D85141DCDA60300CAF67F /* DB.m in Sources */,
 				AE9D850D1DCDA60300CAF67F /* CaculatorMaker.m in Sources */,
@@ -309,14 +341,6 @@
 				AE9D84FB1DCDA60300CAF67F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		AE9D84FC1DCDA60300CAF67F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AE9D84FD1DCDA60300CAF67F /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -21,7 +21,7 @@
     showview.layer.masksToBounds = YES;
     [window addSubview:showview];
     
-    UILabel *label = [[UILabel alloc]init];
+    UILabel *label = [[UILabel alloc] init];
     
     CGRect labelRect = [message boundingRectWithSize:CGSizeMake(290, 9000) options:NSStringDrawingUsesLineFragmentOrigin attributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:17], NSFontAttributeName, nil] context:nil];
     

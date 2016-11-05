@@ -15,6 +15,4 @@
 @property (copy, nonatomic) NSString *name;
 @property (copy, nonatomic) NSString *tel;
 
-- (instancetype)initWithDict:(NSDictionary *)dict;
-
 @end

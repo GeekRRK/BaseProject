@@ -11,14 +11,6 @@
 
 @implementation UserModel
 
-- (instancetype)initWithDict:(NSDictionary *)dict {
-    if(self = [super init]) {
-        
-    }
-    
-    return self;
-}
-
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{@"m_id" : @"id"};
 }

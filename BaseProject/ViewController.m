@@ -23,10 +23,13 @@
         make.add(1).add(2).add(3).add(4).divide(5);
     }];
     
-    NSLog(@"%d", result);
+    DDLogInfo(@"%d", result);
     
     UserModel *userModel = [UserModel yy_modelWithDictionary:@{@"id":@"001", @"name":@"Al", @"tel":@"18516282405"}];
-    NSLog(@"%@ %@ %@", userModel.m_id, userModel.name, userModel.tel);
+    DDLogInfo(@"%@ %@ %@", userModel.m_id, userModel.name, userModel.tel);
+
+    NSArray *arr = [[NSArray alloc] init];
+    NSLog(@"%@", arr[1]);
 }
 
 @end

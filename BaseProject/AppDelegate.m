@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "CatchCrash.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self setupDDLog];
+    [self setRootVC];
+    
     return YES;
 }
 
@@ -45,6 +50,71 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+#pragma mark - Utils
+
+- (void)setRootVC {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    ViewController *vc1 = [[ViewController alloc] init];
+    ViewController *vc2 = [[ViewController alloc] init];
+    ViewController *vc3 = [[ViewController alloc] init];
+    ViewController *vc4 = [[ViewController alloc] init];
+    
+    NSArray *vcs = @[vc1, vc2, vc3, vc4];
+    NSArray *titles = @[@"Tab1", @"Tab2", @"Tab3", @"Tab4"];
+    NSArray *tabItemImages = @[@"icon_tab1", @"icon_tab2", @"icon_tab3", @"icon_tab4"];
+    
+    NSMutableArray *navCtrls = [[NSMutableArray alloc] init];
+    for (int i = 0; i < vcs.count; ++i) {
+        UIViewController *itemVC = vcs[i];
+        itemVC.title = titles[i];
+        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:itemVC];
+        navVC.navigationBar.barTintColor = [UIColor greenColor];
+        navVC.navigationBar.tintColor = [UIColor whiteColor];
+        navVC.navigationBar.translucent = NO;
+        [navVC.navigationBar setTitleTextAttributes:
+         @{NSFontAttributeName:[UIFont systemFontOfSize:15], NSForegroundColorAttributeName:[UIColor whiteColor]}];
+        
+        NSString *imgName = tabItemImages[i];
+        NSString *selImgName = [[NSString alloc] initWithFormat:@"%@_sel", tabItemImages[i]];
+        navVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:titles[i]
+                                                         image:[[UIImage imageNamed:imgName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                                 selectedImage:[[UIImage imageNamed:selImgName]
+                                                                imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        
+        [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:[UIColor grayColor]}
+                                                 forState:UIControlStateNormal];
+        [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:[UIColor greenColor]}
+                                                 forState:UIControlStateSelected];
+        
+        [navCtrls addObject:navVC];
+    }
+    
+    NSArray *navVCArray = [[NSArray alloc] initWithArray:navCtrls];
+    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
+    tabBarVC.viewControllers = navVCArray;
+    tabBarVC.tabBar.barTintColor = [UIColor yellowColor];
+    tabBarVC.tabBar.translucent = NO;
+    
+    self.window.rootViewController = tabBarVC;
+}
+
+- (void)setupDDLog {
+    [CatchCrash uploadErrorLog];
+    
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+    
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    
+    DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
+    fileLogger.rollingFrequency = 60 * 60 * 24;
+    fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
+    [DDLog addLogger:fileLogger];
 }
 
 @end

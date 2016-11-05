@@ -15,6 +15,15 @@
 #import "Interface.h"
 #import "YYModel.h"
 #import "Utils.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
+
+static const DDLogLevel ddLogLevel = DDLogLevelAll;
+
+#ifdef DEBUG
+    #define DXLog(format, ...) DDLogInfo((@"[fileName:%s]" "[functionName:%s]" "[lineNumber:%d]" format), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+    #define DXLog(...);
+#endif
 
 #define APPDELEGATE     ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
