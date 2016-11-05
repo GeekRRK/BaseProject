@@ -18,18 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    int result = [NSObject makeCaculators:^(CaculatorMaker *make) {
-        make.add(1).add(2).add(3).add(4).divide(5);
-    }];
-    
-    DDLogInfo(@"%d", result);
-    
-    UserModel *userModel = [UserModel yy_modelWithDictionary:@{@"id":@"001", @"name":@"Al", @"tel":@"18516282405"}];
-    DDLogInfo(@"%@ %@ %@", userModel.m_id, userModel.name, userModel.tel);
-
-    NSArray *arr = [[NSArray alloc] init];
-    NSLog(@"%@", arr[1]);
 }
 
 @end
