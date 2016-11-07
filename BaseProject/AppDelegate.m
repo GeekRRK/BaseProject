@@ -17,8 +17,23 @@
 @implementation AppDelegate
 
 
+- (void)switchLocalizedLanguage {
+    NSArray *langArr1 = [[NSUserDefaults standardUserDefaults] valueForKey:@"AppleLanguages"];
+    NSString *language1 = langArr1.firstObject;
+    NSLog(@"Before switch：%@", language1);
+    
+    NSArray *lans = @[@"en"];
+    [[NSUserDefaults standardUserDefaults] setObject:lans forKey:@"AppleLanguages"];
+    
+    NSArray *langArr2 = [[NSUserDefaults standardUserDefaults] valueForKey:@"AppleLanguages"];
+    NSString *language2 = langArr2.firstObject;
+    NSLog(@"After switch：%@", language2);
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self switchLocalizedLanguage];
+    
     [self setupDDLog];
     [self setRootVC];
     
