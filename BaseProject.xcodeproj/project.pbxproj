@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AE9D850C1DCDA60300CAF67F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D84F21DCDA60300CAF67F /* AppDelegate.m */; };
-		AE9D850D1DCDA60300CAF67F /* CaculatorMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D84F51DCDA60300CAF67F /* CaculatorMaker.m */; };
-		AE9D850E1DCDA60300CAF67F /* NSObject+Caculator.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D84F71DCDA60300CAF67F /* NSObject+Caculator.m */; };
 		AE9D850F1DCDA60300CAF67F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9D84F91DCDA60300CAF67F /* Assets.xcassets */; };
 		AE9D85101DCDA60300CAF67F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9D84FA1DCDA60300CAF67F /* LaunchScreen.storyboard */; };
 		AE9D85121DCDA60300CAF67F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE9D84FE1DCDA60300CAF67F /* Info.plist */; };
@@ -37,10 +35,6 @@
 		AE473E3A1DCD684900016040 /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9D84F11DCDA60300CAF67F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AE9D84F21DCDA60300CAF67F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AE9D84F41DCDA60300CAF67F /* CaculatorMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaculatorMaker.h; sourceTree = "<group>"; };
-		AE9D84F51DCDA60300CAF67F /* CaculatorMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaculatorMaker.m; sourceTree = "<group>"; };
-		AE9D84F61DCDA60300CAF67F /* NSObject+Caculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Caculator.h"; sourceTree = "<group>"; };
-		AE9D84F71DCDA60300CAF67F /* NSObject+Caculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Caculator.m"; sourceTree = "<group>"; };
 		AE9D84F91DCDA60300CAF67F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE9D84FB1DCDA60300CAF67F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE9D84FE1DCDA60300CAF67F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,22 +122,10 @@
 				AE9D850A1DCDA60300CAF67F /* ViewController.h */,
 				AE9D850B1DCDA60300CAF67F /* ViewController.m */,
 				AE9D85191DCDCA4200CAF67F /* AOP */,
-				AE9D84F31DCDA60300CAF67F /* Chain */,
 				AE9D85001DCDA60300CAF67F /* Util */,
 				AE9D84F81DCDA60300CAF67F /* Supporting Files */,
 			);
 			path = BaseProject;
-			sourceTree = "<group>";
-		};
-		AE9D84F31DCDA60300CAF67F /* Chain */ = {
-			isa = PBXGroup;
-			children = (
-				AE9D84F41DCDA60300CAF67F /* CaculatorMaker.h */,
-				AE9D84F51DCDA60300CAF67F /* CaculatorMaker.m */,
-				AE9D84F61DCDA60300CAF67F /* NSObject+Caculator.h */,
-				AE9D84F71DCDA60300CAF67F /* NSObject+Caculator.m */,
-			);
-			path = Chain;
 			sourceTree = "<group>";
 		};
 		AE9D84F81DCDA60300CAF67F /* Supporting Files */ = {
@@ -337,7 +319,6 @@
 				AE9D85181DCDA60300CAF67F /* ViewController.m in Sources */,
 				AE9D850C1DCDA60300CAF67F /* AppDelegate.m in Sources */,
 				AE9D85271DCDD5BA00CAF67F /* CatchCrash.m in Sources */,
-				AE9D850E1DCDA60300CAF67F /* NSObject+Caculator.m in Sources */,
 				AE9D851C1DCDCA7000CAF67F /* HookUtility.m in Sources */,
 				AE9D85161DCDA60300CAF67F /* UserModel.m in Sources */,
 				AE9D85171DCDA60300CAF67F /* Utils.m in Sources */,
@@ -345,7 +326,6 @@
 				AE9D85231DCDCDFD00CAF67F /* UIControl+InjectStatisticMaiDian.m in Sources */,
 				AE9D85151DCDA60300CAF67F /* Interface.m in Sources */,
 				AE9D85141DCDA60300CAF67F /* DB.m in Sources */,
-				AE9D850D1DCDA60300CAF67F /* CaculatorMaker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
