@@ -13,7 +13,6 @@
 		AE9D85131DCDA60300CAF67F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D84FF1DCDA60300CAF67F /* main.m */; };
 		AE9D85141DCDA60300CAF67F /* DB.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85021DCDA60300CAF67F /* DB.m */; };
 		AE9D85151DCDA60300CAF67F /* Interface.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85041DCDA60300CAF67F /* Interface.m */; };
-		AE9D85161DCDA60300CAF67F /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85071DCDA60300CAF67F /* UserModel.m */; };
 		AE9D85171DCDA60300CAF67F /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85091DCDA60300CAF67F /* Utils.m */; };
 		AE9D85181DCDA60300CAF67F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D850B1DCDA60300CAF67F /* ViewController.m */; };
 		AE9D851C1DCDCA7000CAF67F /* HookUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D851B1DCDCA7000CAF67F /* HookUtility.m */; };
@@ -27,6 +26,7 @@
 		AEC6C2CC1DD17B0F00F9ABA0 /* HZQPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6C2C81DD17B0F00F9ABA0 /* HZQPickerView.m */; };
 		AEC6C2CD1DD17B0F00F9ABA0 /* HZQPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC6C2C91DD17B0F00F9ABA0 /* HZQPickerView.xib */; };
 		AEC6C3071DD1A68900F9ABA0 /* BaseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6C3061DD1A68900F9ABA0 /* BaseProjectTests.m */; };
+		AEC6C3111DD1CEEA00F9ABA0 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6C3101DD1CEEA00F9ABA0 /* UserModel.m */; };
 		B066CBE43F852159EAE0676A /* libPods-BaseProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB59F262626700FB9A0D14FB /* libPods-BaseProject.a */; };
 /* End PBXBuildFile section */
 
@@ -56,8 +56,6 @@
 		AE9D85031DCDA60300CAF67F /* Interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interface.h; sourceTree = "<group>"; };
 		AE9D85041DCDA60300CAF67F /* Interface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Interface.m; sourceTree = "<group>"; };
 		AE9D85051DCDA60300CAF67F /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		AE9D85061DCDA60300CAF67F /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
-		AE9D85071DCDA60300CAF67F /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		AE9D85081DCDA60300CAF67F /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		AE9D85091DCDA60300CAF67F /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		AE9D850A1DCDA60300CAF67F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -84,6 +82,8 @@
 		AEC6C3041DD1A68900F9ABA0 /* BaseProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC6C3061DD1A68900F9ABA0 /* BaseProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseProjectTests.m; sourceTree = "<group>"; };
 		AEC6C3081DD1A68900F9ABA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEC6C30F1DD1CEEA00F9ABA0 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		AEC6C3101DD1CEEA00F9ABA0 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		B65624F93622BF05654EF4B6 /* libPods-RAC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RAC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB59F262626700FB9A0D14FB /* libPods-BaseProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29A755539674D67924F4186 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +148,7 @@
 				AE9D84F21DCDA60300CAF67F /* AppDelegate.m */,
 				AE9D850A1DCDA60300CAF67F /* ViewController.h */,
 				AE9D850B1DCDA60300CAF67F /* ViewController.m */,
+				AEC6C30E1DD1CEEA00F9ABA0 /* Model */,
 				AEC6C2C51DD17AFB00F9ABA0 /* ThirdParty */,
 				AE9D85191DCDCA4200CAF67F /* AOP */,
 				AE9D85001DCDA60300CAF67F /* Util */,
@@ -178,8 +179,6 @@
 				AE9D85031DCDA60300CAF67F /* Interface.h */,
 				AE9D85041DCDA60300CAF67F /* Interface.m */,
 				AE9D85051DCDA60300CAF67F /* PrefixHeader.pch */,
-				AE9D85061DCDA60300CAF67F /* UserModel.h */,
-				AE9D85071DCDA60300CAF67F /* UserModel.m */,
 				AE9D85081DCDA60300CAF67F /* Utils.h */,
 				AE9D85091DCDA60300CAF67F /* Utils.m */,
 			);
@@ -227,6 +226,15 @@
 				AEC6C3081DD1A68900F9ABA0 /* Info.plist */,
 			);
 			path = BaseProjectTests;
+			sourceTree = "<group>";
+		};
+		AEC6C30E1DD1CEEA00F9ABA0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AEC6C30F1DD1CEEA00F9ABA0 /* UserModel.h */,
+				AEC6C3101DD1CEEA00F9ABA0 /* UserModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B61EDA4E8931488C1615D15E /* Pods */ = {
@@ -403,10 +411,10 @@
 			files = (
 				AE9D85241DCDCDFD00CAF67F /* UIViewController+InjectStatisticMaiDian.m in Sources */,
 				AE9D85181DCDA60300CAF67F /* ViewController.m in Sources */,
+				AEC6C3111DD1CEEA00F9ABA0 /* UserModel.m in Sources */,
 				AE9D850C1DCDA60300CAF67F /* AppDelegate.m in Sources */,
 				AE9D85271DCDD5BA00CAF67F /* CatchCrash.m in Sources */,
 				AE9D851C1DCDCA7000CAF67F /* HookUtility.m in Sources */,
-				AE9D85161DCDA60300CAF67F /* UserModel.m in Sources */,
 				AE9D85171DCDA60300CAF67F /* Utils.m in Sources */,
 				AEC6C2CC1DD17B0F00F9ABA0 /* HZQPickerView.m in Sources */,
 				AE9D85131DCDA60300CAF67F /* main.m in Sources */,

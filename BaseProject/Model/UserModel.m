@@ -15,4 +15,8 @@
     return @{@"m_id" : @"id"};
 }
 
++ (NSArray *)propertyNames {
+    return @[@"m_id", @"name", @"tel"];
+}
+
 @end

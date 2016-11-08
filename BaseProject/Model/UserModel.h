@@ -15,4 +15,6 @@
 @property (copy, nonatomic) NSString *name;
 @property (copy, nonatomic) NSString *tel;
 
++ (NSArray *)propertyNames;
+
 @end
