@@ -25,6 +25,8 @@
 		AEC02F851DD04C1700710A62 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEC02F871DD04C1700710A62 /* InfoPlist.strings */; };
 		AEC02F8C1DD0532C00710A62 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEC02F8E1DD0532C00710A62 /* Localizable.strings */; };
 		AEC02F9F1DD059EA00710A62 /* avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC02FA11DD059EA00710A62 /* avatar@2x.png */; };
+		AEC6C2CC1DD17B0F00F9ABA0 /* HZQPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6C2C81DD17B0F00F9ABA0 /* HZQPickerView.m */; };
+		AEC6C2CD1DD17B0F00F9ABA0 /* HZQPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC6C2C91DD17B0F00F9ABA0 /* HZQPickerView.xib */; };
 		B066CBE43F852159EAE0676A /* libPods-BaseProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB59F262626700FB9A0D14FB /* libPods-BaseProject.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,9 @@
 		AEC02F8F1DD0532D00710A62 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		AEC02FA01DD059EA00710A62 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hans"; path = "zh-Hans.lproj/avatar@2x.png"; sourceTree = "<group>"; };
 		AEC02FA21DD05C2100710A62 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "en.lproj/avatar@2x.png"; sourceTree = "<group>"; };
+		AEC6C2C71DD17B0F00F9ABA0 /* HZQPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZQPickerView.h; sourceTree = "<group>"; };
+		AEC6C2C81DD17B0F00F9ABA0 /* HZQPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZQPickerView.m; sourceTree = "<group>"; };
+		AEC6C2C91DD17B0F00F9ABA0 /* HZQPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HZQPickerView.xib; sourceTree = "<group>"; };
 		B65624F93622BF05654EF4B6 /* libPods-RAC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RAC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB59F262626700FB9A0D14FB /* libPods-BaseProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29A755539674D67924F4186 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +126,7 @@
 				AE9D84F21DCDA60300CAF67F /* AppDelegate.m */,
 				AE9D850A1DCDA60300CAF67F /* ViewController.h */,
 				AE9D850B1DCDA60300CAF67F /* ViewController.m */,
+				AEC6C2C51DD17AFB00F9ABA0 /* ThirdParty */,
 				AE9D85191DCDCA4200CAF67F /* AOP */,
 				AE9D85001DCDA60300CAF67F /* Util */,
 				AE9D84F81DCDA60300CAF67F /* Supporting Files */,
@@ -172,6 +178,24 @@
 				AE9D85261DCDD5BA00CAF67F /* CatchCrash.m */,
 			);
 			path = AOP;
+			sourceTree = "<group>";
+		};
+		AEC6C2C51DD17AFB00F9ABA0 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				AEC6C2C61DD17B0F00F9ABA0 /* HZQPickerView */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		AEC6C2C61DD17B0F00F9ABA0 /* HZQPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				AEC6C2C71DD17B0F00F9ABA0 /* HZQPickerView.h */,
+				AEC6C2C81DD17B0F00F9ABA0 /* HZQPickerView.m */,
+				AEC6C2C91DD17B0F00F9ABA0 /* HZQPickerView.xib */,
+			);
+			path = HZQPickerView;
 			sourceTree = "<group>";
 		};
 		B61EDA4E8931488C1615D15E /* Pods */ = {
@@ -253,6 +277,7 @@
 				AE9D85121DCDA60300CAF67F /* Info.plist in Resources */,
 				AEC02F8C1DD0532C00710A62 /* Localizable.strings in Resources */,
 				AE9D850F1DCDA60300CAF67F /* Assets.xcassets in Resources */,
+				AEC6C2CD1DD17B0F00F9ABA0 /* HZQPickerView.xib in Resources */,
 				AE9D85101DCDA60300CAF67F /* LaunchScreen.storyboard in Resources */,
 				AEC02F9F1DD059EA00710A62 /* avatar@2x.png in Resources */,
 				AE9D851E1DCDCD8800CAF67F /* GlobalUserStatisticConfig.plist in Resources */,
@@ -322,6 +347,7 @@
 				AE9D851C1DCDCA7000CAF67F /* HookUtility.m in Sources */,
 				AE9D85161DCDA60300CAF67F /* UserModel.m in Sources */,
 				AE9D85171DCDA60300CAF67F /* Utils.m in Sources */,
+				AEC6C2CC1DD17B0F00F9ABA0 /* HZQPickerView.m in Sources */,
 				AE9D85131DCDA60300CAF67F /* main.m in Sources */,
 				AE9D85231DCDCDFD00CAF67F /* UIControl+InjectStatisticMaiDian.m in Sources */,
 				AE9D85151DCDA60300CAF67F /* Interface.m in Sources */,
