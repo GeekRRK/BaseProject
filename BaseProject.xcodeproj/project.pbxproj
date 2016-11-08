@@ -26,8 +26,19 @@
 		AEC02F9F1DD059EA00710A62 /* avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC02FA11DD059EA00710A62 /* avatar@2x.png */; };
 		AEC6C2CC1DD17B0F00F9ABA0 /* HZQPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6C2C81DD17B0F00F9ABA0 /* HZQPickerView.m */; };
 		AEC6C2CD1DD17B0F00F9ABA0 /* HZQPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC6C2C91DD17B0F00F9ABA0 /* HZQPickerView.xib */; };
+		AEC6C3071DD1A68900F9ABA0 /* BaseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6C3061DD1A68900F9ABA0 /* BaseProjectTests.m */; };
 		B066CBE43F852159EAE0676A /* libPods-BaseProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB59F262626700FB9A0D14FB /* libPods-BaseProject.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AEC6C3091DD1A68900F9ABA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE473E321DCD684900016040 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE473E391DCD684900016040;
+			remoteInfo = BaseProject;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0063C634DDCAFF2971CAAF00 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +81,9 @@
 		AEC6C2C71DD17B0F00F9ABA0 /* HZQPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZQPickerView.h; sourceTree = "<group>"; };
 		AEC6C2C81DD17B0F00F9ABA0 /* HZQPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZQPickerView.m; sourceTree = "<group>"; };
 		AEC6C2C91DD17B0F00F9ABA0 /* HZQPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HZQPickerView.xib; sourceTree = "<group>"; };
+		AEC6C3041DD1A68900F9ABA0 /* BaseProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEC6C3061DD1A68900F9ABA0 /* BaseProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseProjectTests.m; sourceTree = "<group>"; };
+		AEC6C3081DD1A68900F9ABA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B65624F93622BF05654EF4B6 /* libPods-RAC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RAC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB59F262626700FB9A0D14FB /* libPods-BaseProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29A755539674D67924F4186 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +98,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B066CBE43F852159EAE0676A /* libPods-BaseProject.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEC6C3011DD1A68900F9ABA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				AE9D84F01DCDA60300CAF67F /* BaseProject */,
+				AEC6C3051DD1A68900F9ABA0 /* BaseProjectTests */,
 				AE473E3B1DCD684900016040 /* Products */,
 				B61EDA4E8931488C1615D15E /* Pods */,
 				315306899ECF8F91C47784F0 /* Frameworks */,
@@ -114,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				AE473E3A1DCD684900016040 /* BaseProject.app */,
+				AEC6C3041DD1A68900F9ABA0 /* BaseProjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,6 +220,15 @@
 			path = HZQPickerView;
 			sourceTree = "<group>";
 		};
+		AEC6C3051DD1A68900F9ABA0 /* BaseProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				AEC6C3061DD1A68900F9ABA0 /* BaseProjectTests.m */,
+				AEC6C3081DD1A68900F9ABA0 /* Info.plist */,
+			);
+			path = BaseProjectTests;
+			sourceTree = "<group>";
+		};
 		B61EDA4E8931488C1615D15E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +265,24 @@
 			productReference = AE473E3A1DCD684900016040 /* BaseProject.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AEC6C3031DD1A68900F9ABA0 /* BaseProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEC6C30B1DD1A68900F9ABA0 /* Build configuration list for PBXNativeTarget "BaseProjectTests" */;
+			buildPhases = (
+				AEC6C3001DD1A68900F9ABA0 /* Sources */,
+				AEC6C3011DD1A68900F9ABA0 /* Frameworks */,
+				AEC6C3021DD1A68900F9ABA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEC6C30A1DD1A68900F9ABA0 /* PBXTargetDependency */,
+			);
+			name = BaseProjectTests;
+			productName = BaseProjectTests;
+			productReference = AEC6C3041DD1A68900F9ABA0 /* BaseProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -246,6 +296,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = B5BXCD45E5;
 						ProvisioningStyle = Automatic;
+					};
+					AEC6C3031DD1A68900F9ABA0 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AE473E391DCD684900016040;
 					};
 				};
 			};
@@ -264,6 +319,7 @@
 			projectRoot = "";
 			targets = (
 				AE473E391DCD684900016040 /* BaseProject */,
+				AEC6C3031DD1A68900F9ABA0 /* BaseProjectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -280,6 +336,13 @@
 				AEC02F9F1DD059EA00710A62 /* avatar@2x.png in Resources */,
 				AE9D851E1DCDCD8800CAF67F /* GlobalUserStatisticConfig.plist in Resources */,
 				AEC02F851DD04C1700710A62 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEC6C3021DD1A68900F9ABA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +416,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AEC6C3001DD1A68900F9ABA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEC6C3071DD1A68900F9ABA0 /* BaseProjectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AEC6C30A1DD1A68900F9ABA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE473E391DCD684900016040 /* BaseProject */;
+			targetProxy = AEC6C3091DD1A68900F9ABA0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AE9D84FA1DCDA60300CAF67F /* LaunchScreen.storyboard */ = {
@@ -519,6 +598,30 @@
 			};
 			name = Release;
 		};
+		AEC6C30C1DD1A68900F9ABA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BaseProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.UgoMedia.BaseProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BaseProject.app/BaseProject";
+			};
+			name = Debug;
+		};
+		AEC6C30D1DD1A68900F9ABA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BaseProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.UgoMedia.BaseProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BaseProject.app/BaseProject";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -539,6 +642,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		AEC6C30B1DD1A68900F9ABA0 /* Build configuration list for PBXNativeTarget "BaseProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEC6C30C1DD1A68900F9ABA0 /* Debug */,
+				AEC6C30D1DD1A68900F9ABA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
