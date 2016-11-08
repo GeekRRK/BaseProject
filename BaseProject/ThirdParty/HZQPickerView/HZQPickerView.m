@@ -10,6 +10,8 @@
 
 static HZQBlock curBlock;
 static NSArray *curTitles;
+static int curNumOfComponent;
+static NSString *curTitle;
 
 @interface HZQPickerView () <UIPickerViewDataSource, UIPickerViewDelegate>
 
@@ -22,35 +24,39 @@ static NSArray *curTitles;
 
 @implementation HZQPickerView
 
-+ (void)showPickerViewInVC:(UIViewController *)parentVC titles:(NSArray *)titles block:(HZQBlock)block {
++ (void)showPickerViewInVC:(UIViewController *)parentVC titles:(NSArray *)titles numOfComponent:(int)numOfComponent block:(HZQBlock)block {
     curTitles = titles;
     curBlock = block;
+    curNumOfComponent = numOfComponent;
     
     HZQPickerView *pickerView = [[[NSBundle mainBundle] loadNibNamed:@"HZQPickerView" owner:nil options:nil] firstObject];
     pickerView.frame = parentVC.view.bounds;
     [parentVC.view addSubview:pickerView];
+    
+    NSArray *arr = @[@{@"河北省":@[@"石家庄", @"承德"]}, @{@"上海市":@[@"嘉定区", @"黄浦区"]}];
+    NSLog(@"%@", arr);
 }
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    self.backgVIew.layer.cornerRadius = 5;
-    self.backgVIew.layer.borderWidth = 1;
-    self.backgVIew.layer.borderColor = [UIColor whiteColor].CGColor;
-    self.backgVIew.layer.masksToBounds = YES;
+    _backgVIew.layer.cornerRadius = 5;
+    _backgVIew.layer.borderWidth = 1;
+    _backgVIew.layer.borderColor = [UIColor whiteColor].CGColor;
+    _backgVIew.layer.masksToBounds = YES;
     
-    self.sureBtn.layer.cornerRadius = 3;
-    self.sureBtn.layer.borderWidth = 1;
-    self.sureBtn.layer.borderColor = [UIColor redColor].CGColor;
-    self.sureBtn.layer.masksToBounds = YES;
+    _sureBtn.layer.cornerRadius = 3;
+    _sureBtn.layer.borderWidth = 1;
+    _sureBtn.layer.borderColor = [UIColor redColor].CGColor;
+    _sureBtn.layer.masksToBounds = YES;
     
-    self.cannelBtn.layer.cornerRadius = 3;
-    self.cannelBtn.layer.borderWidth = 1;
-    self.cannelBtn.layer.borderColor = [UIColor grayColor].CGColor;
-    self.cannelBtn.layer.masksToBounds = YES;
+    _cannelBtn.layer.cornerRadius = 3;
+    _cannelBtn.layer.borderWidth = 1;
+    _cannelBtn.layer.borderColor = [UIColor grayColor].CGColor;
+    _cannelBtn.layer.masksToBounds = YES;
     
-    self.pickerView.dataSource = self;
-    self.pickerView.delegate = self;
+    _pickerView.dataSource = self;
+    _pickerView.delegate = self;
 }
 
 - (void)animationbegin:(UIView *)view {
@@ -92,7 +98,7 @@ static NSArray *curTitles;
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return curTitles.count;
+    return curNumOfComponent;
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {

@@ -12,6 +12,6 @@ typedef void(^HZQBlock)(int index1st, int index2nd, int index3rd);
 
 @interface HZQPickerView : UIView
 
-+ (void)showPickerViewInVC:(UIViewController *)parentVC titles:(NSArray *)titles block:(HZQBlock)block;
++ (void)showPickerViewInVC:(UIViewController *)parentVC titles:(NSArray *)titles numOfComponent:(int)numOfComponent block:(HZQBlock)block;
     
 @end

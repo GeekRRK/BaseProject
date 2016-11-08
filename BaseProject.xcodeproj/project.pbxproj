@@ -10,7 +10,6 @@
 		AE9D850C1DCDA60300CAF67F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D84F21DCDA60300CAF67F /* AppDelegate.m */; };
 		AE9D850F1DCDA60300CAF67F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9D84F91DCDA60300CAF67F /* Assets.xcassets */; };
 		AE9D85101DCDA60300CAF67F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9D84FA1DCDA60300CAF67F /* LaunchScreen.storyboard */; };
-		AE9D85121DCDA60300CAF67F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE9D84FE1DCDA60300CAF67F /* Info.plist */; };
 		AE9D85131DCDA60300CAF67F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D84FF1DCDA60300CAF67F /* main.m */; };
 		AE9D85141DCDA60300CAF67F /* DB.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85021DCDA60300CAF67F /* DB.m */; };
 		AE9D85151DCDA60300CAF67F /* Interface.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85041DCDA60300CAF67F /* Interface.m */; };
@@ -274,7 +273,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE9D85121DCDA60300CAF67F /* Info.plist in Resources */,
 				AEC02F8C1DD0532C00710A62 /* Localizable.strings in Resources */,
 				AE9D850F1DCDA60300CAF67F /* Assets.xcassets in Resources */,
 				AEC6C2CD1DD17B0F00F9ABA0 /* HZQPickerView.xib in Resources */,
