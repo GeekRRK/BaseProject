@@ -1,6 +1,6 @@
 //
-//  Utils.m
-//  CodeSnippets
+//  BPUtil.m
+//  BaseProject
 //
 //  Created by GeekRRK on 16/4/7.
 //  Copyright © 2016年 GeekRRK. All rights reserved.
@@ -67,7 +67,7 @@
 }
 
 + (UIColor *)colorWithHexString:(NSString *)stringToConvert {
-    NSString *cString = [[stringToConvert stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];//字符串处理
+    NSString *cString = [[stringToConvert stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     
     if ([cString length] < 6)
         return [UIColor whiteColor];

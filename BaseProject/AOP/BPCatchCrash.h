@@ -1,5 +1,5 @@
 //
-//  CatchCrash.h
+//  BPCatchCrash.h
 //  BaseProject
 //
 //  Created by GeekRRK on 16/11/5.

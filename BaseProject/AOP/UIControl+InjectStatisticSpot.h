@@ -1,6 +1,6 @@
 //
-//  UIControl+InjectStatisticMaiDian.h
-//  Demo_Indicator
+//  UIControl+InjectStatisticSpot.h
+//  BaseProject
 //
 //  Created by GeekRRK on 16/4/22.
 //  Copyright © 2016年 GeekRRK. All rights reserved.
