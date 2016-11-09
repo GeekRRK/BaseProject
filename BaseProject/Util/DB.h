@@ -12,4 +12,10 @@
 
 @interface DB : NSObject
 
++ (void)createUserTable;
+
++ (void)replaceModel:(id)model intoTable:(NSString *)tableName;
+
++ (id)queryModelById:(NSString *)mId class:(Class)class fromTable:(NSString *)tableName;
+
 @end

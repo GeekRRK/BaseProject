@@ -37,29 +37,65 @@
 + (void)replaceModel:(id)model intoTable:(NSString *)tableName {
     [DB createUserTable];
     
-//    NSString *replaceSql = [NSString stringWithFormat:
-//                            @"replace into %@ (id, name, tel) values ('%@', '%@', '%@'')",
-//                            tableName,
-//                            userModel.m_id,
-//                            userModel.name,
-//                            userModel.tel];
-//    [[DB shareDateBase] executeUpdate:replaceSql];
+    Class class = [model class];
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    NSArray *propertyNames = [class performSelector:@selector(propertyNames)];
+#pragma clang diagnostic pop
+    
+    NSString *sql = [NSString stringWithFormat:@"replace into %@ (", tableName];
+    for (int i = 0; i < propertyNames.count; ++i) {
+        NSString *key = propertyNames[i];
+        
+        if (i == propertyNames.count - 1) {
+            sql = [NSString stringWithFormat:@"%@%@", sql, key];
+        } else {
+            sql = [NSString stringWithFormat:@"%@%@,", sql, key];
+        }
+    }
+    sql = [sql stringByAppendingString:@") values ("];
+    
+    for (int i = 0; i < propertyNames.count; ++i) {
+        NSString *key = propertyNames[i];
+        
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        NSString *value = [model performSelector:NSSelectorFromString(key)];
+#pragma clang diagnostic pop
+        
+        if (i == propertyNames.count - 1) {
+            sql = [NSString stringWithFormat:@"%@'%@'", sql, value];
+        } else {
+            sql = [NSString stringWithFormat:@"%@'%@',", sql, value];
+        }
+    }
+    sql = [sql stringByAppendingString:@")"];
+
+    [[DB shareDateBase] executeUpdate:sql];
 }
 
-+ (id)queryModelById:(NSString *)token fromTable:(NSString *)tableName {
++ (id)queryModelById:(NSString *)mId class:(Class)class fromTable:(NSString *)tableName {
     [DB createUserTable];
     
-//    UserModel *userModel = [[UserModel alloc] init];
-//    
-//    NSString *querySql = [NSString stringWithFormat:@"select * from %@ where token = '%@'", tableName, token];
-//    FMResultSet *resultSet = [[DB shareDateBase] executeQuery:querySql];
-//    if ([resultSet next]) {
-//        userModel.m_id = [resultSet stringForColumn:@"id"];
-//        userModel.name = [resultSet stringForColumn:@"name"];
-//        userModel.tel = [resultSet stringForColumn:@"tel"];
-//        
-//        return userModel;
-//    }
+    id model = [[class alloc] init];
+    
+    NSString *querySql = [NSString stringWithFormat:@"select * from %@ where id = '%@'", tableName, mId];
+    FMResultSet *resultSet = [[DB shareDateBase] executeQuery:querySql];
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    NSArray *propertyNames = [class performSelector:@selector(propertyNames)];
+#pragma clang diagnostic pop
+    
+    if ([resultSet next]) {
+        for (int i = 0; i < resultSet.columnCount; ++i) {
+            NSString *value = [resultSet stringForColumnIndex:i];
+            [model setProperty:value forKey:propertyNames[i]];
+        }
+        
+        return model;
+    }
     
     return nil;
 }

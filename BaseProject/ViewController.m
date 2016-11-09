@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UserModel.h"
+#import "DB.h"
 
 @interface ViewController ()
 
@@ -23,6 +24,12 @@
     NSString *imageName = NSLocalizedString(@"avatar", nil);
     UIImage *image = [UIImage imageNamed:imageName];
     imgView.image = image;
+    
+    UserModel *userModel = [[UserModel alloc] init];
+    userModel.m_id = @"1";
+    userModel.name = @"iOS";
+    userModel.tel = @"18516282405";
+    [DB replaceModel:userModel intoTable:@"Test"];
 }
 
 @end
