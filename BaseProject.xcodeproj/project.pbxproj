@@ -14,7 +14,6 @@
 		AE9D85141DCDA60300CAF67F /* DB.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85021DCDA60300CAF67F /* DB.m */; };
 		AE9D85151DCDA60300CAF67F /* Interface.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85041DCDA60300CAF67F /* Interface.m */; };
 		AE9D85171DCDA60300CAF67F /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85091DCDA60300CAF67F /* Utils.m */; };
-		AE9D85181DCDA60300CAF67F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D850B1DCDA60300CAF67F /* ViewController.m */; };
 		AE9D851C1DCDCA7000CAF67F /* HookUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D851B1DCDCA7000CAF67F /* HookUtility.m */; };
 		AE9D851E1DCDCD8800CAF67F /* GlobalUserStatisticConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE9D851D1DCDCD8800CAF67F /* GlobalUserStatisticConfig.plist */; };
 		AE9D85231DCDCDFD00CAF67F /* UIControl+InjectStatisticMaiDian.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85201DCDCDFD00CAF67F /* UIControl+InjectStatisticMaiDian.m */; };
@@ -27,6 +26,7 @@
 		AEC6C2CD1DD17B0F00F9ABA0 /* HZQPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC6C2C91DD17B0F00F9ABA0 /* HZQPickerView.xib */; };
 		AEC6C3071DD1A68900F9ABA0 /* BaseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6C3061DD1A68900F9ABA0 /* BaseProjectTests.m */; };
 		AEC6C3111DD1CEEA00F9ABA0 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6C3101DD1CEEA00F9ABA0 /* UserModel.m */; };
+		AED7E7891DD301350034DDDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED7E7881DD301350034DDDE /* ViewController.m */; };
 		B066CBE43F852159EAE0676A /* libPods-BaseProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB59F262626700FB9A0D14FB /* libPods-BaseProject.a */; };
 /* End PBXBuildFile section */
 
@@ -41,9 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0063C634DDCAFF2971CAAF00 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
-		146C708AEDBC0871D06CB494 /* Pods-RAC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC.release.xcconfig"; path = "Pods/Target Support Files/Pods-RAC/Pods-RAC.release.xcconfig"; sourceTree = "<group>"; };
-		1DE3411C5CE8903C365BB1D3 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		AE473E3A1DCD684900016040 /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9D84F11DCDA60300CAF67F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AE9D84F21DCDA60300CAF67F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,8 +55,6 @@
 		AE9D85051DCDA60300CAF67F /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		AE9D85081DCDA60300CAF67F /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		AE9D85091DCDA60300CAF67F /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
-		AE9D850A1DCDA60300CAF67F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AE9D850B1DCDA60300CAF67F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AE9D851A1DCDCA7000CAF67F /* HookUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HookUtility.h; sourceTree = "<group>"; };
 		AE9D851B1DCDCA7000CAF67F /* HookUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HookUtility.m; sourceTree = "<group>"; };
 		AE9D851D1DCDCD8800CAF67F /* GlobalUserStatisticConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GlobalUserStatisticConfig.plist; sourceTree = "<group>"; };
@@ -84,11 +79,11 @@
 		AEC6C3081DD1A68900F9ABA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEC6C30F1DD1CEEA00F9ABA0 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		AEC6C3101DD1CEEA00F9ABA0 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
-		B65624F93622BF05654EF4B6 /* libPods-RAC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RAC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AED7E7871DD301350034DDDE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AED7E7881DD301350034DDDE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AED7E78A1DD30A980034DDDE /* libPods-BaseProject.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-BaseProject.a"; path = "../../../Library/Developer/Xcode/DerivedData/BaseProject-audinbsvkvdjnmeqxxonrzcsjhpb/Build/Products/Debug-iphonesimulator/libPods-BaseProject.a"; sourceTree = "<group>"; };
 		BB59F262626700FB9A0D14FB /* libPods-BaseProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29A755539674D67924F4186 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
-		CB72B3D0F89B9364D3ECF8F6 /* Pods-RAC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RAC/Pods-RAC.debug.xcconfig"; sourceTree = "<group>"; };
-		D11D1B6192E038BE3EAF9BC3 /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E715A1E7CB2C09C8D1548EDC /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,8 +109,7 @@
 		315306899ECF8F91C47784F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B65624F93622BF05654EF4B6 /* libPods-RAC.a */,
-				D11D1B6192E038BE3EAF9BC3 /* libPods-Demo.a */,
+				AED7E78A1DD30A980034DDDE /* libPods-BaseProject.a */,
 				BB59F262626700FB9A0D14FB /* libPods-BaseProject.a */,
 			);
 			name = Frameworks;
@@ -146,12 +140,12 @@
 			children = (
 				AE9D84F11DCDA60300CAF67F /* AppDelegate.h */,
 				AE9D84F21DCDA60300CAF67F /* AppDelegate.m */,
-				AE9D850A1DCDA60300CAF67F /* ViewController.h */,
-				AE9D850B1DCDA60300CAF67F /* ViewController.m */,
-				AEC6C30E1DD1CEEA00F9ABA0 /* Model */,
-				AEC6C2C51DD17AFB00F9ABA0 /* ThirdParty */,
-				AE9D85191DCDCA4200CAF67F /* AOP */,
 				AE9D85001DCDA60300CAF67F /* Util */,
+				AEC6C30E1DD1CEEA00F9ABA0 /* Model */,
+				AED7E7861DD300E00034DDDE /* View */,
+				AED7E7851DD300E00034DDDE /* Controller */,
+				AE9D85191DCDCA4200CAF67F /* AOP */,
+				AEC6C2C51DD17AFB00F9ABA0 /* ThirdParty */,
 				AE9D84F81DCDA60300CAF67F /* Supporting Files */,
 			);
 			path = BaseProject;
@@ -174,13 +168,13 @@
 		AE9D85001DCDA60300CAF67F /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				AE9D85011DCDA60300CAF67F /* DB.h */,
-				AE9D85021DCDA60300CAF67F /* DB.m */,
-				AE9D85031DCDA60300CAF67F /* Interface.h */,
-				AE9D85041DCDA60300CAF67F /* Interface.m */,
 				AE9D85051DCDA60300CAF67F /* PrefixHeader.pch */,
 				AE9D85081DCDA60300CAF67F /* Utils.h */,
 				AE9D85091DCDA60300CAF67F /* Utils.m */,
+				AE9D85031DCDA60300CAF67F /* Interface.h */,
+				AE9D85041DCDA60300CAF67F /* Interface.m */,
+				AE9D85011DCDA60300CAF67F /* DB.h */,
+				AE9D85021DCDA60300CAF67F /* DB.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -237,13 +231,25 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		AED7E7851DD300E00034DDDE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AED7E7871DD301350034DDDE /* ViewController.h */,
+				AED7E7881DD301350034DDDE /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AED7E7861DD300E00034DDDE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B61EDA4E8931488C1615D15E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CB72B3D0F89B9364D3ECF8F6 /* Pods-RAC.debug.xcconfig */,
-				146C708AEDBC0871D06CB494 /* Pods-RAC.release.xcconfig */,
-				1DE3411C5CE8903C365BB1D3 /* Pods-Demo.debug.xcconfig */,
-				0063C634DDCAFF2971CAAF00 /* Pods-Demo.release.xcconfig */,
 				E715A1E7CB2C09C8D1548EDC /* Pods-BaseProject.debug.xcconfig */,
 				C29A755539674D67924F4186 /* Pods-BaseProject.release.xcconfig */,
 			);
@@ -410,12 +416,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE9D85241DCDCDFD00CAF67F /* UIViewController+InjectStatisticMaiDian.m in Sources */,
-				AE9D85181DCDA60300CAF67F /* ViewController.m in Sources */,
 				AEC6C3111DD1CEEA00F9ABA0 /* UserModel.m in Sources */,
 				AE9D850C1DCDA60300CAF67F /* AppDelegate.m in Sources */,
 				AE9D85271DCDD5BA00CAF67F /* CatchCrash.m in Sources */,
 				AE9D851C1DCDCA7000CAF67F /* HookUtility.m in Sources */,
 				AE9D85171DCDA60300CAF67F /* Utils.m in Sources */,
+				AED7E7891DD301350034DDDE /* ViewController.m in Sources */,
 				AEC6C2CC1DD17B0F00F9ABA0 /* HZQPickerView.m in Sources */,
 				AE9D85131DCDA60300CAF67F /* main.m in Sources */,
 				AE9D85231DCDCDFD00CAF67F /* UIControl+InjectStatisticMaiDian.m in Sources */,
@@ -610,6 +616,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = BaseProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UgoMedia.BaseProjectTests;
@@ -622,6 +630,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = BaseProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UgoMedia.BaseProjectTests;
@@ -658,6 +668,7 @@
 				AEC6C30D1DD1A68900F9ABA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

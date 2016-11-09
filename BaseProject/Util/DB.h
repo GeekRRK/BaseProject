@@ -12,7 +12,7 @@
 
 @interface DB : NSObject
 
-+ (void)createUserTable;
++ (void)createUserTable:(NSString *)tableName;
 
 + (void)replaceModel:(id)model intoTable:(NSString *)tableName;
 

@@ -8,10 +8,10 @@
 //  数据库封闭接口
 
 #import "DB.h"
+#import "UserModel.h"
 
 #define CACHE_DIR                 [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
 #define DATABASE_PATH             @"nxh.db"
-#define USER_TABLE                [NSString stringWithFormat:@"usertable%@", @""]
 
 @implementation DB
 
@@ -29,13 +29,13 @@
     return db;
 }
 
-+ (void)createUserTable {
-    NSString *createStarTable = [NSString stringWithFormat:@"create table if not exists %@ (id text primary key, name text, tel text", USER_TABLE];
-    [[DB shareDateBase] executeUpdate:createStarTable];
++ (void)createUserTable:(NSString *)tableName {
+    NSString *sql = [NSString stringWithFormat:@"create table if not exists %@ (m_id text primary key, name text, tel text)", tableName];
+    [[DB shareDateBase] executeUpdate:sql];
 }
 
 + (void)replaceModel:(id)model intoTable:(NSString *)tableName {
-    [DB createUserTable];
+    [DB createUserTable:tableName];
     
     Class class = [model class];
     
@@ -76,11 +76,11 @@
 }
 
 + (id)queryModelById:(NSString *)mId class:(Class)class fromTable:(NSString *)tableName {
-    [DB createUserTable];
+    [DB createUserTable:tableName];
     
     id model = [[class alloc] init];
     
-    NSString *querySql = [NSString stringWithFormat:@"select * from %@ where id = '%@'", tableName, mId];
+    NSString *querySql = [NSString stringWithFormat:@"select * from %@ where m_id = '%@'", tableName, mId];
     FMResultSet *resultSet = [[DB shareDateBase] executeQuery:querySql];
     
 #pragma clang diagnostic push
@@ -91,7 +91,7 @@
     if ([resultSet next]) {
         for (int i = 0; i < resultSet.columnCount; ++i) {
             NSString *value = [resultSet stringForColumnIndex:i];
-            [model setProperty:value forKey:propertyNames[i]];
+            [model setValue:value forKey:propertyNames[i]];
         }
         
         return model;

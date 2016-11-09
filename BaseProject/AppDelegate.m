@@ -7,15 +7,14 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
 #import "CatchCrash.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
 
 - (void)switchLocalizedLanguage {
     NSArray *langArr1 = [[NSUserDefaults standardUserDefaults] valueForKey:@"AppleLanguages"];

@@ -25,11 +25,17 @@
     UIImage *image = [UIImage imageNamed:imageName];
     imgView.image = image;
     
+    [DB createUserTable:@"userTable"];
+    
     UserModel *userModel = [[UserModel alloc] init];
     userModel.m_id = @"1";
     userModel.name = @"iOS";
     userModel.tel = @"18516282405";
-    [DB replaceModel:userModel intoTable:@"Test"];
+    [DB replaceModel:userModel intoTable:@"userTable"];
+    
+    UserModel *curUserModel = [DB queryModelById:@"1" class:[userModel class] fromTable:@"userTable"];
+    
+    NSLog(@"%@, %@, %@", curUserModel.m_id, curUserModel.name, curUserModel.tel);
 }
 
 @end
