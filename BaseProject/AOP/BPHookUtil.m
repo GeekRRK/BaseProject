@@ -23,7 +23,7 @@
 }
 
 + (NSDictionary *)dictionaryFromUserStatisticsConfigPlist {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"GlobalUserStatisticConfig" ofType:@"plist"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"UserStatistic" ofType:@"plist"];
     NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:filePath];
     
     return dic;

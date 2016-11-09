@@ -15,7 +15,7 @@
 		AE9D85151DCDA60300CAF67F /* BPInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85041DCDA60300CAF67F /* BPInterface.m */; };
 		AE9D85171DCDA60300CAF67F /* BPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85091DCDA60300CAF67F /* BPUtil.m */; };
 		AE9D851C1DCDCA7000CAF67F /* BPHookUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D851B1DCDCA7000CAF67F /* BPHookUtil.m */; };
-		AE9D851E1DCDCD8800CAF67F /* GlobalUserStatisticConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE9D851D1DCDCD8800CAF67F /* GlobalUserStatisticConfig.plist */; };
+		AE9D851E1DCDCD8800CAF67F /* UserStatistic.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE9D851D1DCDCD8800CAF67F /* UserStatistic.plist */; };
 		AE9D85231DCDCDFD00CAF67F /* UIControl+InjectStatisticSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85201DCDCDFD00CAF67F /* UIControl+InjectStatisticSpot.m */; };
 		AE9D85241DCDCDFD00CAF67F /* UIViewController+InjectStatisticSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85221DCDCDFD00CAF67F /* UIViewController+InjectStatisticSpot.m */; };
 		AE9D85271DCDD5BA00CAF67F /* BPCatchCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D85261DCDD5BA00CAF67F /* BPCatchCrash.m */; };
@@ -57,7 +57,7 @@
 		AE9D85091DCDA60300CAF67F /* BPUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPUtil.m; sourceTree = "<group>"; };
 		AE9D851A1DCDCA7000CAF67F /* BPHookUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPHookUtil.h; sourceTree = "<group>"; };
 		AE9D851B1DCDCA7000CAF67F /* BPHookUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPHookUtil.m; sourceTree = "<group>"; };
-		AE9D851D1DCDCD8800CAF67F /* GlobalUserStatisticConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GlobalUserStatisticConfig.plist; sourceTree = "<group>"; };
+		AE9D851D1DCDCD8800CAF67F /* UserStatistic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserStatistic.plist; sourceTree = "<group>"; };
 		AE9D851F1DCDCDFD00CAF67F /* UIControl+InjectStatisticSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+InjectStatisticSpot.h"; sourceTree = "<group>"; };
 		AE9D85201DCDCDFD00CAF67F /* UIControl+InjectStatisticSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+InjectStatisticSpot.m"; sourceTree = "<group>"; };
 		AE9D85211DCDCDFD00CAF67F /* UIViewController+InjectStatisticSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+InjectStatisticSpot.h"; sourceTree = "<group>"; };
@@ -182,7 +182,7 @@
 		AE9D85191DCDCA4200CAF67F /* AOP */ = {
 			isa = PBXGroup;
 			children = (
-				AE9D851D1DCDCD8800CAF67F /* GlobalUserStatisticConfig.plist */,
+				AE9D851D1DCDCD8800CAF67F /* UserStatistic.plist */,
 				AE9D851A1DCDCA7000CAF67F /* BPHookUtil.h */,
 				AE9D851B1DCDCA7000CAF67F /* BPHookUtil.m */,
 				AE9D851F1DCDCDFD00CAF67F /* UIControl+InjectStatisticSpot.h */,
@@ -348,7 +348,7 @@
 				AEC6C2CD1DD17B0F00F9ABA0 /* HZQPickerView.xib in Resources */,
 				AE9D85101DCDA60300CAF67F /* LaunchScreen.storyboard in Resources */,
 				AEC02F9F1DD059EA00710A62 /* avatar@2x.png in Resources */,
-				AE9D851E1DCDCD8800CAF67F /* GlobalUserStatisticConfig.plist in Resources */,
+				AE9D851E1DCDCD8800CAF67F /* UserStatistic.plist in Resources */,
 				AEC02F851DD04C1700710A62 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

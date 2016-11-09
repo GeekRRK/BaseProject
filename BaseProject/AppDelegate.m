@@ -84,9 +84,9 @@
                                                  selectedImage:[[UIImage imageNamed:selImgName]
                                                                 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         
-        [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:[UIColor whiteColor]}
+        [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}
                                                  forState:UIControlStateNormal];
-        [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:BP_COLOR_GREEN}
+        [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:BP_COLOR_GREEN}
                                                  forState:UIControlStateSelected];
         
         [navCtrls addObject:navVC];
