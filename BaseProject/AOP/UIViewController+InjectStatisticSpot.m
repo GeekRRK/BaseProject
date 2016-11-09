@@ -6,21 +6,21 @@
 //  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
-#import "UIViewController+InjectStatisticMaiDian.h"
-#import "BPHookUtility.h"
+#import "UIViewController+InjectStatisticSpot.h"
+#import "BPHookUtil.h"
 
-@implementation UIViewController (InjectStatisticMaiDian)
+@implementation UIViewController (InjectStatisticSpot)
 
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         SEL originalSelector = @selector(viewWillAppear:);
         SEL swizzledSelector = @selector(swiz_viewWillAppear:);
-        [BPHookUtility swizzlingInClass:[self class] originalSelector:originalSelector swizzledSelector:swizzledSelector];
+        [BPHookUtil swizzlingInClass:[self class] originalSelector:originalSelector swizzledSelector:swizzledSelector];
         
         SEL orignalDisappearSelector = @selector(viewWillDisappear:);
         SEL swizzledDisappearSelector = @selector(swiz_viewWillDisappear:);
-        [BPHookUtility swizzlingInClass:[self class] originalSelector:orignalDisappearSelector swizzledSelector:swizzledDisappearSelector];
+        [BPHookUtil swizzlingInClass:[self class] originalSelector:orignalDisappearSelector swizzledSelector:swizzledDisappearSelector];
     });
 }
 
@@ -49,7 +49,7 @@
 }
 
 - (NSString *)pageEventID:(BOOL)bEnterPage {
-    NSDictionary *configDict = [BPHookUtility dictionaryFromUserStatisticsConfigPlist];
+    NSDictionary *configDict = [BPHookUtil dictionaryFromUserStatisticsConfigPlist];
     NSString *selfClassName = NSStringFromClass([self class]);
     
     return configDict[selfClassName][@"PageEventIDs"][bEnterPage ? @"Enter" : @"Leave"];

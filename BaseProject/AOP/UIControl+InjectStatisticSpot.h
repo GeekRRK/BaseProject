@@ -1,5 +1,5 @@
 //
-//  UIViewController+InjectStatisticMaiDian.h
+//  UIControl+InjectStatisticMaiDian.h
 //  Demo_Indicator
 //
 //  Created by GeekRRK on 16/4/22.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (InjectStatisticMaiDian)
+@interface UIControl (InjectStatisticSpot)
 
 @end

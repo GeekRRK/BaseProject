@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BPHookUtility : NSObject
+@interface BPHookUtil : NSObject
 
 + (void)swizzlingInClass:(Class)class originalSelector:(SEL)originalSelector swizzledSelector:(SEL)swizzledSelector;
 + (NSDictionary *)dictionaryFromUserStatisticsConfigPlist;
