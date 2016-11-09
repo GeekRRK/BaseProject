@@ -27,6 +27,8 @@
 		AEC6C3071DD1A68900F9ABA0 /* BaseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6C3061DD1A68900F9ABA0 /* BaseProjectTests.m */; };
 		AEC6C3111DD1CEEA00F9ABA0 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6C3101DD1CEEA00F9ABA0 /* UserModel.m */; };
 		AED7E7891DD301350034DDDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED7E7881DD301350034DDDE /* ViewController.m */; };
+		AED7E7931DD322FD0034DDDE /* BPTouchScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AED7E78F1DD322FD0034DDDE /* BPTouchScrollView.m */; };
+		AED7E7941DD322FD0034DDDE /* BPTouchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AED7E7921DD322FD0034DDDE /* BPTouchTableView.m */; };
 		B066CBE43F852159EAE0676A /* libPods-BaseProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB59F262626700FB9A0D14FB /* libPods-BaseProject.a */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,10 @@
 		AED7E7871DD301350034DDDE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AED7E7881DD301350034DDDE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AED7E78A1DD30A980034DDDE /* libPods-BaseProject.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-BaseProject.a"; path = "../../../Library/Developer/Xcode/DerivedData/BaseProject-audinbsvkvdjnmeqxxonrzcsjhpb/Build/Products/Debug-iphonesimulator/libPods-BaseProject.a"; sourceTree = "<group>"; };
+		AED7E78E1DD322FD0034DDDE /* BPTouchScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTouchScrollView.h; sourceTree = "<group>"; };
+		AED7E78F1DD322FD0034DDDE /* BPTouchScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTouchScrollView.m; sourceTree = "<group>"; };
+		AED7E7911DD322FD0034DDDE /* BPTouchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTouchTableView.h; sourceTree = "<group>"; };
+		AED7E7921DD322FD0034DDDE /* BPTouchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTouchTableView.m; sourceTree = "<group>"; };
 		BB59F262626700FB9A0D14FB /* libPods-BaseProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29A755539674D67924F4186 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 		E715A1E7CB2C09C8D1548EDC /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +150,7 @@
 				AEC6C30E1DD1CEEA00F9ABA0 /* Model */,
 				AED7E7861DD300E00034DDDE /* View */,
 				AED7E7851DD300E00034DDDE /* Controller */,
+				AED7E78C1DD322820034DDDE /* Custom */,
 				AE9D85191DCDCA4200CAF67F /* AOP */,
 				AEC6C2C51DD17AFB00F9ABA0 /* ThirdParty */,
 				AE9D84F81DCDA60300CAF67F /* Supporting Files */,
@@ -245,6 +252,33 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AED7E78C1DD322820034DDDE /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				AED7E78D1DD322FD0034DDDE /* ScrollView */,
+				AED7E7901DD322FD0034DDDE /* TableView */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		AED7E78D1DD322FD0034DDDE /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				AED7E78E1DD322FD0034DDDE /* BPTouchScrollView.h */,
+				AED7E78F1DD322FD0034DDDE /* BPTouchScrollView.m */,
+			);
+			path = ScrollView;
+			sourceTree = "<group>";
+		};
+		AED7E7901DD322FD0034DDDE /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				AED7E7911DD322FD0034DDDE /* BPTouchTableView.h */,
+				AED7E7921DD322FD0034DDDE /* BPTouchTableView.m */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		B61EDA4E8931488C1615D15E /* Pods */ = {
@@ -415,10 +449,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED7E7941DD322FD0034DDDE /* BPTouchTableView.m in Sources */,
 				AE9D85241DCDCDFD00CAF67F /* UIViewController+InjectStatisticSpot.m in Sources */,
 				AEC6C3111DD1CEEA00F9ABA0 /* UserModel.m in Sources */,
 				AE9D850C1DCDA60300CAF67F /* AppDelegate.m in Sources */,
 				AE9D85271DCDD5BA00CAF67F /* BPCatchCrash.m in Sources */,
+				AED7E7931DD322FD0034DDDE /* BPTouchScrollView.m in Sources */,
 				AE9D851C1DCDCA7000CAF67F /* BPHookUtil.m in Sources */,
 				AE9D85171DCDA60300CAF67F /* BPUtil.m in Sources */,
 				AED7E7891DD301350034DDDE /* ViewController.m in Sources */,
