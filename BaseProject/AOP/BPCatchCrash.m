@@ -7,9 +7,9 @@
 //
 //  http://www.jianshu.com/p/ea1e6b210b27
 
-#import "CatchCrash.h"
+#import "BPCatchCrash.h"
 
-@implementation CatchCrash
+@implementation BPCatchCrash
 
 void uncaughtExceptionHandler(NSException *exception) {
     NSDateFormatter *formatter =[[NSDateFormatter alloc] init];

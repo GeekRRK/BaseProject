@@ -10,9 +10,16 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CommonCrypto/CommonCrypto.h>
+#import "BPCatchCrash.h"
 
-@interface Utils : NSObject
+@interface BPUtil : NSObject
+
++ (void)switchLocalizedLanguage;
+
++ (void)setupDDLog;
 
 + (void)showMessage:(NSString *)message;
-    
+
++ (UIColor *)colorWithHexString:(NSString *)stringToConvert;
+
 @end

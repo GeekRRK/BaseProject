@@ -12,22 +12,29 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-#import "Interface.h"
+#import "BPDB.h"
 #import "YYModel.h"
-#import "Utils.h"
+#import "BPUtil.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
 static const DDLogLevel ddLogLevel = DDLogLevelAll;
 
 #ifdef DEBUG
-    #define DXLog(format, ...) DDLogInfo((@"[fileName:%s]" "[functionName:%s]" "[lineNumber:%d]" format), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+
 #else
-    #define DXLog(...);
+
 #endif
 
-#define APPDELEGATE     ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+// Util
+#define LOCALSTR(str)               NSLocalizedString(str, nil)
+#define APPDELEGATE                 ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
-#define SCREENWIDTH     [[UIScreen mainScreen] bounds].size.width
-#define SCREENHEIGHT    [[UIScreen mainScreen] bounds].size.height
+// Color
+#define BP_COLOR_GREEN              [BPUtil colorWithHexString:@"2AB759"]
+
+// Size
+#define SCREENWIDTH                 [[UIScreen mainScreen] bounds].size.width
+#define SCREENHEIGHT                [[UIScreen mainScreen] bounds].size.height
+#define BP_NAVBAR_TITLE_FONTSIZE    19
 
 #endif /* PrefixHeader_pch */

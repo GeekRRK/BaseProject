@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "CatchCrash.h"
 #import "ViewController.h"
 
 @interface AppDelegate ()
@@ -16,24 +15,9 @@
 
 @implementation AppDelegate
 
-- (void)switchLocalizedLanguage {
-    NSArray *langArr1 = [[NSUserDefaults standardUserDefaults] valueForKey:@"AppleLanguages"];
-    NSString *language1 = langArr1.firstObject;
-    NSLog(@"Before switch：%@", language1);
-    
-    NSArray *lans = @[@"en"];
-    [[NSUserDefaults standardUserDefaults] setObject:lans forKey:@"AppleLanguages"];
-    
-    NSArray *langArr2 = [[NSUserDefaults standardUserDefaults] valueForKey:@"AppleLanguages"];
-    NSString *language2 = langArr2.firstObject;
-    NSLog(@"After switch：%@", language2);
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [self switchLocalizedLanguage];
     
-    [self setupDDLog];
     [self setRootVC];
     
     return YES;
@@ -77,22 +61,21 @@
     ViewController *vc1 = [[ViewController alloc] init];
     ViewController *vc2 = [[ViewController alloc] init];
     ViewController *vc3 = [[ViewController alloc] init];
-    ViewController *vc4 = [[ViewController alloc] init];
     
-    NSArray *vcs = @[vc1, vc2, vc3, vc4];
-    NSArray *titles = @[@"Tab1", @"Tab2", @"Tab3", @"Tab4"];
-    NSArray *tabItemImages = @[@"icon_tab1", @"icon_tab2", @"icon_tab3", @"icon_tab4"];
+    NSArray *vcs = @[vc1, vc2, vc3];
+    NSArray *titles = @[LOCALSTR(@"Homepage"), LOCALSTR(@"Video"), LOCALSTR(@"Me")];
+    NSArray *tabItemImages = @[@"tabbar_homepage", @"tabbar_video", @"tabbar_me"];
     
     NSMutableArray *navCtrls = [[NSMutableArray alloc] init];
     for (int i = 0; i < vcs.count; ++i) {
         UIViewController *itemVC = vcs[i];
         itemVC.title = titles[i];
         UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:itemVC];
-        navVC.navigationBar.barTintColor = [UIColor greenColor];
+        navVC.navigationBar.barTintColor = [UIColor blackColor];
         navVC.navigationBar.tintColor = [UIColor whiteColor];
         navVC.navigationBar.translucent = NO;
         [navVC.navigationBar setTitleTextAttributes:
-         @{NSFontAttributeName:[UIFont systemFontOfSize:15], NSForegroundColorAttributeName:[UIColor whiteColor]}];
+         @{NSFontAttributeName:[UIFont systemFontOfSize:BP_NAVBAR_TITLE_FONTSIZE], NSForegroundColorAttributeName:[UIColor whiteColor]}];
         
         NSString *imgName = tabItemImages[i];
         NSString *selImgName = [[NSString alloc] initWithFormat:@"%@_sel", tabItemImages[i]];
@@ -101,9 +84,9 @@
                                                  selectedImage:[[UIImage imageNamed:selImgName]
                                                                 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         
-        [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:[UIColor grayColor]}
+        [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:[UIColor whiteColor]}
                                                  forState:UIControlStateNormal];
-        [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:[UIColor greenColor]}
+        [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:BP_COLOR_GREEN}
                                                  forState:UIControlStateSelected];
         
         [navCtrls addObject:navVC];
@@ -112,23 +95,11 @@
     NSArray *navVCArray = [[NSArray alloc] initWithArray:navCtrls];
     UITabBarController *tabBarVC = [[UITabBarController alloc] init];
     tabBarVC.viewControllers = navVCArray;
-    tabBarVC.tabBar.barTintColor = [UIColor yellowColor];
+    tabBarVC.tabBar.barTintColor = [UIColor blackColor];
+    tabBarVC.tabBar.tintColor = BP_COLOR_GREEN;
     tabBarVC.tabBar.translucent = NO;
     
     self.window.rootViewController = tabBarVC;
-}
-
-- (void)setupDDLog {
-    [CatchCrash uploadErrorLog];
-    
-    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
-    
-    [DDLog addLogger:[DDTTYLogger sharedInstance]];
-    
-    DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
-    fileLogger.rollingFrequency = 60 * 60 * 24;
-    fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
-    [DDLog addLogger:fileLogger];
 }
 
 @end

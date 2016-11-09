@@ -6,9 +6,9 @@
 //  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
-#import "HookUtility.h"
+#import "BPHookUtility.h"
 
-@implementation HookUtility
+@implementation BPHookUtility
 
 + (void)swizzlingInClass:(Class)class originalSelector:(SEL)originalSelector swizzledSelector:(SEL)swizzledSelector {
     Method originalMethod = class_getInstanceMethod(class, originalSelector);

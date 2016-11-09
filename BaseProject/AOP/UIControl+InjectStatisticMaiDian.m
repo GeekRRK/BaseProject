@@ -7,7 +7,7 @@
 //
 
 #import "UIControl+InjectStatisticMaiDian.h"
-#import "HookUtility.h"
+#import "BPHookUtility.h"
 
 @implementation UIControl (InjectStatisticMaiDian)
 
@@ -16,7 +16,7 @@
     dispatch_once(&onceToken, ^{
         SEL originalSelector = @selector(sendAction:to:forEvent:);
         SEL swizzledSelector = @selector(swiz_sendAction:to:forEvent:);
-        [HookUtility swizzlingInClass:[self class] originalSelector:originalSelector swizzledSelector:swizzledSelector];
+        [BPHookUtility swizzlingInClass:[self class] originalSelector:originalSelector swizzledSelector:swizzledSelector];
     });
 }
 
@@ -28,7 +28,7 @@
 - (void)performUserStatisticAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
     NSString *actionString = NSStringFromSelector(action);
     NSString *targetName = NSStringFromClass([target class]);
-    NSDictionary *configDict = [HookUtility dictionaryFromUserStatisticsConfigPlist];
+    NSDictionary *configDict = [BPHookUtility dictionaryFromUserStatisticsConfigPlist];
     NSString *eventID = configDict[targetName][@"ControlEventIDs"][actionString];
     
     if (eventID) {

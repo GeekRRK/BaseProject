@@ -13,7 +13,7 @@
 typedef void (^SuccessBlock)(NSDictionary *responseObject);
 typedef void (^FailureBlock)(NSError *error);
 
-@interface Interface : NSObject
+@interface BPInterface : NSObject
 
 + (void)request:(NSString *)api param:(NSDictionary *)param success:(SuccessBlock)successBlock failure:(FailureBlock)failureBlock;
 

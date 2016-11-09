@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 #import <FMDB.h>
 
-@interface DB : NSObject
+@interface BPDB : NSObject
 
 + (void)createUserTable:(NSString *)tableName;
 

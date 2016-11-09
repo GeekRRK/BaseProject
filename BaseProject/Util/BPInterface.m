@@ -7,9 +7,9 @@
 //
 //  网络封装接口
 
-#import "Interface.h"
+#import "BPInterface.h"
 
-@implementation Interface
+@implementation BPInterface
 
 + (AFURLSessionManager *)shareURLSessionMgr {
     static AFURLSessionManager *URLSessionMgr;
@@ -26,12 +26,12 @@
     NSURL *URL = [NSURL URLWithString:api];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
     [request setHTTPMethod:@"POST"];
-    NSString *paramURL = [Interface convertParam2URL:param];
+    NSString *paramURL = [BPInterface convertParam2URL:param];
     NSData *paramData = [paramURL dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
     [request setHTTPBody:paramData];
     
-    [Interface shareURLSessionMgr].responseSerializer = [AFHTTPResponseSerializer serializer];
-    NSURLSessionDataTask *dataTask = [[Interface shareURLSessionMgr] dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+    [BPInterface shareURLSessionMgr].responseSerializer = [AFHTTPResponseSerializer serializer];
+    NSURLSessionDataTask *dataTask = [[BPInterface shareURLSessionMgr] dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         if (error) {
             failureBlock(error);
         } else {
@@ -71,7 +71,7 @@
         }
     } error:nil];
     
-    NSURLSessionUploadTask *uploadTask = [[Interface shareURLSessionMgr] uploadTaskWithStreamedRequest:request progress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+    NSURLSessionUploadTask *uploadTask = [[BPInterface shareURLSessionMgr] uploadTaskWithStreamedRequest:request progress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         if (error) {
             failureBlock(error);
         } else {

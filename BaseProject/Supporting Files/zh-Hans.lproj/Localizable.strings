@@ -7,3 +7,8 @@
 */
 
 "click" = "点击";
+
+// Tabbar
+"Homepage" = "主页";
+"Video" = "视频";
+"Me" = "我";

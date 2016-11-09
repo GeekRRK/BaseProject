@@ -7,7 +7,7 @@
 //
 
 #import "UIViewController+InjectStatisticMaiDian.h"
-#import "HookUtility.h"
+#import "BPHookUtility.h"
 
 @implementation UIViewController (InjectStatisticMaiDian)
 
@@ -16,11 +16,11 @@
     dispatch_once(&onceToken, ^{
         SEL originalSelector = @selector(viewWillAppear:);
         SEL swizzledSelector = @selector(swiz_viewWillAppear:);
-        [HookUtility swizzlingInClass:[self class] originalSelector:originalSelector swizzledSelector:swizzledSelector];
+        [BPHookUtility swizzlingInClass:[self class] originalSelector:originalSelector swizzledSelector:swizzledSelector];
         
         SEL orignalDisappearSelector = @selector(viewWillDisappear:);
         SEL swizzledDisappearSelector = @selector(swiz_viewWillDisappear:);
-        [HookUtility swizzlingInClass:[self class] originalSelector:orignalDisappearSelector swizzledSelector:swizzledDisappearSelector];
+        [BPHookUtility swizzlingInClass:[self class] originalSelector:orignalDisappearSelector swizzledSelector:swizzledDisappearSelector];
     });
 }
 
@@ -49,7 +49,7 @@
 }
 
 - (NSString *)pageEventID:(BOOL)bEnterPage {
-    NSDictionary *configDict = [HookUtility dictionaryFromUserStatisticsConfigPlist];
+    NSDictionary *configDict = [BPHookUtility dictionaryFromUserStatisticsConfigPlist];
     NSString *selfClassName = NSStringFromClass([self class]);
     
     return configDict[selfClassName][@"PageEventIDs"][bEnterPage ? @"Enter" : @"Leave"];

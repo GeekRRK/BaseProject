@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CatchCrash : NSObject
+@interface BPCatchCrash : NSObject
 
 void uncaughtExceptionHandler(NSException *exception);
 

@@ -7,13 +7,13 @@
 //
 //  数据库封闭接口
 
-#import "DB.h"
+#import "BPDB.h"
 #import "UserModel.h"
 
 #define CACHE_DIR                 [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
-#define DATABASE_PATH             @"nxh.db"
+#define DATABASE_PATH             @"bp.db"
 
-@implementation DB
+@implementation BPDB
 
 + (FMDatabase *)shareDateBase {
     static FMDatabase *db;
@@ -31,11 +31,11 @@
 
 + (void)createUserTable:(NSString *)tableName {
     NSString *sql = [NSString stringWithFormat:@"create table if not exists %@ (m_id text primary key, name text, tel text)", tableName];
-    [[DB shareDateBase] executeUpdate:sql];
+    [[BPDB shareDateBase] executeUpdate:sql];
 }
 
 + (void)replaceModel:(id)model intoTable:(NSString *)tableName {
-    [DB createUserTable:tableName];
+    [BPDB createUserTable:tableName];
     
     Class class = [model class];
     
@@ -72,16 +72,16 @@
     }
     sql = [sql stringByAppendingString:@")"];
 
-    [[DB shareDateBase] executeUpdate:sql];
+    [[BPDB shareDateBase] executeUpdate:sql];
 }
 
 + (id)queryModelById:(NSString *)mId class:(Class)class fromTable:(NSString *)tableName {
-    [DB createUserTable:tableName];
+    [BPDB createUserTable:tableName];
     
     id model = [[class alloc] init];
     
     NSString *querySql = [NSString stringWithFormat:@"select * from %@ where m_id = '%@'", tableName, mId];
-    FMResultSet *resultSet = [[DB shareDateBase] executeQuery:querySql];
+    FMResultSet *resultSet = [[BPDB shareDateBase] executeQuery:querySql];
     
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
