@@ -16,6 +16,7 @@
 #import "YYModel.h"
 #import "BPUtil.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
+#import "BPInterface.h"
 
 static const DDLogLevel ddLogLevel = DDLogLevelAll;
 

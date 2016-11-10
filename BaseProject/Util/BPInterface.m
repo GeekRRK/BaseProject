@@ -22,7 +22,10 @@
     return URLSessionMgr;
 }
 
-+ (void)request:(NSString *)api param:(NSDictionary *)param success:(SuccessBlock)successBlock failure:(FailureBlock)failureBlock {
++ (void)request:(NSString *)api
+          param:(NSDictionary *)param
+        success:(SuccessBlock)successBlock
+        failure:(FailureBlock)failureBlock {
     NSURL *URL = [NSURL URLWithString:api];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
     [request setHTTPMethod:@"POST"];

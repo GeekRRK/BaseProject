@@ -100,4 +100,9 @@
     return nil;
 }
 
++ (void)deleteModelById:(NSString *)mId fromTable:(NSString *)tableName {
+    NSString *sql = [NSString stringWithFormat:@"delete from %@ where groupid = '%@'", tableName, mId];
+    [[BPDB shareDateBase] executeUpdate:sql];
+}
+
 @end

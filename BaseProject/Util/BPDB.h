@@ -18,4 +18,6 @@
 
 + (id)queryModelById:(NSString *)mId class:(Class)class fromTable:(NSString *)tableName;
 
++ (void)deleteModelById:(NSString *)mId fromTable:(NSString *)tableName;
+
 @end

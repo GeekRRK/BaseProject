@@ -21,17 +21,21 @@
 }
 
 - (void)testDB {
-    [BPDB createUserTable:@"userTable"];
+    NSString *tableName = @"userTable";
+    
+    [BPDB createUserTable:tableName];
     
     UserModel *userModel = [[UserModel alloc] init];
     userModel.m_id = @"1";
     userModel.name = @"iOS";
     userModel.tel = @"18516282405";
-    [BPDB replaceModel:userModel intoTable:@"userTable"];
+    [BPDB replaceModel:userModel intoTable:tableName];
     
-    UserModel *curUserModel = [BPDB queryModelById:@"1" class:[userModel class] fromTable:@"userTable"];
+    UserModel *curUserModel = [BPDB queryModelById:@"1" class:[userModel class] fromTable:tableName];
     
-    NSLog(@"%@, %@, %@", curUserModel.m_id, curUserModel.name, curUserModel.tel);
+    NSLog(@"userId: %@, userName: %@, userPhone: %@", curUserModel.m_id, curUserModel.name, curUserModel.tel);
+    
+    [BPDB deleteModelById:@"1" fromTable:tableName];
 }
 
 @end
