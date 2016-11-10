@@ -26,6 +26,7 @@
           param:(NSDictionary *)param
         success:(SuccessBlock)successBlock
         failure:(FailureBlock)failureBlock {
+    
     NSURL *URL = [NSURL URLWithString:api];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
     [request setHTTPMethod:@"POST"];
@@ -44,7 +45,12 @@
     [dataTask resume];
 }
 
-+ (void)request2UploadFile:(NSString *)api files:(NSDictionary *)files param:(NSDictionary *)param success:(SuccessBlock)successBlock failure:(FailureBlock)failureBlock {
++ (void)request2UploadFile:(NSString *)api
+                     files:(NSDictionary *)files
+                     param:(NSDictionary *)param
+                   success:(SuccessBlock)successBlock
+                   failure:(FailureBlock)failureBlock {
+    
     NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:api parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         
         NSArray *sortedFileKeys = [files.allKeys sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
