@@ -10,6 +10,8 @@
 #import <Foundation/Foundation.h>
 #import <AFURLSessionManager.h>
 
+#define API_USERINFO @""
+
 typedef void (^SuccessBlock)(NSDictionary *responseObject);
 typedef void (^FailureBlock)(NSError *error);
 

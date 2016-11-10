@@ -20,10 +20,10 @@
 
 static const DDLogLevel ddLogLevel = DDLogLevelAll;
 
-#ifdef DEBUG
-
+#ifndef DEBUG
+    #define SERVER_ADDRESS @""
 #else
-
+    #define SERVER_ADDRESS @""
 #endif
 
 // Util

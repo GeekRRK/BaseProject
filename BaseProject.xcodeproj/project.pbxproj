@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AE78A9071DD4276700869859 /* Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = AE78A9061DD4276700869859 /* Guide.docx */; };
+		AE78A90A1DD4709900869859 /* BadCode.m in Sources */ = {isa = PBXBuildFile; fileRef = AE78A9091DD4709900869859 /* BadCode.m */; };
+		AE78A90D1DD473A200869859 /* CallUtilCode.m in Sources */ = {isa = PBXBuildFile; fileRef = AE78A90C1DD473A200869859 /* CallUtilCode.m */; };
 		AE9D850C1DCDA60300CAF67F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D84F21DCDA60300CAF67F /* AppDelegate.m */; };
 		AE9D850F1DCDA60300CAF67F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9D84F91DCDA60300CAF67F /* Assets.xcassets */; };
 		AE9D85101DCDA60300CAF67F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9D84FA1DCDA60300CAF67F /* LaunchScreen.storyboard */; };
@@ -46,6 +48,10 @@
 /* Begin PBXFileReference section */
 		AE473E3A1DCD684900016040 /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE78A9061DD4276700869859 /* Guide.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Guide.docx; sourceTree = "<group>"; };
+		AE78A9081DD4709900869859 /* BadCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadCode.h; sourceTree = "<group>"; };
+		AE78A9091DD4709900869859 /* BadCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadCode.m; sourceTree = "<group>"; };
+		AE78A90B1DD473A200869859 /* CallUtilCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallUtilCode.h; sourceTree = "<group>"; };
+		AE78A90C1DD473A200869859 /* CallUtilCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallUtilCode.m; sourceTree = "<group>"; };
 		AE9D84F11DCDA60300CAF67F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AE9D84F21DCDA60300CAF67F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AE9D84F91DCDA60300CAF67F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,6 +154,10 @@
 			isa = PBXGroup;
 			children = (
 				AE78A9061DD4276700869859 /* Guide.docx */,
+				AE78A9081DD4709900869859 /* BadCode.h */,
+				AE78A9091DD4709900869859 /* BadCode.m */,
+				AE78A90B1DD473A200869859 /* CallUtilCode.h */,
+				AE78A90C1DD473A200869859 /* CallUtilCode.m */,
 			);
 			path = Doc;
 			sourceTree = "<group>";
@@ -472,8 +482,10 @@
 				AED7E7891DD301350034DDDE /* ViewController.m in Sources */,
 				AEC6C2CC1DD17B0F00F9ABA0 /* HZQPickerView.m in Sources */,
 				AE9D85131DCDA60300CAF67F /* main.m in Sources */,
+				AE78A90A1DD4709900869859 /* BadCode.m in Sources */,
 				AE9D85231DCDCDFD00CAF67F /* UIControl+InjectStatisticSpot.m in Sources */,
 				AE9D85151DCDA60300CAF67F /* BPInterface.m in Sources */,
+				AE78A90D1DD473A200869859 /* CallUtilCode.m in Sources */,
 				AE9D85141DCDA60300CAF67F /* BPDB.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
