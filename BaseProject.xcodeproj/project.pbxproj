@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE78A9071DD4276700869859 /* Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = AE78A9061DD4276700869859 /* Guide.docx */; };
 		AE9D850C1DCDA60300CAF67F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9D84F21DCDA60300CAF67F /* AppDelegate.m */; };
 		AE9D850F1DCDA60300CAF67F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9D84F91DCDA60300CAF67F /* Assets.xcassets */; };
 		AE9D85101DCDA60300CAF67F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9D84FA1DCDA60300CAF67F /* LaunchScreen.storyboard */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		AE473E3A1DCD684900016040 /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE78A9061DD4276700869859 /* Guide.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Guide.docx; sourceTree = "<group>"; };
 		AE9D84F11DCDA60300CAF67F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AE9D84F21DCDA60300CAF67F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AE9D84F91DCDA60300CAF67F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				AE9D84F01DCDA60300CAF67F /* BaseProject */,
 				AEC6C3051DD1A68900F9ABA0 /* BaseProjectTests */,
+				AE78A9051DD4276700869859 /* Doc */,
 				AE473E3B1DCD684900016040 /* Products */,
 				B61EDA4E8931488C1615D15E /* Pods */,
 				315306899ECF8F91C47784F0 /* Frameworks */,
@@ -139,6 +142,14 @@
 				AEC6C3041DD1A68900F9ABA0 /* BaseProjectTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AE78A9051DD4276700869859 /* Doc */ = {
+			isa = PBXGroup;
+			children = (
+				AE78A9061DD4276700869859 /* Guide.docx */,
+			);
+			path = Doc;
 			sourceTree = "<group>";
 		};
 		AE9D84F01DCDA60300CAF67F /* BaseProject */ = {
@@ -381,6 +392,7 @@
 				AE9D850F1DCDA60300CAF67F /* Assets.xcassets in Resources */,
 				AEC6C2CD1DD17B0F00F9ABA0 /* HZQPickerView.xib in Resources */,
 				AE9D85101DCDA60300CAF67F /* LaunchScreen.storyboard in Resources */,
+				AE78A9071DD4276700869859 /* Guide.docx in Resources */,
 				AEC02F9F1DD059EA00710A62 /* avatar@2x.png in Resources */,
 				AE9D851E1DCDCD8800CAF67F /* UserStatistic.plist in Resources */,
 				AEC02F851DD04C1700710A62 /* InfoPlist.strings in Resources */,
