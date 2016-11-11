@@ -1,37 +1,20 @@
 //
-//  CallUtilCode.m
+//  BPDBTests.m
 //  BaseProject
 //
-//  Created by GeekRRK on 16/11/10.
-//  Copyright © 2016年 GeekRRK. All rights reserved.
+//  Created by UGOMEDIA on 16/11/11.
+//  Copyright © 2016年 UgoMedia. All rights reserved.
 //
 
-#import "CallUtilCode.h"
+#import <XCTest/XCTest.h>
 #import "UserModel.h"
 #import "BPDB.h"
 
-@interface CallUtilCode ()
+@interface BPDBTests : XCTestCase
 
 @end
 
-@implementation CallUtilCode
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
-// 网络请求
-- (void)testBPInterface {
-    NSString *api = SERVER_ADDRESS API_USERINFO;
-    NSDictionary *params = @{@"userId":@"1"};
-    [BPInterface request:api
-                   param:params
-                 success:^(NSDictionary *responseObject) {
-                     NSLog(@"%@", responseObject);
-                 } failure:^(NSError *error) {
-                     NSLog(@"%@", error.localizedDescription);
-                 }];
-}
+@implementation BPDBTests
 
 // 数据库操作
 - (void)testBPDB {
