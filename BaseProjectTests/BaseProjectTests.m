@@ -2,8 +2,8 @@
 //  BaseProjectTests.m
 //  BaseProjectTests
 //
-//  Created by UGOMEDIA on 16/11/8.
-//  Copyright © 2016年 UgoMedia. All rights reserved.
+//  Created by GeekRRK on 16/11/8.
+//  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
