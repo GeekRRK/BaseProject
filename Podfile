@@ -6,4 +6,9 @@ target 'BaseProject' do
     pod 'FMDB', '2.6.2'
     pod 'YYModel'
     pod 'CocoaLumberjack'
+    pod 'MJRefresh', '3.1.9'
+    pod 'MBProgressHUD'
+    pod 'Masonry'
+    pod 'SDCycleScrollView', '1.65'
+    pod 'IQKeyboardManager', '3.3.7'
 end
