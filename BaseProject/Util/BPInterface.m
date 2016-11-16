@@ -9,6 +9,11 @@
 
 #import "BPInterface.h"
 
+#define SIGN_KEY                                    @"m1ctZ[M2N12+H{q^HKA[D"
+#define AES_ECB_KEY                                 @"q)w]Y|&!X4nCEi:K"
+
+#define ENCRYPT @"ENCRYPT"
+
 @implementation BPInterface
 
 + (AFURLSessionManager *)shareURLSessionMgr {
@@ -31,6 +36,12 @@
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
     [request setHTTPMethod:@"POST"];
     NSString *paramURL = [BPInterface convertParam2URL:param];
+    
+#ifdef ENCRYPT
+    NSString *sign = [BPInterface signFromUrl:paramURL];
+    paramURL = [NSString stringWithFormat:@"%@&sign=%@", paramURL, sign];
+#endif
+    
     NSData *paramData = [paramURL dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
     [request setHTTPBody:paramData];
     
@@ -70,8 +81,14 @@
             
             [formData appendPartWithFileURL:[NSURL fileURLWithPath:value] name:key fileName:fileName mimeType:mineType error:nil];
         }
-        
+    
         NSArray *sortedParamKeys = [param.allKeys sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+        
+#ifdef ENCRYPT
+        NSDictionary * signedParams = [BPInterface signedParamsFrom:param];
+        sortedParamKeys = [signedParams.allKeys sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+#endif
+        
         for (int i = 0; i < param.count; ++i) {
             NSString *key = sortedParamKeys[i];
             NSString *value = param[key];
@@ -115,6 +132,23 @@
     urlStr = [urlStr stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"&"]];
     
     return urlStr;
+}
+
++ (NSString *)signFromUrl:(NSString *)urlStr {
+    NSString *wait2Md5Str = [urlStr stringByAppendingString:SIGN_KEY];
+    NSString *sign = [BPUtil md5:wait2Md5Str];
+    
+    return sign;
+}
+
++ (NSDictionary *)signedParamsFrom:(NSDictionary *)param {
+    NSString *urlStr = [BPInterface convertParam2URL:param];
+    NSString *sign = [BPInterface signFromUrl:urlStr];
+
+    NSMutableDictionary *signedDict = [NSMutableDictionary dictionaryWithDictionary:param];
+    [signedDict setObject:sign forKey:@"sign"];
+    
+    return signedDict;
 }
 
 @end

@@ -22,4 +22,6 @@
 
 + (UIColor *)colorWithHexString:(NSString *)stringToConvert;
 
++ (NSString *)md5:(NSString *)str;
+
 @end
