@@ -8,6 +8,8 @@
 //  网络封装接口
 
 #import "BPInterface.h"
+#import "Base64.h"
+#import "NSData+AES.h"
 
 #define SIGN_KEY                                    @"m1ctZ[M2N12+H{q^HKA[D"
 #define AES_ECB_KEY                                 @"q)w]Y|&!X4nCEi:K"
@@ -50,7 +52,15 @@
         if (error) {
             failureBlock(error);
         } else {
+        #ifndef ENCRYPT
+            NSDictionary *resDict = [CFInterface convertEncryptedData2Dict:responseObject];
+            BOOL res = [BPInterface preprocessResponseDict:resDict];
+            if (res) {
+                successBlock(resDict);
+            }
+        #else
             successBlock(responseObject);
+        #endif
         }
     }];
     [dataTask resume];
@@ -101,7 +111,16 @@
         if (error) {
             failureBlock(error);
         } else {
+            
+        #ifndef ENCRYPT
+            NSDictionary *resDict = [CFInterface convertEncryptedData2Dict:responseObject];
+            BOOL res = [BPInterface preprocessResponseDict:resDict];
+            if (res) {
+                successBlock(resDict);
+            }
+        #else
             successBlock(responseObject);
+        #endif
         }
     }];
     [uploadTask resume];
@@ -149,6 +168,34 @@
     [signedDict setObject:sign forKey:@"sign"];
     
     return signedDict;
+}
+
++ (NSDictionary *)convertEncryptedData2Dict:(NSData *)responseObject {
+    NSString *base64DecodedStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+    NSData *aesData = [base64DecodedStr base64DecodedData];
+
+    NSData *base64Data = [aesData AES128DecryptedDataWithKey:AES_ECB_KEY];
+    
+    NSString *base64Str = [[NSString alloc] initWithData:base64Data encoding:NSUTF8StringEncoding];
+    NSString *decodedStr = [base64Str base64DecodedString];
+    
+    if (decodedStr == nil) {
+        [BPUtil showMessage:@"Encryted data is not correct."];
+        return nil;
+    }
+
+    NSData *jsonAsData = [decodedStr dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+    NSDictionary *resDict = [NSJSONSerialization JSONObjectWithData:jsonAsData options:NSJSONReadingAllowFragments error:nil];
+    
+    return resDict;
+}
+
++ (BOOL)preprocessResponseDict:(NSDictionary *)dict {
+    if ([dict[@"status"] intValue] == -1) {
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end
