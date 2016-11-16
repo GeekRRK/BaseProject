@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <MBProgressHUD.h>
 
 @interface BPInterfaceTests : XCTestCase
 
@@ -18,11 +19,17 @@
 - (void)testBPInterface {
     NSString *api = SERVER_ADDRESS API_USERINFO;
     NSDictionary *params = @{@"userId":@"1"};
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [BPInterface request:api
                    param:params
                  success:^(NSDictionary *responseObject) {
+                     [MBProgressHUD hideHUDForView:self.view animated:YES];
+                     
                      NSLog(@"%@", responseObject);
                  } failure:^(NSError *error) {
+                     [MBProgressHUD hideHUDForView:self.view animated:YES];
+                     
                      NSLog(@"%@", error.localizedDescription);
                  }];
 }
