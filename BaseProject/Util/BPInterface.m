@@ -11,10 +11,9 @@
 #import "Base64.h"
 #import "NSData+AES.h"
 
-#define SIGN_KEY                                    @"m1ctZ[M2N12+H{q^HKA[D"
-#define AES_ECB_KEY                                 @"q)w]Y|&!X4nCEi:K"
-
-#define ENCRYPT @"ENCRYPT"
+#define ENCRYPT         @"ENCRYPT"
+#define SIGN_KEY        @"m1ctZ[M2N12+H{q^HKA[D"
+#define AES_ECB_KEY     @"q)w]Y|&!X4nCEi:K"
 
 @implementation BPInterface
 
