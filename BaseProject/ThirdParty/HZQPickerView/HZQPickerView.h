@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^HZQBlock)(int index1st, int index2nd, int index3rd);
+typedef void(^HZQBlock)(NSInteger index1st, NSInteger index2nd, NSInteger index3rd);
 
 @interface HZQPickerView : UIView
 

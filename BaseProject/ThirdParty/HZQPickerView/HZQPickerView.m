@@ -32,9 +32,6 @@ static NSString *curTitle;
     HZQPickerView *pickerView = [[[NSBundle mainBundle] loadNibNamed:@"HZQPickerView" owner:nil options:nil] firstObject];
     pickerView.frame = parentVC.view.bounds;
     [parentVC.view addSubview:pickerView];
-    
-    NSArray *arr = @[@{@"河北省":@[@"石家庄", @"承德"]}, @{@"上海市":@[@"嘉定区", @"黄浦区"]}];
-    NSLog(@"%@", arr);
 }
 
 - (void)awakeFromNib {
@@ -47,7 +44,7 @@ static NSString *curTitle;
     
     _sureBtn.layer.cornerRadius = 3;
     _sureBtn.layer.borderWidth = 1;
-    _sureBtn.layer.borderColor = [UIColor redColor].CGColor;
+    _sureBtn.layer.borderColor = [UIColor greenColor].CGColor;
     _sureBtn.layer.masksToBounds = YES;
     
     _cannelBtn.layer.cornerRadius = 3;
@@ -90,7 +87,18 @@ static NSString *curTitle;
         [indexs addObject:indexObj];
     }
     
-    curBlock(1, 2, 3);
+    NSInteger index1st = [_pickerView selectedRowInComponent:0];
+    
+    if (curNumOfComponent == 3) {
+        NSInteger index2nd = [_pickerView selectedRowInComponent:1];
+        NSInteger index3rd = [_pickerView selectedRowInComponent:2];
+        curBlock(index1st, index2nd, index3rd);
+    } else if (curNumOfComponent == 2) {
+        NSInteger index2nd = [_pickerView selectedRowInComponent:1];
+        curBlock(index1st, index2nd, 0);
+    } else {
+        curBlock(index1st, 0, 0);
+    }
     
     [self animationbegin:sender];
     
