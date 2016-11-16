@@ -11,7 +11,7 @@
 #import "Base64.h"
 #import "NSData+AES.h"
 
-#define ENCRYPT         @"ENCRYPT"
+//#define ENCRYPT         @"ENCRYPT"
 #define SIGN_KEY        @"m1ctZ[M2N12+H{q^HKA[D"
 #define AES_ECB_KEY     @"q)w]Y|&!X4nCEi:K"
 
@@ -52,7 +52,7 @@
             failureBlock(error);
         } else {
         #ifndef ENCRYPT
-            NSDictionary *resDict = [CFInterface convertEncryptedData2Dict:responseObject];
+            NSDictionary *resDict = [BPInterface convertEncryptedData2Dict:responseObject];
             BOOL res = [BPInterface preprocessResponseDict:resDict];
             if (res) {
                 successBlock(resDict);
@@ -112,7 +112,7 @@
         } else {
             
         #ifndef ENCRYPT
-            NSDictionary *resDict = [CFInterface convertEncryptedData2Dict:responseObject];
+            NSDictionary *resDict = [BPInterface convertEncryptedData2Dict:responseObject];
             BOOL res = [BPInterface preprocessResponseDict:resDict];
             if (res) {
                 successBlock(resDict);
