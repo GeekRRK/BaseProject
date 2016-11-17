@@ -109,6 +109,12 @@ static NSString *curTitle;
     return curNumOfComponent;
 }
 
+-(CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
+    float width = _pickerView.frame.size.width / curNumOfComponent;
+    
+    return width;
+}
+
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     NSArray *titleOfRows = curTitles[component];
     
