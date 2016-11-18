@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE5FBD9D1DDEE9930031D57F /* BPAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5FBD9C1DDEE9930031D57F /* BPAlertView.m */; };
 		AE78A9071DD4276700869859 /* Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = AE78A9061DD4276700869859 /* Guide.docx */; };
 		AE78A90A1DD4709900869859 /* BadCode.m in Sources */ = {isa = PBXBuildFile; fileRef = AE78A9091DD4709900869859 /* BadCode.m */; };
 		AE828DEC1DD569D700235DC6 /* BPInterfaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE828DEB1DD569D700235DC6 /* BPInterfaceTests.m */; };
@@ -52,6 +53,8 @@
 		43C4864AB0CC3C3E1DEEE553 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 		A64EFFB3F224598667B2063F /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		AE473E3A1DCD684900016040 /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE5FBD9B1DDEE9930031D57F /* BPAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPAlertView.h; sourceTree = "<group>"; };
+		AE5FBD9C1DDEE9930031D57F /* BPAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPAlertView.m; sourceTree = "<group>"; };
 		AE78A9061DD4276700869859 /* Guide.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Guide.docx; sourceTree = "<group>"; };
 		AE78A9081DD4709900869859 /* BadCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadCode.h; sourceTree = "<group>"; };
 		AE78A9091DD4709900869859 /* BadCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadCode.m; sourceTree = "<group>"; };
@@ -254,6 +257,8 @@
 				AEC6C2C71DD17B0F00F9ABA0 /* HZQPickerView.h */,
 				AEC6C2C81DD17B0F00F9ABA0 /* HZQPickerView.m */,
 				AEC6C2C91DD17B0F00F9ABA0 /* HZQPickerView.xib */,
+				AE5FBD9B1DDEE9930031D57F /* BPAlertView.h */,
+				AE5FBD9C1DDEE9930031D57F /* BPAlertView.m */,
 			);
 			path = HZQPickerView;
 			sourceTree = "<group>";
@@ -497,6 +502,7 @@
 				AE9D85271DCDD5BA00CAF67F /* BPCatchCrash.m in Sources */,
 				AED7E7931DD322FD0034DDDE /* BPTouchScrollView.m in Sources */,
 				AE9D851C1DCDCA7000CAF67F /* BPHookUtil.m in Sources */,
+				AE5FBD9D1DDEE9930031D57F /* BPAlertView.m in Sources */,
 				AE9D85171DCDA60300CAF67F /* BPUtil.m in Sources */,
 				AE89995F1DDC522E00FF768E /* Base64.m in Sources */,
 				AED7E7891DD301350034DDDE /* ViewController.m in Sources */,
