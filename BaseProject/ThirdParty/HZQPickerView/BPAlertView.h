@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^BPAlertBlock)(void);
+
 @interface BPAlertView : UIView
 
-+ (void)showParentVC:(UIViewController *)parentVC;
++ (void)showParentVC:(UIViewController *)parentVC block:(BPAlertBlock)block;
 
 @end
