@@ -11,7 +11,18 @@
 static HZQBlock curBlock;
 static NSArray *curTitles;
 static int curNumOfComponent;
-static NSString *curTitle;
+
+static int curSelectedColumn;
+static int curSelectedRow;
+
+static NSArray *curDataModel;
+
+@interface HZQDataModel : NSObject
+
+@property (copy, nonatomic) NSString *title;
+@property (strong, nonatomic) NSArray *sub;
+
+@end
 
 @interface HZQPickerView () <UIPickerViewDataSource, UIPickerViewDelegate>
 
@@ -26,6 +37,16 @@ static NSString *curTitle;
 
 + (void)showPickerViewInVC:(UIViewController *)parentVC titles:(NSArray *)titles numOfComponent:(int)numOfComponent block:(HZQBlock)block {
     curTitles = titles;
+    curBlock = block;
+    curNumOfComponent = numOfComponent;
+    
+    HZQPickerView *pickerView = [[[NSBundle mainBundle] loadNibNamed:@"HZQPickerView" owner:nil options:nil] firstObject];
+    pickerView.frame = parentVC.view.bounds;
+    [parentVC.view addSubview:pickerView];
+}
+
++ (void)showPickerViewInVC:(UIViewController *)parentVC dataModels:(NSArray *)dataModels numOfComponent:(int)numOfComponent block:(HZQBlock)block {
+    curDataModel = dataModels;
     curBlock = block;
     curNumOfComponent = numOfComponent;
     
@@ -116,15 +137,23 @@ static NSString *curTitle;
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    NSArray *titleOfRows = curTitles[component];
-    
-    return titleOfRows.count;
+    if (curDataModel) {
+        return 0;
+    } else {
+        NSArray *titleOfRows = curTitles[component];
+        
+        return titleOfRows.count;
+    }
 }
 
 - (nullable NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    NSString *title = curTitles[component][row];
-    
-    return title;
+    if (curDataModel) {
+        return nil;
+    } else {
+        NSString *title = curTitles[component][row];
+        
+        return title;
+    }
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
