@@ -36,6 +36,8 @@
 		AED7E7891DD301350034DDDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED7E7881DD301350034DDDE /* ViewController.m */; };
 		AED7E7931DD322FD0034DDDE /* BPTouchScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AED7E78F1DD322FD0034DDDE /* BPTouchScrollView.m */; };
 		AED7E7941DD322FD0034DDDE /* BPTouchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AED7E7921DD322FD0034DDDE /* BPTouchTableView.m */; };
+		AEFC48131DE45EC5000B7772 /* HHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFC480F1DE45EC5000B7772 /* HHAlertView.m */; };
+		AEFC48141DE45EC5000B7772 /* UIView+Draw.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFC48121DE45EC5000B7772 /* UIView+Draw.m */; };
 		B066CBE43F852159EAE0676A /* libPods-BaseProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB59F262626700FB9A0D14FB /* libPods-BaseProject.a */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +110,11 @@
 		AED7E78F1DD322FD0034DDDE /* BPTouchScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTouchScrollView.m; sourceTree = "<group>"; };
 		AED7E7911DD322FD0034DDDE /* BPTouchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTouchTableView.h; sourceTree = "<group>"; };
 		AED7E7921DD322FD0034DDDE /* BPTouchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTouchTableView.m; sourceTree = "<group>"; };
+		AEFC480E1DE45EC5000B7772 /* HHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHAlertView.h; sourceTree = "<group>"; };
+		AEFC480F1DE45EC5000B7772 /* HHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHAlertView.m; sourceTree = "<group>"; };
+		AEFC48101DE45EC5000B7772 /* HHAlertViewConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHAlertViewConst.h; sourceTree = "<group>"; };
+		AEFC48111DE45EC5000B7772 /* UIView+Draw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Draw.h"; sourceTree = "<group>"; };
+		AEFC48121DE45EC5000B7772 /* UIView+Draw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Draw.m"; sourceTree = "<group>"; };
 		BB59F262626700FB9A0D14FB /* libPods-BaseProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -245,6 +252,7 @@
 		AEC6C2C51DD17AFB00F9ABA0 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				AEFC480D1DE45EC5000B7772 /* HHAlertView */,
 				AE89995A1DDC522E00FF768E /* Cipher */,
 				AEC6C2C61DD17B0F00F9ABA0 /* HZQPickerView */,
 			);
@@ -324,6 +332,18 @@
 				AED7E7921DD322FD0034DDDE /* BPTouchTableView.m */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		AEFC480D1DE45EC5000B7772 /* HHAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				AEFC480E1DE45EC5000B7772 /* HHAlertView.h */,
+				AEFC480F1DE45EC5000B7772 /* HHAlertView.m */,
+				AEFC48101DE45EC5000B7772 /* HHAlertViewConst.h */,
+				AEFC48111DE45EC5000B7772 /* UIView+Draw.h */,
+				AEFC48121DE45EC5000B7772 /* UIView+Draw.m */,
+			);
+			path = HHAlertView;
 			sourceTree = "<group>";
 		};
 		B61EDA4E8931488C1615D15E /* Pods */ = {
@@ -495,6 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEFC48131DE45EC5000B7772 /* HHAlertView.m in Sources */,
 				AED7E7941DD322FD0034DDDE /* BPTouchTableView.m in Sources */,
 				AE9D85241DCDCDFD00CAF67F /* UIViewController+InjectStatisticSpot.m in Sources */,
 				AEC6C3111DD1CEEA00F9ABA0 /* UserModel.m in Sources */,
@@ -508,6 +529,7 @@
 				AED7E7891DD301350034DDDE /* ViewController.m in Sources */,
 				AEC6C2CC1DD17B0F00F9ABA0 /* HZQPickerView.m in Sources */,
 				AE9D85131DCDA60300CAF67F /* main.m in Sources */,
+				AEFC48141DE45EC5000B7772 /* UIView+Draw.m in Sources */,
 				AE78A90A1DD4709900869859 /* BadCode.m in Sources */,
 				AE9D85231DCDCDFD00CAF67F /* UIControl+InjectStatisticSpot.m in Sources */,
 				AE8999601DDC522E00FF768E /* NSData+AES.m in Sources */,
