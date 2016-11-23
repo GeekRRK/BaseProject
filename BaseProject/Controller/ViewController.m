@@ -102,8 +102,8 @@ static float baseMaxY = 160 - 64;
     
     NSLog(@"%lf", alpha);
     
-    self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:alpha];
-    _statusView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:alpha];
+    self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:0.4 green:0.8 blue:1 alpha:alpha];
+    _statusView.backgroundColor = [UIColor colorWithRed:0.4 green:0.8 blue:1 alpha:alpha];
 }
 
 - (void)setupNavBarTransparent {
