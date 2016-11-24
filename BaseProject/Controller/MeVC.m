@@ -44,7 +44,9 @@
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
     btn.frame = CGRectMake(SCREENWIDTH - 60, 0, 60, 44);
-    [btn setTitle:@"筛选" forState:UIControlStateNormal];
+    //[btn setTitle:@"筛选" forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:@"filter"] forState:UIControlStateNormal];
+    btn.backgroundColor = [UIColor colorWithRed:220.f/255.0f green:220.f/255.0f blue:220.f/255.0f alpha:1.0];
     [self.view addSubview:btn];
 }
 
