@@ -92,9 +92,8 @@
         [navCtrls addObject:navVC];
     }
     
-    NSArray *navVCArray = [[NSArray alloc] initWithArray:navCtrls];
     UITabBarController *tabBarVC = [[UITabBarController alloc] init];
-    tabBarVC.viewControllers = navVCArray;
+    tabBarVC.viewControllers = navCtrls;
     tabBarVC.tabBar.barTintColor = [UIColor blackColor];
     tabBarVC.tabBar.tintColor = BP_COLOR_GREEN;
     tabBarVC.tabBar.translucent = NO;
