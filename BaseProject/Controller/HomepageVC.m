@@ -6,7 +6,7 @@
 //  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HomepageVC.h"
 #import "HZQPickerView.h"
 #import "BPTouchTableView.h"
 #import <SDCycleScrollView.h>
@@ -16,7 +16,7 @@ static float baseMinY = -64;
 static float baseMaxY = 160 - 64;
 
 
-@interface ViewController () <UITableViewDelegate, UITableViewDataSource, SDCycleScrollViewDelegate>
+@interface HomepageVC () <UITableViewDelegate, UITableViewDataSource, SDCycleScrollViewDelegate>
 
 @property (strong, nonatomic) BPTouchTableView *tableView;
 @property (strong, nonatomic) UIView *statusView;
@@ -24,7 +24,7 @@ static float baseMaxY = 160 - 64;
 
 @end
 
-@implementation ViewController
+@implementation HomepageVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

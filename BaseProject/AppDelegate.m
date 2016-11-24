@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "HomepageVC.h"
+#import "VideoVC.h"
+#import "MeVC.h"
 
 @interface AppDelegate ()
 
@@ -58,11 +60,11 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    ViewController *vc1 = [[ViewController alloc] init];
-    ViewController *vc2 = [[ViewController alloc] init];
-    ViewController *vc3 = [[ViewController alloc] init];
+    HomepageVC *homepageVC = [[HomepageVC alloc] init];
+    VideoVC *videoVC = [[VideoVC alloc] init];
+    MeVC *meVC = [[MeVC alloc] init];
     
-    NSArray *vcs = @[vc1, vc2, vc3];
+    NSArray *vcs = @[homepageVC, videoVC, meVC];
     NSArray *titles = @[LOCALSTR(@"Homepage"), LOCALSTR(@"Video"), LOCALSTR(@"Me")];
     NSArray *tabItemImages = @[@"tabbar_homepage", @"tabbar_video", @"tabbar_me"];
     

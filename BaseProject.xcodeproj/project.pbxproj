@@ -33,7 +33,12 @@
 		AEC6C2CD1DD17B0F00F9ABA0 /* HZQPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC6C2C91DD17B0F00F9ABA0 /* HZQPickerView.xib */; };
 		AEC6C3071DD1A68900F9ABA0 /* BaseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6C3061DD1A68900F9ABA0 /* BaseProjectTests.m */; };
 		AEC6C3111DD1CEEA00F9ABA0 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6C3101DD1CEEA00F9ABA0 /* UserModel.m */; };
-		AED7E7891DD301350034DDDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED7E7881DD301350034DDDE /* ViewController.m */; };
+		AED10FB51DE68D6700D0C7EE /* WJItemsControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = AED10FB41DE68D6700D0C7EE /* WJItemsControlView.m */; };
+		AED10FB81DE68DC200D0C7EE /* VideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AED10FB71DE68DC200D0C7EE /* VideoVC.m */; };
+		AED10FBB1DE68DD900D0C7EE /* MeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AED10FBA1DE68DD900D0C7EE /* MeVC.m */; };
+		AED10FC01DE6910300D0C7EE /* ico_make.png in Resources */ = {isa = PBXBuildFile; fileRef = AED10FBD1DE6910300D0C7EE /* ico_make.png */; };
+		AED10FC11DE6910300D0C7EE /* JSDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AED10FBF1DE6910300D0C7EE /* JSDropDownMenu.m */; };
+		AED7E7891DD301350034DDDE /* HomepageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AED7E7881DD301350034DDDE /* HomepageVC.m */; };
 		AED7E7931DD322FD0034DDDE /* BPTouchScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AED7E78F1DD322FD0034DDDE /* BPTouchScrollView.m */; };
 		AED7E7941DD322FD0034DDDE /* BPTouchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AED7E7921DD322FD0034DDDE /* BPTouchTableView.m */; };
 		AEFC48131DE45EC5000B7772 /* HHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFC480F1DE45EC5000B7772 /* HHAlertView.m */; };
@@ -103,8 +108,17 @@
 		AEC6C3081DD1A68900F9ABA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEC6C30F1DD1CEEA00F9ABA0 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		AEC6C3101DD1CEEA00F9ABA0 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
-		AED7E7871DD301350034DDDE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AED7E7881DD301350034DDDE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AED10FB31DE68D6700D0C7EE /* WJItemsControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJItemsControlView.h; sourceTree = "<group>"; };
+		AED10FB41DE68D6700D0C7EE /* WJItemsControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJItemsControlView.m; sourceTree = "<group>"; };
+		AED10FB61DE68DC200D0C7EE /* VideoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoVC.h; sourceTree = "<group>"; };
+		AED10FB71DE68DC200D0C7EE /* VideoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoVC.m; sourceTree = "<group>"; };
+		AED10FB91DE68DD900D0C7EE /* MeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeVC.h; sourceTree = "<group>"; };
+		AED10FBA1DE68DD900D0C7EE /* MeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeVC.m; sourceTree = "<group>"; };
+		AED10FBD1DE6910300D0C7EE /* ico_make.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_make.png; sourceTree = "<group>"; };
+		AED10FBE1DE6910300D0C7EE /* JSDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDropDownMenu.h; sourceTree = "<group>"; };
+		AED10FBF1DE6910300D0C7EE /* JSDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDropDownMenu.m; sourceTree = "<group>"; };
+		AED7E7871DD301350034DDDE /* HomepageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageVC.h; sourceTree = "<group>"; };
+		AED7E7881DD301350034DDDE /* HomepageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepageVC.m; sourceTree = "<group>"; };
 		AED7E78A1DD30A980034DDDE /* libPods-BaseProject.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-BaseProject.a"; path = "../../../Library/Developer/Xcode/DerivedData/BaseProject-audinbsvkvdjnmeqxxonrzcsjhpb/Build/Products/Debug-iphonesimulator/libPods-BaseProject.a"; sourceTree = "<group>"; };
 		AED7E78E1DD322FD0034DDDE /* BPTouchScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTouchScrollView.h; sourceTree = "<group>"; };
 		AED7E78F1DD322FD0034DDDE /* BPTouchScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTouchScrollView.m; sourceTree = "<group>"; };
@@ -252,6 +266,8 @@
 		AEC6C2C51DD17AFB00F9ABA0 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				AED10FBC1DE6910300D0C7EE /* JSDropDownMenu */,
+				AED10FB21DE68D6700D0C7EE /* WJSegment */,
 				AEFC480D1DE45EC5000B7772 /* HHAlertView */,
 				AE89995A1DDC522E00FF768E /* Cipher */,
 				AEC6C2C61DD17B0F00F9ABA0 /* HZQPickerView */,
@@ -291,11 +307,34 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		AED10FB21DE68D6700D0C7EE /* WJSegment */ = {
+			isa = PBXGroup;
+			children = (
+				AED10FB31DE68D6700D0C7EE /* WJItemsControlView.h */,
+				AED10FB41DE68D6700D0C7EE /* WJItemsControlView.m */,
+			);
+			path = WJSegment;
+			sourceTree = "<group>";
+		};
+		AED10FBC1DE6910300D0C7EE /* JSDropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				AED10FBD1DE6910300D0C7EE /* ico_make.png */,
+				AED10FBE1DE6910300D0C7EE /* JSDropDownMenu.h */,
+				AED10FBF1DE6910300D0C7EE /* JSDropDownMenu.m */,
+			);
+			path = JSDropDownMenu;
+			sourceTree = "<group>";
+		};
 		AED7E7851DD300E00034DDDE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AED7E7871DD301350034DDDE /* ViewController.h */,
-				AED7E7881DD301350034DDDE /* ViewController.m */,
+				AED7E7871DD301350034DDDE /* HomepageVC.h */,
+				AED7E7881DD301350034DDDE /* HomepageVC.m */,
+				AED10FB61DE68DC200D0C7EE /* VideoVC.h */,
+				AED10FB71DE68DC200D0C7EE /* VideoVC.m */,
+				AED10FB91DE68DD900D0C7EE /* MeVC.h */,
+				AED10FBA1DE68DD900D0C7EE /* MeVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -446,6 +485,7 @@
 				AE9D850F1DCDA60300CAF67F /* Assets.xcassets in Resources */,
 				AEC6C2CD1DD17B0F00F9ABA0 /* HZQPickerView.xib in Resources */,
 				AE9D85101DCDA60300CAF67F /* LaunchScreen.storyboard in Resources */,
+				AED10FC01DE6910300D0C7EE /* ico_make.png in Resources */,
 				AE78A9071DD4276700869859 /* Guide.docx in Resources */,
 				AEC02F9F1DD059EA00710A62 /* avatar@2x.png in Resources */,
 				AE9D851E1DCDCD8800CAF67F /* UserStatistic.plist in Resources */,
@@ -521,17 +561,21 @@
 				AEC6C3111DD1CEEA00F9ABA0 /* UserModel.m in Sources */,
 				AE9D850C1DCDA60300CAF67F /* AppDelegate.m in Sources */,
 				AE9D85271DCDD5BA00CAF67F /* BPCatchCrash.m in Sources */,
+				AED10FBB1DE68DD900D0C7EE /* MeVC.m in Sources */,
 				AED7E7931DD322FD0034DDDE /* BPTouchScrollView.m in Sources */,
 				AE9D851C1DCDCA7000CAF67F /* BPHookUtil.m in Sources */,
 				AE5FBD9D1DDEE9930031D57F /* BPAlertView.m in Sources */,
+				AED10FC11DE6910300D0C7EE /* JSDropDownMenu.m in Sources */,
 				AE9D85171DCDA60300CAF67F /* BPUtil.m in Sources */,
 				AE89995F1DDC522E00FF768E /* Base64.m in Sources */,
-				AED7E7891DD301350034DDDE /* ViewController.m in Sources */,
+				AED7E7891DD301350034DDDE /* HomepageVC.m in Sources */,
+				AED10FB51DE68D6700D0C7EE /* WJItemsControlView.m in Sources */,
 				AEC6C2CC1DD17B0F00F9ABA0 /* HZQPickerView.m in Sources */,
 				AE9D85131DCDA60300CAF67F /* main.m in Sources */,
 				AEFC48141DE45EC5000B7772 /* UIView+Draw.m in Sources */,
 				AE78A90A1DD4709900869859 /* BadCode.m in Sources */,
 				AE9D85231DCDCDFD00CAF67F /* UIControl+InjectStatisticSpot.m in Sources */,
+				AED10FB81DE68DC200D0C7EE /* VideoVC.m in Sources */,
 				AE8999601DDC522E00FF768E /* NSData+AES.m in Sources */,
 				AE9D85151DCDA60300CAF67F /* BPInterface.m in Sources */,
 				AE9D85141DCDA60300CAF67F /* BPDB.m in Sources */,
