@@ -15,7 +15,6 @@ static float alpha = 1;
 static float baseMinY = -64;
 static float baseMaxY = 160 - 64;
 
-
 @interface HomepageVC () <UITableViewDelegate, UITableViewDataSource, SDCycleScrollViewDelegate>
 
 @property (strong, nonatomic) BPTouchTableView *tableView;
@@ -32,6 +31,7 @@ static float baseMaxY = 160 - 64;
     _tableView = [[BPTouchTableView alloc] initWithFrame:CGRectMake(0, -64, SCREENWIDTH, SCREENHEIGHT)];
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _tableView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:_tableView];
     
     [self setupNavBarTransparent];
@@ -99,8 +99,6 @@ static float baseMaxY = 160 - 64;
     } else if (curY >= baseMaxY) {
         alpha = 1;
     }
-    
-    NSLog(@"%lf", alpha);
     
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:0.4 green:0.8 blue:1 alpha:alpha];
     _statusView.backgroundColor = [UIColor colorWithRed:0.4 green:0.8 blue:1 alpha:alpha];
