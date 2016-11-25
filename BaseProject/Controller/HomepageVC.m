@@ -40,8 +40,6 @@ static float baseMaxY = 160 - 64;
     [self setupTableHeaderView];
     
     [self setupTitleView];
-    
-    
 }
 
 - (void)setupTitleView {

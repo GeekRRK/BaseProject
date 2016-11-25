@@ -11,4 +11,5 @@ target 'BaseProject' do
     pod 'Masonry'
     pod 'SDCycleScrollView', '1.65'
     pod 'IQKeyboardManager', '3.3.7'
+    pod 'WXTabBarController'
 end

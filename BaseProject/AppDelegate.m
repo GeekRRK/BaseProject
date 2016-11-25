@@ -10,6 +10,9 @@
 #import "HomepageVC.h"
 #import "VideoVC.h"
 #import "MeVC.h"
+#import <WXTabBarController.h>
+
+//#define WXTabBar
 
 @interface AppDelegate ()
 
@@ -93,7 +96,8 @@
         
         [navCtrls addObject:navVC];
     }
-    
+ 
+#ifndef WXTabBar
     UITabBarController *tabBarVC = [[UITabBarController alloc] init];
     tabBarVC.viewControllers = navCtrls;
     tabBarVC.tabBar.barTintColor = [UIColor blackColor];
@@ -101,6 +105,16 @@
     tabBarVC.tabBar.translucent = NO;
     
     self.window.rootViewController = tabBarVC;
+#else
+    WXTabBarController *tabBarVC = [[WXTabBarController alloc] init];
+    tabBarVC.viewControllers = navCtrls;
+    tabBarVC.tabBar.barTintColor = [UIColor blackColor];
+    tabBarVC.tabBar.tintColor = BP_COLOR_GREEN;
+    tabBarVC.tabBar.translucent = NO;
+    UINavigationController *tabBarNavVC = [[UINavigationController alloc] initWithRootViewController:tabBarVC];
+    
+    self.window.rootViewController = tabBarNavVC;
+#endif
 }
 
 @end
