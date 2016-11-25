@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BPAlertView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ace-Ca-Fo1" userLabel="shadow" customClass="UIControl">
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="clickShadowView:" destination="iN0-l3-epB" eventType="touchUpInside" id="k0B-Ye-hHu"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6O-IH-Cl4">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Do-O6-5VH">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFP-aj-7iI">
+                            <state key="normal" title="Confirm"/>
+                            <connections>
+                                <action selector="clickConfirmBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="LmB-dx-bcL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wX6-Oo-6GO">
+                            <state key="normal" title="Cancel"/>
+                            <connections>
+                                <action selector="clickCancelBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="zzG-n9-SpB"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="MFP-aj-7iI" secondAttribute="trailing" constant="50" id="GSb-nR-0R3"/>
+                        <constraint firstItem="3Do-O6-5VH" firstAttribute="top" secondItem="D6O-IH-Cl4" secondAttribute="top" constant="56" id="LSx-Vi-lbl"/>
+                        <constraint firstAttribute="bottom" secondItem="MFP-aj-7iI" secondAttribute="bottom" constant="45" id="LhX-S7-wpN"/>
+                        <constraint firstAttribute="bottom" secondItem="wX6-Oo-6GO" secondAttribute="bottom" constant="45" id="Q95-6z-Fno"/>
+                        <constraint firstAttribute="height" constant="200" id="UyT-gO-H3w"/>
+                        <constraint firstItem="wX6-Oo-6GO" firstAttribute="leading" secondItem="D6O-IH-Cl4" secondAttribute="leading" constant="50" id="tiS-ds-CcC"/>
+                        <constraint firstItem="3Do-O6-5VH" firstAttribute="centerX" secondItem="D6O-IH-Cl4" secondAttribute="centerX" id="xXJ-sm-SLq"/>
+                        <constraint firstAttribute="width" constant="280" id="zwr-DO-KsK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="D6O-IH-Cl4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="172-r7-vO7"/>
+                <constraint firstAttribute="trailing" secondItem="Ace-Ca-Fo1" secondAttribute="trailing" id="1b7-bW-gvR"/>
+                <constraint firstItem="Ace-Ca-Fo1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7js-KI-0Ri"/>
+                <constraint firstItem="Ace-Ca-Fo1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NUo-Er-IFf"/>
+                <constraint firstItem="D6O-IH-Cl4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jT6-Jb-elA"/>
+                <constraint firstAttribute="bottom" secondItem="Ace-Ca-Fo1" secondAttribute="bottom" id="qyg-4Y-gwn"/>
+            </constraints>
+            <point key="canvasLocation" x="-49" y="-59"/>
+        </view>
+    </objects>
+</document>

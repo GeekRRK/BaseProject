@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE5FBD9D1DDEE9930031D57F /* BPAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5FBD9C1DDEE9930031D57F /* BPAlertView.m */; };
+		AE0081801DE7D5A600CC16F1 /* BPAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE00817F1DE7D5A600CC16F1 /* BPAlertView.m */; };
+		AE0081821DE7D6BF00CC16F1 /* BPAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE0081811DE7D6BF00CC16F1 /* BPAlertView.xib */; };
 		AE78A9071DD4276700869859 /* Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = AE78A9061DD4276700869859 /* Guide.docx */; };
 		AE78A90A1DD4709900869859 /* BadCode.m in Sources */ = {isa = PBXBuildFile; fileRef = AE78A9091DD4709900869859 /* BadCode.m */; };
 		AE828DEC1DD569D700235DC6 /* BPInterfaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE828DEB1DD569D700235DC6 /* BPInterfaceTests.m */; };
@@ -59,9 +60,10 @@
 /* Begin PBXFileReference section */
 		43C4864AB0CC3C3E1DEEE553 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 		A64EFFB3F224598667B2063F /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
+		AE00817E1DE7D5A600CC16F1 /* BPAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPAlertView.h; sourceTree = "<group>"; };
+		AE00817F1DE7D5A600CC16F1 /* BPAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPAlertView.m; sourceTree = "<group>"; };
+		AE0081811DE7D6BF00CC16F1 /* BPAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BPAlertView.xib; sourceTree = "<group>"; };
 		AE473E3A1DCD684900016040 /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE5FBD9B1DDEE9930031D57F /* BPAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPAlertView.h; sourceTree = "<group>"; };
-		AE5FBD9C1DDEE9930031D57F /* BPAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPAlertView.m; sourceTree = "<group>"; };
 		AE78A9061DD4276700869859 /* Guide.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Guide.docx; sourceTree = "<group>"; };
 		AE78A9081DD4709900869859 /* BadCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadCode.h; sourceTree = "<group>"; };
 		AE78A9091DD4709900869859 /* BadCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadCode.m; sourceTree = "<group>"; };
@@ -158,6 +160,16 @@
 				BB59F262626700FB9A0D14FB /* libPods-BaseProject.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE00817D1DE7D55E00CC16F1 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				AE00817E1DE7D5A600CC16F1 /* BPAlertView.h */,
+				AE00817F1DE7D5A600CC16F1 /* BPAlertView.m */,
+				AE0081811DE7D6BF00CC16F1 /* BPAlertView.xib */,
+			);
+			path = AlertView;
 			sourceTree = "<group>";
 		};
 		AE473E311DCD684900016040 = {
@@ -281,8 +293,6 @@
 				AEC6C2C71DD17B0F00F9ABA0 /* HZQPickerView.h */,
 				AEC6C2C81DD17B0F00F9ABA0 /* HZQPickerView.m */,
 				AEC6C2C91DD17B0F00F9ABA0 /* HZQPickerView.xib */,
-				AE5FBD9B1DDEE9930031D57F /* BPAlertView.h */,
-				AE5FBD9C1DDEE9930031D57F /* BPAlertView.m */,
 			);
 			path = HZQPickerView;
 			sourceTree = "<group>";
@@ -349,6 +359,7 @@
 		AED7E78C1DD322820034DDDE /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				AE00817D1DE7D55E00CC16F1 /* AlertView */,
 				AED7E78D1DD322FD0034DDDE /* ScrollView */,
 				AED7E7901DD322FD0034DDDE /* TableView */,
 			);
@@ -484,6 +495,7 @@
 				AEC02F8C1DD0532C00710A62 /* Localizable.strings in Resources */,
 				AE9D850F1DCDA60300CAF67F /* Assets.xcassets in Resources */,
 				AEC6C2CD1DD17B0F00F9ABA0 /* HZQPickerView.xib in Resources */,
+				AE0081821DE7D6BF00CC16F1 /* BPAlertView.xib in Resources */,
 				AE9D85101DCDA60300CAF67F /* LaunchScreen.storyboard in Resources */,
 				AED10FC01DE6910300D0C7EE /* ico_make.png in Resources */,
 				AE78A9071DD4276700869859 /* Guide.docx in Resources */,
@@ -563,8 +575,8 @@
 				AE9D85271DCDD5BA00CAF67F /* BPCatchCrash.m in Sources */,
 				AED10FBB1DE68DD900D0C7EE /* MeVC.m in Sources */,
 				AED7E7931DD322FD0034DDDE /* BPTouchScrollView.m in Sources */,
+				AE0081801DE7D5A600CC16F1 /* BPAlertView.m in Sources */,
 				AE9D851C1DCDCA7000CAF67F /* BPHookUtil.m in Sources */,
-				AE5FBD9D1DDEE9930031D57F /* BPAlertView.m in Sources */,
 				AED10FC11DE6910300D0C7EE /* JSDropDownMenu.m in Sources */,
 				AE9D85171DCDA60300CAF67F /* BPUtil.m in Sources */,
 				AE89995F1DDC522E00FF768E /* Base64.m in Sources */,

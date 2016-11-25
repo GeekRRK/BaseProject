@@ -2,7 +2,7 @@
 //  BPAlertView.m
 //  BaseProject
 //
-//  Created by UGOMEDIA on 2016/11/18.
+//  Created by UGOMEDIA on 2016/11/25.
 //  Copyright © 2016年 UgoMedia. All rights reserved.
 //
 
@@ -13,26 +13,17 @@ static BPAlertBlock curBlock;
 
 @implementation BPAlertView
 
-+ (void)showParentVC:(UIViewController *)parentVC block:(BPAlertBlock)block {
+- (void)showAlertView:(UIViewController *)parentVC block:(BPAlertBlock)block {
     curParentVC = parentVC;
     curBlock = block;
     
-    BPAlertView *alertView = [[[NSBundle mainBundle] loadNibNamed:@"BPAlertView" owner:nil options:nil] firstObject];
-    alertView.frame = curParentVC.view.bounds;
-    [parentVC.view addSubview:alertView];
-}
-
-- (void)clickConfirmBtn {
-    [self hideAlertView];
-    
-    curBlock();
-}
-
-- (void)clickCancelBtn {
-    [self hideAlertView];
+    [self showAlertView];
 }
 
 - (void)showAlertView {
+    self.frame = curParentVC.view.bounds;
+    [curParentVC.view addSubview:self];
+    
     self.transform = CGAffineTransformMakeScale(0.01, 0.01);
     [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         self.transform = CGAffineTransformIdentity;
@@ -46,6 +37,19 @@ static BPAlertBlock curBlock;
     } completion:^(BOOL finished){
         [self removeFromSuperview];
     }];
+}
+
+- (IBAction)clickCancelBtn:(id)sender {
+    [self hideAlertView];
+}
+
+- (IBAction)clickConfirmBtn:(id)sender {
+    curBlock(@"iOS");
+    [self hideAlertView];
+}
+
+- (IBAction)clickShadowView:(id)sender {
+    [self hideAlertView];
 }
 
 @end

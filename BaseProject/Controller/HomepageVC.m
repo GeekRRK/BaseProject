@@ -10,6 +10,7 @@
 #import "HZQPickerView.h"
 #import "BPTouchTableView.h"
 #import <SDCycleScrollView.h>
+#import "BPAlertView.h"
 
 static float alpha = 1;
 static float baseMinY = -64;
@@ -39,6 +40,8 @@ static float baseMaxY = 160 - 64;
     [self setupTableHeaderView];
     
     [self setupTitleView];
+    
+    
 }
 
 - (void)setupTitleView {
@@ -84,6 +87,13 @@ static float baseMaxY = 160 - 64;
     cell.textLabel.text = @"iOS";
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    BPAlertView *alertView = [[[NSBundle mainBundle] loadNibNamed:@"BPAlertView" owner:nil options:nil] firstObject];
+    [alertView showAlertView:self block:^(NSString *name) {
+        NSLog(@"Click confirm button of BPAlertView");
+    }];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
