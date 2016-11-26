@@ -42,6 +42,7 @@
 		AED10FC01DE6910300D0C7EE /* ico_make.png in Resources */ = {isa = PBXBuildFile; fileRef = AED10FBD1DE6910300D0C7EE /* ico_make.png */; };
 		AED10FC11DE6910300D0C7EE /* JSDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AED10FBF1DE6910300D0C7EE /* JSDropDownMenu.m */; };
 		AED7E7891DD301350034DDDE /* HomepageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AED7E7881DD301350034DDDE /* HomepageVC.m */; };
+		AEECDA301DE934CD0021A612 /* BPLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = AEECDA2F1DE934CD0021A612 /* BPLaunchAd.m */; };
 		AEFC48131DE45EC5000B7772 /* HHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFC480F1DE45EC5000B7772 /* HHAlertView.m */; };
 		AEFC48141DE45EC5000B7772 /* UIView+Draw.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFC48121DE45EC5000B7772 /* UIView+Draw.m */; };
 		B066CBE43F852159EAE0676A /* libPods-BaseProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB59F262626700FB9A0D14FB /* libPods-BaseProject.a */; };
@@ -126,6 +127,8 @@
 		AED7E7871DD301350034DDDE /* HomepageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageVC.h; sourceTree = "<group>"; };
 		AED7E7881DD301350034DDDE /* HomepageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepageVC.m; sourceTree = "<group>"; };
 		AED7E78A1DD30A980034DDDE /* libPods-BaseProject.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-BaseProject.a"; path = "../../../Library/Developer/Xcode/DerivedData/BaseProject-audinbsvkvdjnmeqxxonrzcsjhpb/Build/Products/Debug-iphonesimulator/libPods-BaseProject.a"; sourceTree = "<group>"; };
+		AEECDA2E1DE934CD0021A612 /* BPLaunchAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPLaunchAd.h; sourceTree = "<group>"; };
+		AEECDA2F1DE934CD0021A612 /* BPLaunchAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPLaunchAd.m; sourceTree = "<group>"; };
 		AEFC480E1DE45EC5000B7772 /* HHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHAlertView.h; sourceTree = "<group>"; };
 		AEFC480F1DE45EC5000B7772 /* HHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHAlertView.m; sourceTree = "<group>"; };
 		AEFC48101DE45EC5000B7772 /* HHAlertViewConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHAlertViewConst.h; sourceTree = "<group>"; };
@@ -401,11 +404,21 @@
 		AED7E78C1DD322820034DDDE /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				AEECDA2D1DE934CD0021A612 /* Object */,
 				AE0081841DE7DA9000CC16F1 /* Model */,
 				AE0081851DE7DA9000CC16F1 /* View */,
 				AE0081831DE7DA9000CC16F1 /* Controller */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		AEECDA2D1DE934CD0021A612 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				AEECDA2E1DE934CD0021A612 /* BPLaunchAd.h */,
+				AEECDA2F1DE934CD0021A612 /* BPLaunchAd.m */,
+			);
+			path = Object;
 			sourceTree = "<group>";
 		};
 		AEFC480D1DE45EC5000B7772 /* HHAlertView */ = {
@@ -610,6 +623,7 @@
 				AE9D85231DCDCDFD00CAF67F /* UIControl+InjectStatisticSpot.m in Sources */,
 				AE0081901DE7DA9000CC16F1 /* BPAlertView.m in Sources */,
 				AED10FB81DE68DC200D0C7EE /* VideoVC.m in Sources */,
+				AEECDA301DE934CD0021A612 /* BPLaunchAd.m in Sources */,
 				AE8999601DDC522E00FF768E /* NSData+AES.m in Sources */,
 				AE9D85151DCDA60300CAF67F /* BPInterface.m in Sources */,
 				AE0081931DE7DA9000CC16F1 /* BPTouchTableView.m in Sources */,

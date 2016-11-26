@@ -109,4 +109,34 @@
             ];
 }
 
++ (NSString *)getFilePathBy:(NSString *)fileName {
+    NSArray  *paths  =  NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [paths objectAtIndex:0];
+    return [docDir stringByAppendingPathComponent:fileName];
+}
+
++ (NSMutableDictionary *)readDictBy:(NSString *)fileName {
+    NSString *filepath = [BPUtil getFilePathBy:fileName];
+    NSMutableDictionary *apps = [[NSMutableDictionary alloc] initWithContentsOfFile:filepath];
+    if(apps == nil){
+        apps = [[NSMutableDictionary alloc] init];
+        if([apps writeToFile:filepath atomically:YES]){
+            apps = [[NSMutableDictionary alloc] initWithContentsOfFile:filepath];
+        }
+    }
+    
+    return apps;
+}
+
++ (void)writeDict:(NSDictionary *)dict to:(NSString *)fileName {
+    NSString *path = [BPUtil getFilePathBy:fileName];
+    [dict writeToFile:path atomically:YES];
+}
+
++ (void)deleteFileByName:(NSString *)fileName {
+    NSString *filePath = [BPUtil getFilePathBy:fileName];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    [fileManager removeItemAtPath:filePath error:nil];
+}
+
 @end

@@ -24,4 +24,12 @@
 
 + (NSString *)md5:(NSString *)str;
 
++ (NSString *)getFilePathBy:(NSString *)fileName;
+
++ (NSMutableDictionary *)readDictBy:(NSString *)fileName;
+
++ (void)writeDict:(NSDictionary *)dict to:(NSString *)fileName;
+
++ (void)deleteFileByName:(NSString *)fileName;
+
 @end
