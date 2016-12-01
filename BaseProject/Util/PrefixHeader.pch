@@ -26,6 +26,8 @@ static const DDLogLevel ddLogLevel = DDLogLevelAll;
     #define SERVER_ADDRESS @""
 #endif
 
+#define MAS_SHORTHAND
+
 // Util
 #define LOCALSTR(str)               NSLocalizedString(str, nil)
 #define APPDELEGATE                 ((AppDelegate *)[[UIApplication sharedApplication] delegate])
