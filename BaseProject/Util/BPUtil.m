@@ -8,6 +8,19 @@
 //  常用方法
 
 #import "BPUtil.h"
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
+
+//腾讯开放平台（对应QQ和QQ空间）SDK头文件
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+
+//微信SDK头文件
+#import "WXApi.h"
+
+//新浪微博SDK头文件
+#import "WeiboSDK.h"
+//新浪微博SDK需要在项目Build Settings中的Other Linker Flags添加"-ObjC"
 
 @implementation BPUtil
 
@@ -137,6 +150,56 @@
     NSString *filePath = [BPUtil getFilePathBy:fileName];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     [fileManager removeItemAtPath:filePath error:nil];
+}
+
++ (void)loginWithThirdParty:(UIButton *)sender {
+    SSDKPlatformType platformType;
+    NSString *platform;
+    if (sender.tag == 1) {
+        if (![QQApiInterface isQQInstalled]) {
+            [BPUtil showMessage:@"您未安装QQ客户端，无法用QQ登录"];
+            return;
+        }
+        platformType = SSDKPlatformTypeQQ;
+        platform = @"QQ";
+    } else if (sender.tag == 2) {
+        if (![WXApi isWXAppInstalled]) {
+            [BPUtil showMessage:@"您未安装微信客户端，无法用微信登录"];
+            return;
+        }
+        platformType = SSDKPlatformTypeWechat;
+        platform = @"WX";
+    } else if (sender.tag == 3) {
+        if (![WeiboSDK isWeiboAppInstalled]) {
+            [BPUtil showMessage:@"您未安装微博客户端，无法用微博登录"];
+            return;
+        }
+        platformType = SSDKPlatformTypeSinaWeibo;
+        platform = @"WB";
+    }
+    
+    [ShareSDK getUserInfo:platformType
+           onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error) {
+               if (state == SSDKResponseStateSuccess) {
+                   NSString *APIAddr = SERVER_ADDRESS @"";
+                   
+                   NSDictionary *param = @{@"platform":platform, @"openid":user.uid, @"nickname":user.nickname, @"headface":user.icon};
+                   [BPInterface request:APIAddr param:param success:^(NSDictionary *responseObject) {
+                       if ([responseObject[@"error"] intValue] == 0) {
+                           [BPUtil showMessage:@"登录成功"];
+                           
+                           NSDictionary *keyValue = responseObject[@"content"];
+                           NSLog(@"%@", keyValue);
+                       } else {
+                           [BPUtil showMessage:@"登录失败"];
+                       }
+                   } failure:^(NSError *error) {
+                       NSLog(@"%@", error.localizedDescription);
+                   }];
+               } else {
+                   NSLog(@"%@",error);
+               }
+           }];
 }
 
 @end
