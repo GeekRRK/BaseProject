@@ -40,4 +40,12 @@ static const DDLogLevel ddLogLevel = DDLogLevelAll;
 #define SCREENHEIGHT                [[UIScreen mainScreen] bounds].size.height
 #define BP_NAVBAR_TITLE_FONTSIZE    19
 
+// ThirdParty
+#define BAIDUMTJ_APPKEY             @"2dff9c21ad"
+#define BUGLY_APPID                 @"1f48bde97b"
+#define JPUSH_APPKEY                @"6bc6e9883a2021ded0ea79cb"
+#define JPUSH_CHANNEL               @"AppStore"
+#define JPUSH_ISPRODUCT             NO
+#define MOB_APPKEY                  @"199b4b61d6eaa"
+
 #endif /* PrefixHeader_pch */

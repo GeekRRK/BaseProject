@@ -15,7 +15,7 @@
 #import <Masonry.h>
 
 static float alpha = 1;
-static float baseMinY = -64;
+static float baseMinY = 0;
 static float baseMaxY = 160 - 64;
 
 @interface HomepageVC () <UITableViewDelegate, UITableViewDataSource, SDCycleScrollViewDelegate>
@@ -45,10 +45,10 @@ static float baseMaxY = 160 - 64;
 }
 
 - (void)setupHomepageUI {
-    [self setupNavBarTransparent];
     [self setupTitleView];
     [self setupNavBarBtn];
     [self setupTableHeaderView];
+    [self setupNavBarTransparent];
 }
 
 - (void)setupNavBarBtn {
@@ -68,7 +68,7 @@ static float baseMaxY = 160 - 64;
 }
 
 - (void)setupTableHeaderView {
-    _tableView = [[BPTouchTableView alloc] initWithFrame:CGRectMake(0, -64, SCREENWIDTH, SCREENHEIGHT)];
+    _tableView = [[BPTouchTableView alloc] init];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.showsVerticalScrollIndicator = NO;
@@ -87,7 +87,6 @@ static float baseMaxY = 160 - 64;
                       @"http://mg.soupingguo.com/bizhi/big/10/350/642/10350642.jpg",
                       @"http://iphone.tgbus.com/UploadFiles/201301/20130130145233400.jpg"
                       ];
-    
     SDCycleScrollView *adScrollView = [[SDCycleScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 160)];
     adScrollView.delegate = self;
     adScrollView.imageURLStringsGroup = imageArray;
@@ -110,12 +109,12 @@ static float baseMaxY = 160 - 64;
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reusableCell];
     }
     
-    //cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
     if (indexPath.row == 0) {
         cell.textLabel.text = @"弹出框";
     } else if (indexPath.row == 1) {
         cell.textLabel.text = @"下一页";
+    } else {
+        cell.textLabel.text = @"占位";
     }
     
     return cell;
@@ -155,13 +154,19 @@ static float baseMaxY = 160 - 64;
 
 - (void)setupNavBarTransparent {
     self.navigationController.navigationBar.translucent = YES;
-    //Make navigationbar transparent.
     UIImage *navClearBkg = [UIImage imageNamed:@"TransparentPixel"];
     [self.navigationController.navigationBar setBackgroundImage:navClearBkg forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = navClearBkg;
     
-    _statusView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 20)];
+    _statusView = [[UIView alloc] init];
     [self.view addSubview:_statusView];
+    
+    [_statusView makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view);
+        make.left.equalTo(self.view);
+        make.right.equalTo(self.view);
+        make.height.equalTo(@20);
+    }];
 }
 
 @end

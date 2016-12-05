@@ -45,7 +45,7 @@ typedef NS_ENUM(NSInteger, HHAlertLeaveMode){
 /**
  *  the block to tell user whitch button is clicked
  *
- *  @param button button
+ *  @param index x
  */
 typedef void (^selectButtonIndexComplete)(NSInteger index);
 
@@ -59,8 +59,6 @@ typedef void (^selectButtonIndexComplete)(NSInteger index);
  *
  *  @param title              titleString
  *  @param detailtext         detailStrng
- *  @param superView          the view that alertview will show
- *  @param cancelButtonTitle  cancel button's title
  *  @param otherButtonsTitles ohter button's titles
  *
  *  @return instance of alertview
@@ -86,7 +84,7 @@ typedef void (^selectButtonIndexComplete)(NSInteger index);
 /**
  *  show method with block to konw which button clicked
  *
- *  @param completeBlock
+ *  @param completeBlock block
  */
 - (void)showWithBlock:(selectButtonIndexComplete)completeBlock;
 
@@ -175,7 +173,6 @@ typedef void (^selectButtonIndexComplete)(NSInteger index);
 /**
  *  the delegate to tell user whitch button is clicked
  *
- *  @param button button
  */
 - (void)HHAlertView:(HHAlertView *)alertview didClickButtonAnIndex:(NSInteger )buttonIndex;
 

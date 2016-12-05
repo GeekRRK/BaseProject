@@ -12,9 +12,6 @@ static HZQBlock curBlock;
 static NSArray *curTitles;
 static int curNumOfComponent;
 
-static int curSelectedColumn;
-static int curSelectedRow;
-
 static NSArray *curDataModel;
 
 @interface HZQDataModel : NSObject

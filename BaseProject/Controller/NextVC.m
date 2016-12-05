@@ -28,7 +28,7 @@
         make.bottom.equalTo(self.view);
         make.left.equalTo(self.view);
         make.right.equalTo(self.view);
-        make.height.equalTo(@150);
+        make.height.equalTo(self.view);
     }];
 }
 
