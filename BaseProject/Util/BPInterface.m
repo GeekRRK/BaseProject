@@ -51,14 +51,15 @@
         if (error) {
             failureBlock(error);
         } else {
-        #ifndef ENCRYPT
+        #ifdef ENCRYPT
             NSDictionary *resDict = [BPInterface convertEncryptedData2Dict:responseObject];
             BOOL res = [BPInterface preprocessResponseDict:resDict];
             if (res) {
                 successBlock(resDict);
             }
         #else
-            successBlock(responseObject);
+            NSDictionary *resDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+            successBlock(resDict);
         #endif
         }
     }];
@@ -111,14 +112,15 @@
             failureBlock(error);
         } else {
             
-        #ifndef ENCRYPT
+        #ifdef ENCRYPT
             NSDictionary *resDict = [BPInterface convertEncryptedData2Dict:responseObject];
             BOOL res = [BPInterface preprocessResponseDict:resDict];
             if (res) {
                 successBlock(resDict);
             }
         #else
-            successBlock(responseObject);
+            NSDictionary *resDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+            successBlock(resDict);
         #endif
         }
     }];
