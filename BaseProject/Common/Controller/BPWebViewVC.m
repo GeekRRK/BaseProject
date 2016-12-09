@@ -7,8 +7,9 @@
 //
 
 #import "BPWebViewVC.h"
+#import <MBProgressHUD.h>
 
-@interface BPWebViewVC ()
+@interface BPWebViewVC () <UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
@@ -19,6 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _webView.delegate = self;
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
     NSString *content = _webModel.content;
     if (_webModel.type == 0) {
         [_webView loadHTMLString:content baseURL:nil];
@@ -26,6 +31,10 @@
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:content]];
         [_webView loadRequest:request];
     }
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 @end
