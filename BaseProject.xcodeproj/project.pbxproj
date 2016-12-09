@@ -16,6 +16,7 @@
 		AE78A90A1DD4709900869859 /* BadCode.m in Sources */ = {isa = PBXBuildFile; fileRef = AE78A9091DD4709900869859 /* BadCode.m */; };
 		AE80F7611DFA7D0300D2B3D7 /* BPWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AE80F75E1DFA7D0300D2B3D7 /* BPWebViewVC.m */; };
 		AE80F7621DFA7D0300D2B3D7 /* BPWebViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE80F7601DFA7D0300D2B3D7 /* BPWebViewVC.xib */; };
+		AE80F7651DFA805100D2B3D7 /* BPWebModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE80F7641DFA805100D2B3D7 /* BPWebModel.m */; };
 		AE828DEC1DD569D700235DC6 /* BPInterfaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE828DEB1DD569D700235DC6 /* BPInterfaceTests.m */; };
 		AE828DEE1DD569E500235DC6 /* BPDBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE828DED1DD569E500235DC6 /* BPDBTests.m */; };
 		AE89995F1DDC522E00FF768E /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = AE89995C1DDC522E00FF768E /* Base64.m */; };
@@ -99,6 +100,8 @@
 		AE80F75E1DFA7D0300D2B3D7 /* BPWebViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPWebViewVC.m; sourceTree = "<group>"; };
 		AE80F75F1DFA7D0300D2B3D7 /* BPWebViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPWebViewVC.h; sourceTree = "<group>"; };
 		AE80F7601DFA7D0300D2B3D7 /* BPWebViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BPWebViewVC.xib; sourceTree = "<group>"; };
+		AE80F7631DFA805100D2B3D7 /* BPWebModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPWebModel.h; sourceTree = "<group>"; };
+		AE80F7641DFA805100D2B3D7 /* BPWebModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPWebModel.m; sourceTree = "<group>"; };
 		AE828DEB1DD569D700235DC6 /* BPInterfaceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPInterfaceTests.m; sourceTree = "<group>"; };
 		AE828DED1DD569E500235DC6 /* BPDBTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPDBTests.m; sourceTree = "<group>"; };
 		AE89995B1DDC522E00FF768E /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 		AE0081841DE7DA9000CC16F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AE80F7631DFA805100D2B3D7 /* BPWebModel.h */,
+				AE80F7641DFA805100D2B3D7 /* BPWebModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -730,6 +735,7 @@
 				AE80F7611DFA7D0300D2B3D7 /* BPWebViewVC.m in Sources */,
 				AEA2ABFC1DF8E87500ACAA78 /* BPThirdParty.m in Sources */,
 				AEC6C2CC1DD17B0F00F9ABA0 /* HZQPickerView.m in Sources */,
+				AE80F7651DFA805100D2B3D7 /* BPWebModel.m in Sources */,
 				AE9D85131DCDA60300CAF67F /* main.m in Sources */,
 				AEFC48141DE45EC5000B7772 /* UIView+Draw.m in Sources */,
 				AE78A90A1DD4709900869859 /* BadCode.m in Sources */,

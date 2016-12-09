@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BPWebModel.h"
 
 @interface BPWebViewVC : UIViewController
 
-@property (copy, nonatomic) NSString *urlType;
+@property (strong, nonatomic) BPWebModel *webModel;
 
 @end

@@ -19,10 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (_urlType) {
-        [_webView loadHTMLString:@"" baseURL:nil];
-    } else {
-        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@""]];
+    NSString *content = _webModel.content;
+    if (_webModel.type == 0) {
+        [_webView loadHTMLString:content baseURL:nil];
+    } else if (_webModel.type == 1) {
+        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:content]];
         [_webView loadRequest:request];
     }
 }

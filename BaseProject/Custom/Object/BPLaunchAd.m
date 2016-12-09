@@ -82,6 +82,8 @@
 - (void)clickAd {
     UIViewController* rootVC = [[UIApplication sharedApplication].delegate window].rootViewController;
     BPWebViewVC *webVC = [[BPWebViewVC alloc] init];
+    BPWebModel *webModel = [BPWebModel yy_modelWithDictionary:_curAdDict];
+    webVC.webModel = webModel;
     
     if ([rootVC isKindOfClass:[UITabBarController class]]) {
         [rootVC.navigationController pushViewController:webVC animated:YES];
