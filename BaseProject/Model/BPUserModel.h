@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UserModel : NSObject
+@interface BPUserModel : NSObject
 
 @property (copy, nonatomic) NSString *m_id;
 @property (copy, nonatomic) NSString *name;

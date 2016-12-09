@@ -8,7 +8,7 @@
 //  数据库封闭接口
 
 #import "BPDB.h"
-#import "UserModel.h"
+#import "BPUserModel.h"
 
 #define CACHE_DIR                 [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
 #define DATABASE_PATH             @"bp.db"

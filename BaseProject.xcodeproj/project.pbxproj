@@ -17,6 +17,7 @@
 		AE80F7611DFA7D0300D2B3D7 /* BPWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AE80F75E1DFA7D0300D2B3D7 /* BPWebViewVC.m */; };
 		AE80F7621DFA7D0300D2B3D7 /* BPWebViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE80F7601DFA7D0300D2B3D7 /* BPWebViewVC.xib */; };
 		AE80F7651DFA805100D2B3D7 /* BPWebModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE80F7641DFA805100D2B3D7 /* BPWebModel.m */; };
+		AE80F77A1DFA919200D2B3D7 /* BPAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE80F7791DFA919200D2B3D7 /* BPAddressModel.m */; };
 		AE828DEC1DD569D700235DC6 /* BPInterfaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE828DEB1DD569D700235DC6 /* BPInterfaceTests.m */; };
 		AE828DEE1DD569E500235DC6 /* BPDBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE828DED1DD569E500235DC6 /* BPDBTests.m */; };
 		AE89995F1DDC522E00FF768E /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = AE89995C1DDC522E00FF768E /* Base64.m */; };
@@ -58,7 +59,7 @@
 		AEC6C2CC1DD17B0F00F9ABA0 /* HZQPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6C2C81DD17B0F00F9ABA0 /* HZQPickerView.m */; };
 		AEC6C2CD1DD17B0F00F9ABA0 /* HZQPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC6C2C91DD17B0F00F9ABA0 /* HZQPickerView.xib */; };
 		AEC6C3071DD1A68900F9ABA0 /* BaseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6C3061DD1A68900F9ABA0 /* BaseProjectTests.m */; };
-		AEC6C3111DD1CEEA00F9ABA0 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6C3101DD1CEEA00F9ABA0 /* UserModel.m */; };
+		AEC6C3111DD1CEEA00F9ABA0 /* BPUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC6C3101DD1CEEA00F9ABA0 /* BPUserModel.m */; };
 		AED10FB51DE68D6700D0C7EE /* WJItemsControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = AED10FB41DE68D6700D0C7EE /* WJItemsControlView.m */; };
 		AED10FB81DE68DC200D0C7EE /* VideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AED10FB71DE68DC200D0C7EE /* VideoVC.m */; };
 		AED10FBB1DE68DD900D0C7EE /* MeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AED10FBA1DE68DD900D0C7EE /* MeVC.m */; };
@@ -102,6 +103,8 @@
 		AE80F7601DFA7D0300D2B3D7 /* BPWebViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BPWebViewVC.xib; sourceTree = "<group>"; };
 		AE80F7631DFA805100D2B3D7 /* BPWebModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPWebModel.h; sourceTree = "<group>"; };
 		AE80F7641DFA805100D2B3D7 /* BPWebModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPWebModel.m; sourceTree = "<group>"; };
+		AE80F7781DFA919200D2B3D7 /* BPAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPAddressModel.h; sourceTree = "<group>"; };
+		AE80F7791DFA919200D2B3D7 /* BPAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPAddressModel.m; sourceTree = "<group>"; };
 		AE828DEB1DD569D700235DC6 /* BPInterfaceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPInterfaceTests.m; sourceTree = "<group>"; };
 		AE828DED1DD569E500235DC6 /* BPDBTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPDBTests.m; sourceTree = "<group>"; };
 		AE89995B1DDC522E00FF768E /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
@@ -165,8 +168,8 @@
 		AEC6C3041DD1A68900F9ABA0 /* BaseProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC6C3061DD1A68900F9ABA0 /* BaseProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseProjectTests.m; sourceTree = "<group>"; };
 		AEC6C3081DD1A68900F9ABA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AEC6C30F1DD1CEEA00F9ABA0 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
-		AEC6C3101DD1CEEA00F9ABA0 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		AEC6C30F1DD1CEEA00F9ABA0 /* BPUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPUserModel.h; sourceTree = "<group>"; };
+		AEC6C3101DD1CEEA00F9ABA0 /* BPUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPUserModel.m; sourceTree = "<group>"; };
 		AED10FB31DE68D6700D0C7EE /* WJItemsControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJItemsControlView.h; sourceTree = "<group>"; };
 		AED10FB41DE68D6700D0C7EE /* WJItemsControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJItemsControlView.m; sourceTree = "<group>"; };
 		AED10FB61DE68DC200D0C7EE /* VideoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoVC.h; sourceTree = "<group>"; };
@@ -469,8 +472,10 @@
 		AEC6C30E1DD1CEEA00F9ABA0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AEC6C30F1DD1CEEA00F9ABA0 /* UserModel.h */,
-				AEC6C3101DD1CEEA00F9ABA0 /* UserModel.m */,
+				AEC6C30F1DD1CEEA00F9ABA0 /* BPUserModel.h */,
+				AEC6C3101DD1CEEA00F9ABA0 /* BPUserModel.m */,
+				AE80F7781DFA919200D2B3D7 /* BPAddressModel.h */,
+				AE80F7791DFA919200D2B3D7 /* BPAddressModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -722,7 +727,7 @@
 			files = (
 				AEFC48131DE45EC5000B7772 /* HHAlertView.m in Sources */,
 				AE9D85241DCDCDFD00CAF67F /* UIViewController+InjectStatisticSpot.m in Sources */,
-				AEC6C3111DD1CEEA00F9ABA0 /* UserModel.m in Sources */,
+				AEC6C3111DD1CEEA00F9ABA0 /* BPUserModel.m in Sources */,
 				AE9D850C1DCDA60300CAF67F /* AppDelegate.m in Sources */,
 				AE9D85271DCDD5BA00CAF67F /* BPCatchCrash.m in Sources */,
 				AED10FBB1DE68DD900D0C7EE /* MeVC.m in Sources */,
@@ -744,6 +749,7 @@
 				AED10FB81DE68DC200D0C7EE /* VideoVC.m in Sources */,
 				AE5B32F11DEFC64D006159BD /* NextVC.m in Sources */,
 				AEECDA301DE934CD0021A612 /* BPLaunchAd.m in Sources */,
+				AE80F77A1DFA919200D2B3D7 /* BPAddressModel.m in Sources */,
 				AE8999601DDC522E00FF768E /* NSData+AES.m in Sources */,
 				AE9D85151DCDA60300CAF67F /* BPInterface.m in Sources */,
 				AE0081931DE7DA9000CC16F1 /* BPTouchTableView.m in Sources */,

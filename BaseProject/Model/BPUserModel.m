@@ -7,9 +7,9 @@
 //
 //  模型结合YYModel示例
 
-#import "UserModel.h"
+#import "BPUserModel.h"
 
-@implementation UserModel
+@implementation BPUserModel
 
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{@"m_id" : @"id"};
