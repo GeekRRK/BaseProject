@@ -14,10 +14,6 @@
     return @{@"m_id" : @"id"};
 }
 
-+ (NSArray *)propertyNames {
-    return @[@"m_id", @"name"];
-}
-
 + (NSDictionary *)modelContainerPropertyGenericClass {
     return @{@"subAddresses" : [BPAddressModel class]};
 }

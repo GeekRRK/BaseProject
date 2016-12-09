@@ -15,6 +15,4 @@
 
 @property (strong, nonatomic) NSMutableArray *subAddresses;
 
-+ (NSArray *)propertyNames;
-
 @end

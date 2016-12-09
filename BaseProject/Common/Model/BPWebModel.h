@@ -10,6 +10,7 @@
 
 @interface BPWebModel : NSObject
 
+@property (copy, nonatomic) NSString *title;
 @property (assign, nonatomic) int type;
 @property (copy, nonatomic) NSString *content;
 
