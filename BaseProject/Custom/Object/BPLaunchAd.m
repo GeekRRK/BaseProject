@@ -1,4 +1,5 @@
 #import "BPLaunchAd.h"
+#import "BPWebViewVC.h"
 
 #define AD_IMG_NAME @"BPAdImg.jpg"
 #define AD_INFO     @"BPAdInfo"
@@ -59,10 +60,10 @@
                 [self asyncDownloadAdImageWithUrl:_curAdDict[@"imgurl"] imageName:AD_IMG_NAME];
             }
         } else {
-            //[BPUtil showMessage:responseObject[@"msg"]];
+            NSLog(@"%@", responseObject[@"msg"]);
         }
     } failure:^(NSError *error) {
-        
+        NSLog(@"%@", error.localizedDescription);
     }];
 }
 
@@ -80,12 +81,12 @@
 
 - (void)clickAd {
     UIViewController* rootVC = [[UIApplication sharedApplication].delegate window].rootViewController;
-    //UIWebView *webVC = [[UIWebView alloc] init];
+    BPWebViewVC *webVC = [[BPWebViewVC alloc] init];
     
     if ([rootVC isKindOfClass:[UITabBarController class]]) {
-        
+        [rootVC.navigationController pushViewController:webVC animated:YES];
     } else {
-        
+        [(UINavigationController *)rootVC.navigationController pushViewController:webVC animated:YES];
     }
     
     [self hide];
