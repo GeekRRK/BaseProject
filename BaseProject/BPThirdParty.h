@@ -13,5 +13,6 @@
 + (instancetype)shareInstance;
 - (void)setupThirdParty:(NSDictionary *)launchOptions;
 - (void)loginWithThirdParty:(UIButton *)sender;
+- (void)shareInView:(UIView *)view;
 
 @end
