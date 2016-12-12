@@ -32,4 +32,6 @@
 
 + (void)deleteFileByName:(NSString *)fileName;
 
++ (void)dealWithAPNs:(NSDictionary *)userInfo;
+
 @end

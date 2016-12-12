@@ -139,4 +139,16 @@
     [fileManager removeItemAtPath:filePath error:nil];
 }
 
++ (void)dealWithAPNs:(NSDictionary *)userInfo {
+    NSDictionary *aps = userInfo[@"aps"];
+    NSString *type = userInfo[@"type"];
+    NSString *alertMsg = aps[@"alert"];
+    
+    if ([type isEqualToString:@"1"]) {
+        
+    } else if ([type isEqualToString:@"2"]) {
+        
+    }
+}
+
 @end
