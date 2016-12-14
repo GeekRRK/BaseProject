@@ -118,8 +118,8 @@
     }];
      */
     
-    
-    // 第三方解绑
+    /*
+    // 第三方解绑 404
     NSString *launchAdApi = SERVER_ADDRESS API_UNBIND_THIRDPARTY;
     NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"platform":@"WX", @"openid":@"o3LILj1K6teKK8Z6WSatN7MP8Zqo", @"device":@"IOS"} copyItems:YES];
     [BPInterface request:launchAdApi param:launchAdParam success:^(NSDictionary *responseObject) {
@@ -127,6 +127,7 @@
     } failure:^(NSError *error) {
         NSLog(@"%@", error.localizedDescription);
     }];
+     */
     
     /*
     // 开屏广告详情 暂无
@@ -179,12 +180,11 @@
     */
     
     /*
-    // 获取web内容
+    // 获取web内容 非法数据
     NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:TOKEN];
     NSString *userid = [[NSUserDefaults standardUserDefaults] objectForKey:USERID];
     NSString *launchAdApi = SERVER_ADDRESS API_WEB_CONTENT;
-    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"token":token, @"id":@"1", @"type":@"article"} copyItems:YES];
-    [launchAdParam setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
+    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"id":@"1"} copyItems:YES];
     [BPInterface request:launchAdApi param:launchAdParam success:^(NSDictionary *responseObject) {
         NSLog(@"%@", responseObject[@"content"]);
     } failure:^(NSError *error) {
