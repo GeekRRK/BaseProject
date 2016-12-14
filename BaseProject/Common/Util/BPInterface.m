@@ -12,8 +12,8 @@
 #import "NSData+AES.h"
 
 #define ENCRYPT         @"ENCRYPT"
-#define SIGN_KEY        @"l1ctZ[N8I2+H{q^HKA[C"
-#define AES_ECB_KEY     @"p)w]Y|&!X3mDWi:J"
+#define SIGN_KEY        @""
+#define AES_ECB_KEY     @""
 
 @implementation BPInterface
 
