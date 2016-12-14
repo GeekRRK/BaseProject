@@ -9,7 +9,19 @@
 
 #import "BPUtil.h"
 
+#define CIPHER          @"JNQ1VPFL9KYHu775"
+
 @implementation BPUtil
+
++ (void)saveLoginInfo:(NSDictionary *)dict {
+    [[NSUserDefaults standardUserDefaults] setObject:dict[@"signid"] forKey:SIGNID];
+    
+    NSString *diff = [NSString stringWithFormat:@"%d", [[BPUtil getNowTimeStamp] intValue] - [dict[@"time"] intValue]];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:diff forKey:TIMEDIFF];
+    [[NSUserDefaults standardUserDefaults] setObject:dict[@"token"] forKey:TOKEN];
+    [[NSUserDefaults standardUserDefaults] setObject:dict[@"userid"] forKey:USERID];
+}
 
 + (void)switchLocalizedLanguage {
     NSArray *langArr1 = [[NSUserDefaults standardUserDefaults] valueForKey:@"AppleLanguages"];
@@ -150,5 +162,43 @@
         
     }
 }
+
++ (NSString *)getNowTimeStamp {
+    NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval a=[dat timeIntervalSince1970];
+    NSString *timeString = [NSString stringWithFormat:@"%.0f", a];
+    return timeString;
+}
+
++ (NSString *)getCode:(NSString *)timestamp {
+    NSString *diff = [[NSUserDefaults standardUserDefaults] stringForKey:TIMEDIFF];
+    NSString *time = [NSString stringWithFormat:@"%d", [timestamp intValue] + [diff intValue]];
+    
+    NSString *token = [[NSUserDefaults standardUserDefaults] stringForKey:TOKEN];
+    NSString *code = [NSString stringWithFormat:@"%@%@%@", token, time, CIPHER];
+    NSString *md5Code = [BPUtil md5:code];
+    
+    return md5Code;
+}
+
++ (NSDictionary *)getUserParamDict {
+    /*
+    if (![BPUtil isLogin]) {
+        return nil;
+    }
+     */
+    
+    NSString *timestamp = [BPUtil getNowTimeStamp];
+    NSString *code = [BPUtil getCode:timestamp];
+    NSString *userid = [[NSUserDefaults standardUserDefaults] stringForKey:USERID];
+    NSString *signid = [[NSUserDefaults standardUserDefaults] stringForKey:SIGNID];
+    NSString *diff = [[NSUserDefaults standardUserDefaults] stringForKey:TIMEDIFF];
+    NSString *time = [NSString stringWithFormat:@"%d", [timestamp intValue] + [diff intValue]];
+    
+    NSDictionary *param = @{@"timestamp":time, @"code":code, @"userid":userid, @"signid":signid, @"time":time};
+    
+    return param;
+}
+
 
 @end

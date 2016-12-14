@@ -11,9 +11,9 @@
 #import "Base64.h"
 #import "NSData+AES.h"
 
-//#define ENCRYPT         @"ENCRYPT"
-#define SIGN_KEY        @"m1ctZ[M2N12+H{q^HKA[D"
-#define AES_ECB_KEY     @"q)w]Y|&!X4nCEi:K"
+#define ENCRYPT         @"ENCRYPT"
+#define SIGN_KEY        @"l1ctZ[N8I2+H{q^HKA[C"
+#define AES_ECB_KEY     @"p)w]Y|&!X3mDWi:J"
 
 @implementation BPInterface
 
@@ -83,9 +83,9 @@
             NSString *extension = [fileName pathExtension];
             
             NSString *mineType = @"";
-            if ([extension isEqualToString:@".jpg"]) {
+            if ([extension isEqualToString:@"jpg"]) {
                 mineType = @"image/jpeg";
-            } else if ([extension isEqualToString:@".png"]) {
+            } else if ([extension isEqualToString:@"png"]) {
                 mineType = @"image/png";
             }
             
@@ -94,14 +94,16 @@
     
         NSArray *sortedParamKeys = [param.allKeys sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
         
+        NSDictionary *curParam = param;
 #ifdef ENCRYPT
         NSDictionary * signedParams = [BPInterface signedParamsFrom:param];
+        curParam = signedParams;
         sortedParamKeys = [signedParams.allKeys sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 #endif
         
-        for (int i = 0; i < param.count; ++i) {
+        for (int i = 0; i < curParam.count; ++i) {
             NSString *key = sortedParamKeys[i];
-            NSString *value = param[key];
+            NSString *value = curParam[key];
          
             [formData appendPartWithFormData:[value dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES] name:key];
         }

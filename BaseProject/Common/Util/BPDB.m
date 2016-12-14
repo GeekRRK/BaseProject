@@ -10,7 +10,6 @@
 #import "BPDB.h"
 #import "BPUserModel.h"
 
-#define CACHE_DIR                 [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
 #define DATABASE_PATH             @"bp.db"
 
 @implementation BPDB

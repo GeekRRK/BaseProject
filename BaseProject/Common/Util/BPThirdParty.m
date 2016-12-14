@@ -257,9 +257,9 @@
     [ShareSDK getUserInfo:platformType
            onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error) {
                if (state == SSDKResponseStateSuccess) {
-                   NSString *APIAddr = SERVER_ADDRESS @"";
+                   NSString *APIAddr = SERVER_ADDRESS API_THIRDPARTY_LOGIN;
                    
-                   NSDictionary *param = @{@"platform":platform, @"openid":user.uid, @"nickname":user.nickname, @"headface":user.icon};
+                   NSDictionary *param = @{FIXED_PARAMS, @"platform":platform, @"openid":user.uid, @"device":@"IOS"};
                    [BPInterface request:APIAddr param:param success:^(NSDictionary *responseObject) {
                        if ([responseObject[@"error"] intValue] == 0) {
                            [BPUtil showMessage:@"登录成功"];

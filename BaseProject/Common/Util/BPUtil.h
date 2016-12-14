@@ -14,6 +14,8 @@
 
 @interface BPUtil : NSObject
 
++ (void)saveLoginInfo:(NSDictionary *)dict;
+
 + (void)switchLocalizedLanguage;
 
 + (void)setupDDLog;
@@ -33,5 +35,9 @@
 + (void)deleteFileByName:(NSString *)fileName;
 
 + (void)dealWithAPNs:(NSDictionary *)userInfo;
+
++ (NSString *)getNowTimeStamp;
+
++ (NSDictionary *)getUserParamDict;
 
 @end

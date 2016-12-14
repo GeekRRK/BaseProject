@@ -13,6 +13,8 @@
 #import "BPAlertView.h"
 #import "NextVC.h"
 #import <Masonry.h>
+#import "BPWebViewVC.h"
+#import "BPThirdParty.h"
 
 static float alpha = 1;
 static float baseMinY = 0;
@@ -113,8 +115,10 @@ static float baseMaxY = 160 - 64;
         cell.textLabel.text = @"弹出框";
     } else if (indexPath.row == 1) {
         cell.textLabel.text = @"下一页";
-    } else {
-        cell.textLabel.text = @"占位";
+    } else if (indexPath.row == 2) {
+        cell.textLabel.text = @"设置Allow Arbitrary Loads为NO时测试HTTP网页";
+    } else if (indexPath.row == 3) {
+        cell.textLabel.text = @"第三方登录";
     }
     
     return cell;
@@ -131,6 +135,13 @@ static float baseMaxY = 160 - 64;
     } else if (indexPath.row == 1) {
         NextVC *nextVC = [[NextVC alloc] init];
         [self.navigationController pushViewController:nextVC animated:YES];
+    } else if (indexPath.row == 2) {
+        BPWebViewVC *webView = [[BPWebViewVC alloc] init];
+        [self.navigationController pushViewController:webView animated:YES];
+    } else if (indexPath.row == 3) {
+        UIButton *btn = [[UIButton alloc] init];
+        btn.tag = 2;
+        [[BPThirdParty shareInstance] loginWithThirdParty:btn];
     }
 }
 

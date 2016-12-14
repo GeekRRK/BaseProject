@@ -16,6 +16,11 @@
 
 //#define WXTabBar
 
+/*
+    13865250636
+    111111
+ */
+
 @interface AppDelegate ()
 
 @end
@@ -27,6 +32,165 @@
     
     [self setupRootVC];
     [[BPThirdParty shareInstance] setupThirdParty:launchOptions];
+    /*
+    // 登录 应该是客户端进行md5
+    NSString *loginApi = SERVER_ADDRESS API_LOGIN;
+    NSDictionary *loginParam = @{FIXED_PARAMS, @"mobile":@"13865250636", @"password":@"111111", @"device":@"IOS"};
+    [BPInterface request:loginApi param:loginParam success:^(NSDictionary *responseObject) {
+        if ([responseObject[@"status"] intValue] == 0) {
+            [BPUtil saveLoginInfo:responseObject[@"content"]];
+        }
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];*/
+    
+    /*
+    // 修改密码 应该是客户端进行md5
+    NSString *changePwdApi = SERVER_ADDRESS API_CHANGE_PWD;
+    NSDictionary *changePwdParam = @{FIXED_PARAMS, @"mobile":@"13865250636", @"password":@"222222", @"oldpassword":@"111111"};
+    [BPInterface request:changePwdApi param:changePwdParam success:^(NSDictionary *responseObject) {
+        NSLog(@"%@", responseObject[@"content"]);
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+    
+    // 找回密码 应该是客户端进行md5
+    NSString *findPwdApi = SERVER_ADDRESS API_FIND_PWD;
+    NSDictionary *findPwdParam = @{FIXED_PARAMS, @"mobile":@"13865250636", @"code":@"111111", @"password":@"111111"};
+    [BPInterface request:findPwdApi param:findPwdParam success:^(NSDictionary *responseObject) {
+        NSLog(@"%@", responseObject[@"content"]);
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+     */
+    
+    /*
+    // 获取用户详细信息
+    NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:TOKEN];
+    NSString *userinfoApi = SERVER_ADDRESS API_USERINFO;
+    NSMutableDictionary *userinfoParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"token":TOKEN} copyItems:YES];
+    [userinfoParam setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
+    [BPInterface request:userinfoApi param:userinfoParam success:^(NSDictionary *responseObject) {
+        NSLog(@"%@", responseObject[@"content"]);
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+     */
+    
+    /*
+    // 修改用户资料
+    NSString *userid = [[NSUserDefaults standardUserDefaults] objectForKey:USERID];
+    NSString *siginid = [[NSUserDefaults standardUserDefaults] objectForKey:SIGNID];
+    NSString *modifyUserinfoApi = SERVER_ADDRESS API_MODIFY_USERINFO;
+    NSMutableDictionary *modifyUserinfoParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"name":@"iOS_Developer"} copyItems:YES];
+    [modifyUserinfoParam setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
+    NSString *imgPath = [CACHE_DIR stringByAppendingPathComponent:@"avatar.png"];
+    [BPInterface request2UploadFile:modifyUserinfoApi files:@{@"avatar":imgPath} param:modifyUserinfoParam success:^(NSDictionary *responseObject) {
+        NSLog(@"%@", responseObject[@"content"]);
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+     */
+    
+    // 第三方登录，7001，未注册
+    
+    
+    /*
+    // 开屏广告 暂无
+    NSString *launchAdApi = SERVER_ADDRESS API_LAUNCH_AD;
+    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS} copyItems:YES];
+    [launchAdParam setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
+    [BPInterface request:launchAdApi param:launchAdParam success:^(NSDictionary *responseObject) {
+        NSLog(@"%@", responseObject[@"content"]);
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+     */
+    
+    /*
+    // 第三方绑定
+    NSString *launchAdApi = SERVER_ADDRESS API_BIND_THIRDPARTY;
+    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"platform":@"WX", @"openid":@"o3LILj1K6teKK8Z6WSatN7MP8Zqo", @"device":@"IOS"} copyItems:YES];
+    [BPInterface request:launchAdApi param:launchAdParam success:^(NSDictionary *responseObject) {
+        NSLog(@"%@", responseObject[@"content"]);
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+     */
+    
+    
+    // 第三方解绑
+    NSString *launchAdApi = SERVER_ADDRESS API_UNBIND_THIRDPARTY;
+    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"platform":@"WX", @"openid":@"o3LILj1K6teKK8Z6WSatN7MP8Zqo", @"device":@"IOS"} copyItems:YES];
+    [BPInterface request:launchAdApi param:launchAdParam success:^(NSDictionary *responseObject) {
+        NSLog(@"%@", responseObject[@"content"]);
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+    
+    /*
+    // 开屏广告详情 暂无
+    NSString *launchAdApi = SERVER_ADDRESS API_LAUNCHAD_DETAIL;
+    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"id":@"1"} copyItems:YES];
+    [launchAdParam setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
+    [BPInterface request:launchAdApi param:launchAdParam success:^(NSDictionary *responseObject) {
+        NSLog(@"%@", responseObject[@"content"]);
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+     */
+    
+    /*
+    // 省市列表 应该一次性返回
+    NSString *launchAdApi = SERVER_ADDRESS API_PROVINCE_CITY;
+    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"id":@"1"} copyItems:YES];
+    [launchAdParam setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
+    [BPInterface request:launchAdApi param:launchAdParam success:^(NSDictionary *responseObject) {
+        NSLog(@"%@", responseObject[@"content"]);
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+     */
+    
+    /*
+    // 推送详情 不要token
+    NSString *launchAdApi = SERVER_ADDRESS API_PUSH_DETAIL;
+    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"id":@"1"} copyItems:YES];
+    [launchAdParam setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
+    [BPInterface request:launchAdApi param:launchAdParam success:^(NSDictionary *responseObject) {
+        NSLog(@"%@", responseObject[@"content"]);
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+     */
+    
+    /*
+    // 意见反馈 返回非法数据
+    NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:TOKEN];
+    NSString *userid = [[NSUserDefaults standardUserDefaults] objectForKey:USERID];
+    NSString *launchAdApi = SERVER_ADDRESS API_SUGGEST;
+    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"token":token, @"userid":userid, @"context":@"test suggestion", @"email":@"668672615@qq.com", @"phone":@"18516282405"} copyItems:YES];
+    [launchAdParam setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
+    [BPInterface request:launchAdApi param:launchAdParam success:^(NSDictionary *responseObject) {
+        NSLog(@"%@", responseObject[@"content"]);
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+    */
+    
+    /*
+    // 获取web内容
+    NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:TOKEN];
+    NSString *userid = [[NSUserDefaults standardUserDefaults] objectForKey:USERID];
+    NSString *launchAdApi = SERVER_ADDRESS API_WEB_CONTENT;
+    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"token":token, @"id":@"1", @"type":@"article"} copyItems:YES];
+    [launchAdParam setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
+    [BPInterface request:launchAdApi param:launchAdParam success:^(NSDictionary *responseObject) {
+        NSLog(@"%@", responseObject[@"content"]);
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+     */
     
     return YES;
 }

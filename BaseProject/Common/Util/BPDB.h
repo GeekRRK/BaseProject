@@ -10,6 +10,8 @@
 #import <Foundation/Foundation.h>
 #import <FMDB.h>
 
+#define CACHE_DIR                 [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
+
 @interface BPDB : NSObject
 
 + (void)createUserTable:(NSString *)tableName;
