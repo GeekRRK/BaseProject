@@ -11,7 +11,7 @@
 #import "Base64.h"
 #import "NSData+AES.h"
 
-#define ENCRYPT         @"ENCRYPT"
+#define ENCRYPT         @""
 #define SIGN_KEY        @""
 #define AES_ECB_KEY     @""
 
