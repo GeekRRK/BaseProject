@@ -32,8 +32,22 @@
     
     [self setupRootVC];
     [[BPThirdParty shareInstance] setupThirdParty:launchOptions];
+    
     /*
-    // 登录 应该是客户端进行md5
+    // 获取验证码 404
+    NSString *codeApi = SERVER_ADDRESS API_VERIFICATION_TOKEN;
+    NSDictionary *codeParam = @{FIXED_PARAMS, @"mobile":@"18516282405"};
+    [BPInterface request:codeApi param:codeParam success:^(NSDictionary *responseObject) {
+        if ([responseObject[@"status"] intValue] == 0) {
+            
+        }
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+     */
+    
+    /*
+    // 登录 password应该是客户端进行md5
     NSString *loginApi = SERVER_ADDRESS API_LOGIN;
     NSDictionary *loginParam = @{FIXED_PARAMS, @"mobile":@"13865250636", @"password":@"111111", @"device":@"IOS"};
     [BPInterface request:loginApi param:loginParam success:^(NSDictionary *responseObject) {
@@ -45,7 +59,7 @@
     }];*/
     
     /*
-    // 修改密码 应该是客户端进行md5
+    // 修改密码 password和oldpassword应该是客户端进行md5
     NSString *changePwdApi = SERVER_ADDRESS API_CHANGE_PWD;
     NSDictionary *changePwdParam = @{FIXED_PARAMS, @"mobile":@"13865250636", @"password":@"222222", @"oldpassword":@"111111"};
     [BPInterface request:changePwdApi param:changePwdParam success:^(NSDictionary *responseObject) {
@@ -54,7 +68,7 @@
         NSLog(@"%@", error.localizedDescription);
     }];
     
-    // 找回密码 应该是客户端进行md5
+    // 找回密码 password应该是客户端进行md5
     NSString *findPwdApi = SERVER_ADDRESS API_FIND_PWD;
     NSDictionary *findPwdParam = @{FIXED_PARAMS, @"mobile":@"13865250636", @"code":@"111111", @"password":@"111111"};
     [BPInterface request:findPwdApi param:findPwdParam success:^(NSDictionary *responseObject) {
@@ -93,7 +107,6 @@
      */
     
     // 第三方登录，7001，未注册
-    
     
     /*
     // 开屏广告 暂无
@@ -144,8 +157,7 @@
     /*
     // 省市列表 应该一次性返回
     NSString *launchAdApi = SERVER_ADDRESS API_PROVINCE_CITY;
-    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"id":@"1"} copyItems:YES];
-    [launchAdParam setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
+    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS} copyItems:YES];
     [BPInterface request:launchAdApi param:launchAdParam success:^(NSDictionary *responseObject) {
         NSLog(@"%@", responseObject[@"content"]);
     } failure:^(NSError *error) {
@@ -183,9 +195,9 @@
     // 获取web内容 非法数据
     NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:TOKEN];
     NSString *userid = [[NSUserDefaults standardUserDefaults] objectForKey:USERID];
-    NSString *launchAdApi = SERVER_ADDRESS API_WEB_CONTENT;
-    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"id":@"1"} copyItems:YES];
-    [BPInterface request:launchAdApi param:launchAdParam success:^(NSDictionary *responseObject) {
+    NSString *webApi = SERVER_ADDRESS API_WEB_CONTENT;
+    NSMutableDictionary *webParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"id":@"1"} copyItems:YES];
+    [BPInterface request:webApi param:webParam success:^(NSDictionary *responseObject) {
         NSLog(@"%@", responseObject[@"content"]);
     } failure:^(NSError *error) {
         NSLog(@"%@", error.localizedDescription);
