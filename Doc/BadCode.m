@@ -33,13 +33,14 @@
 - (NSArray *)userNames {
     NSArray *exampleNames = @[@"Al", @"John", @"Mary"];
     
-    NSMutableArray *names = [[NSMutableArray alloc] init];
-    for (int i = 0; i < exampleNames.count; ++i) {
-        NSString *name = [NSString stringWithFormat:@"iOS_%@", exampleNames[i]];
-        [names addObject:name];
+    NSMutableArray *iOSNames = [[NSMutableArray alloc] init];
+    
+    for (NSString *name in exampleNames) {
+        NSString *iOSName = [@"iOS_" stringByAppendingString:name];
+        [iOSNames addObject:iOSName];
     }
     
-    return names;
+    return iOSNames;
 }
 
 @end
