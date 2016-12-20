@@ -1,13 +1,13 @@
 //
-//  NextVC.h
+//  PushDetailVC.h
 //  BaseProject
 //
-//  Created by GeekRRK on 2016/12/1.
+//  Created by GeekRRK on 2016/12/20.
 //  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface NextVC : UIViewController
+@interface PushDetailVC : UIViewController
 
 @end

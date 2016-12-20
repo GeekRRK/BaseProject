@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC">
+            <connections>
+                <outlet property="pwdTextField" destination="co1-tk-qzq" id="hjn-eJ-df9"/>
+                <outlet property="userNameTextField" destination="TsJ-WV-ewt" id="odV-uo-Jn0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TsJ-WV-ewt">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="97" id="eUs-6X-fCD"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="co1-tk-qzq">
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckS-nH-ukw">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="0oA-tE-ah9"/>
+                    </constraints>
+                    <state key="normal" title="登录"/>
+                    <connections>
+                        <action selector="clickLoginBtn:" destination="-1" eventType="touchUpInside" id="fq2-6J-IK1"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nK8-f1-Ibz">
+                    <state key="normal" title="QQ"/>
+                    <connections>
+                        <action selector="clickThirdPartyBtn:" destination="-1" eventType="touchUpInside" id="VJF-6P-4N2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unj-fA-ve1">
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                    <state key="normal" title="微信"/>
+                    <connections>
+                        <action selector="clickThirdPartyBtn:" destination="-1" eventType="touchUpInside" id="PGa-D3-OIK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fx-5B-WJV">
+                    <state key="normal" title="微博"/>
+                    <connections>
+                        <action selector="clickThirdPartyBtn:" destination="-1" eventType="touchUpInside" id="Urz-4M-Tli"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="TsJ-WV-ewt" firstAttribute="leading" secondItem="co1-tk-qzq" secondAttribute="leading" id="381-XR-hum"/>
+                <constraint firstItem="ckS-nH-ukw" firstAttribute="top" secondItem="co1-tk-qzq" secondAttribute="bottom" constant="24" id="5ZI-kj-v9g"/>
+                <constraint firstItem="co1-tk-qzq" firstAttribute="top" secondItem="TsJ-WV-ewt" secondAttribute="bottom" constant="24" id="9jf-f3-VNA"/>
+                <constraint firstItem="nK8-f1-Ibz" firstAttribute="centerY" secondItem="Unj-fA-ve1" secondAttribute="centerY" id="Eor-lE-WEV"/>
+                <constraint firstItem="co1-tk-qzq" firstAttribute="centerX" secondItem="ckS-nH-ukw" secondAttribute="centerX" id="ILl-yW-8N1"/>
+                <constraint firstItem="5Fx-5B-WJV" firstAttribute="centerY" secondItem="Unj-fA-ve1" secondAttribute="centerY" id="PGO-xk-1dR"/>
+                <constraint firstItem="5Fx-5B-WJV" firstAttribute="leading" secondItem="Unj-fA-ve1" secondAttribute="trailing" constant="20" id="ReS-3H-NvY"/>
+                <constraint firstItem="Unj-fA-ve1" firstAttribute="leading" secondItem="nK8-f1-Ibz" secondAttribute="trailing" constant="20" id="goc-WE-rjs"/>
+                <constraint firstItem="TsJ-WV-ewt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="ixA-y7-cXs"/>
+                <constraint firstItem="Unj-fA-ve1" firstAttribute="top" secondItem="ckS-nH-ukw" secondAttribute="bottom" constant="36" id="szM-SD-bdS"/>
+                <constraint firstItem="ckS-nH-ukw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tYH-xA-RK9"/>
+                <constraint firstItem="Unj-fA-ve1" firstAttribute="centerX" secondItem="ckS-nH-ukw" secondAttribute="centerX" id="uPv-iA-0pH"/>
+                <constraint firstItem="TsJ-WV-ewt" firstAttribute="trailing" secondItem="co1-tk-qzq" secondAttribute="trailing" id="wDs-gA-9Dl"/>
+            </constraints>
+            <point key="canvasLocation" x="-239" y="34"/>
+        </view>
+    </objects>
+</document>

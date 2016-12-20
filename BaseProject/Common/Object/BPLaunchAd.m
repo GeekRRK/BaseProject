@@ -47,11 +47,11 @@
         [self show];
     }
     
-    NSString *APIAddr = SERVER_ADDRESS;
-    NSDictionary *param = @{@"version":@""};
-    
-    [BPInterface request:APIAddr param:param success:^(NSDictionary *responseObject) {
-        if ([responseObject[@"errcode"] intValue] == 0) {
+    NSString *launchAdApi = SERVER_ADDRESS API_LAUNCH_AD;
+    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS} copyItems:YES];
+    [launchAdParam setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
+    [BPInterface request:launchAdApi param:launchAdParam success:^(NSDictionary *responseObject) {
+        if ([responseObject[@"status"] intValue] == 0) {
             _curAdDict = responseObject[@"info"];
             
             if (_curAdDict == nil || _curAdDict.count == 0) {
@@ -60,10 +60,10 @@
                 [self asyncDownloadAdImageWithUrl:_curAdDict[@"imgurl"] imageName:AD_IMG_NAME];
             }
         } else {
-            NSLog(@"%@", responseObject[@"msg"]);
+            [BPUtil showMessage:responseObject[@"content"]];
         }
     } failure:^(NSError *error) {
-        NSLog(@"%@", error.localizedDescription);
+        [BPUtil showMessage:error.localizedDescription];
     }];
 }
 
@@ -92,6 +92,22 @@
     }
     
     [self hide];
+}
+
+- (void)requestLaunchAdDetail {
+    // 开屏广告详情 暂无
+    NSString *launchAdApi = SERVER_ADDRESS API_LAUNCHAD_DETAIL;
+    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"id":@"1"} copyItems:YES];
+    [launchAdParam setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
+    [BPInterface request:launchAdApi param:launchAdParam success:^(NSDictionary *responseObject) {
+        if ([responseObject[@"status"] intValue] == 0) {
+            NSLog(@"%@", responseObject);
+        } else {
+            [BPUtil showMessage:responseObject[@"content"]];
+        }
+    } failure:^(NSError *error) {
+        [BPUtil showMessage:error.localizedDescription];
+    }];
 }
 
 - (void)clickJumpBtn {

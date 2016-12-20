@@ -2,8 +2,8 @@
 //  VideoVC.m
 //  BaseProject
 //
-//  Created by UGOMEDIA on 2016/11/24.
-//  Copyright © 2016年 UgoMedia. All rights reserved.
+//  Created by GeekRRK on 2016/11/24.
+//  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
 #import "VideoVC.h"
@@ -62,7 +62,6 @@
     float offset = scrollView.contentOffset.x;
     offset = offset / CGRectGetWidth(scrollView.frame);
     [_itemControlView endMoveToIndex:offset];
-    
 }
 
 @end

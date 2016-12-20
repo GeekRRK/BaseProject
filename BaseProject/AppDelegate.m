@@ -25,6 +25,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    NSLog(@"%@", CACHE_DIR);
+    
     [self setupRootVC];
     [[BPThirdParty shareInstance] setupThirdParty:launchOptions];
     

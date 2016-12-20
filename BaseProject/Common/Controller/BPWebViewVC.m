@@ -2,8 +2,8 @@
 //  NXHWebViewVC.m
 //  iFan
 //
-//  Created by UGOMEDIA on 16/7/21.
-//  Copyright © 2016年 UgoMedia. All rights reserved.
+//  Created by GeekRRK on 16/7/21.
+//  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
 #import "BPWebViewVC.h"

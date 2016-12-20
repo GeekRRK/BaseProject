@@ -2,8 +2,8 @@
 //  NextVC.m
 //  BaseProject
 //
-//  Created by UGOMEDIA on 2016/12/1.
-//  Copyright © 2016年 UgoMedia. All rights reserved.
+//  Created by GeekRRK on 2016/12/1.
+//  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
 #import "NextVC.h"
