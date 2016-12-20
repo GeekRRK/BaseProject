@@ -20,14 +20,14 @@
 }
 
 - (void)requestWebDetail {
-    // 获取web内容
-    NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:TOKEN];
-    NSString *userid = [[NSUserDefaults standardUserDefaults] objectForKey:USERID];
-    NSString *webApi = SERVER_ADDRESS API_WEB_CONTENT;
-    NSMutableDictionary *webParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"id":@"1"} copyItems:YES];
-    [BPInterface request:webApi param:webParam success:^(NSDictionary *responseObject) {
+    // 获取Web内容
+    NSString *api = SERVER_ADDRESS API_WEB_CONTENT;
+    
+    NSString *webId = @"网页内容id";    // 必选
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"id":webId} copyItems:YES];
+    [BPInterface request:api param:param success:^(NSDictionary *responseObject) {
         if ([responseObject[@"status"] intValue] == 0) {
-            NSLog(@"%@", responseObject);
+            // 处理获取的网页内容
         } else {
             [BPUtil showMessage:responseObject[@"content"]];
         }

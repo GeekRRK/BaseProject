@@ -7,6 +7,7 @@
 //
 
 #import "PushDetailVC.h"
+#import <MBProgressHUD.h>
 
 @interface PushDetailVC ()
 
@@ -21,15 +22,26 @@
 
 - (void)requestPushDetail {
     // 推送详情
-    NSString *launchAdApi = SERVER_ADDRESS API_PUSH_DETAIL;
-    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"id":@"1"} copyItems:YES];
-    [BPInterface request:launchAdApi param:launchAdParam success:^(NSDictionary *responseObject) {
+    NSString *api = SERVER_ADDRESS API_PUSH_DETAIL;
+    
+    NSString *push_id = @"推送内容id";  // 必选
+    
+    // NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"id":@"1"} copyItems:YES];
+    
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"id":push_id} copyItems:YES];
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [BPInterface request:api param:param success:^(NSDictionary *responseObject) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        
         if ([responseObject[@"status"] intValue] == 0) {
-            NSLog(@"%@", responseObject);
+            // 处理获取到的推送详情
         } else {
             [BPUtil showMessage:responseObject[@"content"]];
         }
     } failure:^(NSError *error) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        
         [BPUtil showMessage:error.localizedDescription];
     }];
 }

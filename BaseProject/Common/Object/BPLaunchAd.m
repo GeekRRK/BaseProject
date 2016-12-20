@@ -47,10 +47,9 @@
         [self show];
     }
     
-    NSString *launchAdApi = SERVER_ADDRESS API_LAUNCH_AD;
-    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS} copyItems:YES];
-    [launchAdParam setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
-    [BPInterface request:launchAdApi param:launchAdParam success:^(NSDictionary *responseObject) {
+    NSString *api = SERVER_ADDRESS API_LAUNCH_AD;
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS} copyItems:YES];
+    [BPInterface request:api param:param success:^(NSDictionary *responseObject) {
         if ([responseObject[@"status"] intValue] == 0) {
             _curAdDict = responseObject[@"info"];
             
@@ -95,13 +94,17 @@
 }
 
 - (void)requestLaunchAdDetail {
-    // 开屏广告详情 暂无
-    NSString *launchAdApi = SERVER_ADDRESS API_LAUNCHAD_DETAIL;
-    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"id":@"1"} copyItems:YES];
-    [launchAdParam setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
-    [BPInterface request:launchAdApi param:launchAdParam success:^(NSDictionary *responseObject) {
+    // 开屏广告详情
+    NSString *api = SERVER_ADDRESS API_LAUNCHAD_DETAIL;
+    
+    NSString *adId = @"广告id";
+    
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"id":adId} copyItems:YES];
+    [api setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
+    
+    [BPInterface request:api param:param success:^(NSDictionary *responseObject) {
         if ([responseObject[@"status"] intValue] == 0) {
-            NSLog(@"%@", responseObject);
+            // 获取到广告详情进行处理
         } else {
             [BPUtil showMessage:responseObject[@"content"]];
         }

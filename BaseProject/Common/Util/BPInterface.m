@@ -23,6 +23,7 @@
     dispatch_once(&onecToken, ^{
         NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
         URLSessionMgr = [[AFURLSessionManager alloc] initWithSessionConfiguration:config];
+        URLSessionMgr.responseSerializer = [AFHTTPResponseSerializer serializer];
     });
     
     return URLSessionMgr;
@@ -46,7 +47,6 @@
     NSData *paramData = [paramURL dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
     [request setHTTPBody:paramData];
     
-    [BPInterface shareURLSessionMgr].responseSerializer = [AFHTTPResponseSerializer serializer];
     NSURLSessionDataTask *dataTask = [[BPInterface shareURLSessionMgr] dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         if (error) {
             failureBlock(error);

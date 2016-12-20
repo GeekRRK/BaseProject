@@ -26,6 +26,7 @@
 		AE65034C1E08D2320001A633 /* ThirdPartyBindingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE65034A1E08D2320001A633 /* ThirdPartyBindingVC.xib */; };
 		AE6503501E08D2AF0001A633 /* PushDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AE65034E1E08D2AF0001A633 /* PushDetailVC.m */; };
 		AE6503511E08D2AF0001A633 /* PushDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE65034F1E08D2AF0001A633 /* PushDetailVC.xib */; };
+		AE6503531E0923630001A633 /* iOS集成常用第三方.docx in Resources */ = {isa = PBXBuildFile; fileRef = AE6503521E0923630001A633 /* iOS集成常用第三方.docx */; };
 		AE78A9071DD4276700869859 /* Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = AE78A9061DD4276700869859 /* Guide.docx */; };
 		AE78A90A1DD4709900869859 /* BadCode.m in Sources */ = {isa = PBXBuildFile; fileRef = AE78A9091DD4709900869859 /* BadCode.m */; };
 		AE80F79B1DFA96A300D2B3D7 /* BPWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AE80F7841DFA96A300D2B3D7 /* BPWebViewVC.m */; };
@@ -133,6 +134,7 @@
 		AE65034D1E08D2AF0001A633 /* PushDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushDetailVC.h; sourceTree = "<group>"; };
 		AE65034E1E08D2AF0001A633 /* PushDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushDetailVC.m; sourceTree = "<group>"; };
 		AE65034F1E08D2AF0001A633 /* PushDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushDetailVC.xib; sourceTree = "<group>"; };
+		AE6503521E0923630001A633 /* iOS集成常用第三方.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iOS集成常用第三方.docx"; sourceTree = "<group>"; };
 		AE78A9061DD4276700869859 /* Guide.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Guide.docx; sourceTree = "<group>"; };
 		AE78A9081DD4709900869859 /* BadCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadCode.h; sourceTree = "<group>"; };
 		AE78A9091DD4709900869859 /* BadCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadCode.m; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 				AE78A9061DD4276700869859 /* Guide.docx */,
 				AE78A9081DD4709900869859 /* BadCode.h */,
 				AE78A9091DD4709900869859 /* BadCode.m */,
+				AE6503521E0923630001A633 /* iOS集成常用第三方.docx */,
 			);
 			path = Doc;
 			sourceTree = "<group>";
@@ -707,6 +710,7 @@
 			files = (
 				AEC02F8C1DD0532C00710A62 /* Localizable.strings in Resources */,
 				AE51FF5E1E08BDAF00B76BE0 /* RegisterVC.xib in Resources */,
+				AE6503531E0923630001A633 /* iOS集成常用第三方.docx in Resources */,
 				AE9D850F1DCDA60300CAF67F /* Assets.xcassets in Resources */,
 				AEC6C2CD1DD17B0F00F9ABA0 /* HZQPickerView.xib in Resources */,
 				AE65033D1E08CE0E0001A633 /* SuggestionVC.xib in Resources */,

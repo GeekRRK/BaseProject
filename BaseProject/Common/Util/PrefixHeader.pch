@@ -22,9 +22,9 @@ static const DDLogLevel ddLogLevel = DDLogLevelAll;
 
 #define BPDEBUG
 #ifndef BPDEBUG
-    #define SERVER_ADDRESS @""
+    #define SERVER_ADDRESS @"http://basev1.dev.babyjs.cn/Api/"
 #else
-    #define SERVER_ADDRESS @""
+    #define SERVER_ADDRESS @"http://basev1.dev.babyjs.cn/Api/"
 #endif
 
 #define MAS_SHORTHAND

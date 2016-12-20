@@ -29,10 +29,11 @@
 #define API_BIND_THIRDPARTY         @"/User/platform/bind"
 #define API_UNBIND_THIRDPARTY       @"/User/platform/remove"
 #define API_LAUNCHAD_DETAIL         @"/Other/Adv/getLaunchInfo"
-#define API_PROVINCE_CITY           @"/Other/District/getList"
+#define API_PROVINCE_CITY           @"/Other/District/lists"
 #define API_PUSH_DETAIL             @"/Other/Push/getInfo"
 #define API_SUGGEST                 @"/Other/Feedback/send"
 #define API_WEB_CONTENT             @"/Other/Web/getHtml"
+#define API_CHANGE_AVATAR           @"/User/Info/setAvatar"
 
 typedef void (^SuccessBlock)(NSDictionary *responseObject);
 typedef void (^FailureBlock)(NSError *error);

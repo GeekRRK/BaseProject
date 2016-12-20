@@ -30,6 +30,19 @@
     [self setupRootVC];
     [[BPThirdParty shareInstance] setupThirdParty:launchOptions];
     
+    /*
+    NSString *api = SERVER_ADDRESS API_CHANGE_AVATAR;
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS} copyItems:YES];
+    [param setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
+    
+    NSString *path = [CACHE_DIR stringByAppendingPathComponent:@"avatar.png"];
+    [BPInterface request2UploadFile:api files:@{@"avatar":path} param:param success:^(NSDictionary *responseObject) {
+        NSLog(@"%@", responseObject);
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+     */
+    
     return YES;
 }
 
