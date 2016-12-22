@@ -1,5 +1,5 @@
 //
-//  PushDetailVC.h
+//  LoginVC.h
 //  BaseProject
 //
 //  Created by GeekRRK on 2016/12/20.
@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PushDetailVC : UIViewController
+typedef void(^AfterLogin)(void);
+
+@interface BPLoginVC : UIViewController
+
+@property (strong, nonatomic) AfterLogin afterLoginBlock;
 
 @end

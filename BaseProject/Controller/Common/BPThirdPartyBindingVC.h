@@ -1,5 +1,5 @@
 //
-//  LoginVC.h
+//  ThirdPartyBindingVC.h
 //  BaseProject
 //
 //  Created by GeekRRK on 2016/12/20.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginVC : UIViewController
+@interface BPThirdPartyBindingVC : UIViewController
 
 @end

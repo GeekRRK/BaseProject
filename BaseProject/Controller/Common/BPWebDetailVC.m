@@ -6,13 +6,13 @@
 //  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
-#import "WebDetailVC.h"
+#import "BPWebDetailVC.h"
 
-@interface WebDetailVC ()
+@interface BPWebDetailVC ()
 
 @end
 
-@implementation WebDetailVC
+@implementation BPWebDetailVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -20,14 +20,13 @@
 }
 
 - (void)requestWebDetail {
-    // 获取Web内容
     NSString *api = SERVER_ADDRESS API_WEB_CONTENT;
     
     NSString *webId = @"网页内容id";    // 必选
     NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"id":webId} copyItems:YES];
     [BPInterface request:api param:param success:^(NSDictionary *responseObject) {
         if ([responseObject[@"status"] intValue] == 0) {
-            // 处理获取的网页内容
+            
         } else {
             [BPUtil showMessage:responseObject[@"content"]];
         }

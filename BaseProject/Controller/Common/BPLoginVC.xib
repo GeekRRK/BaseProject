@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BPLoginVC">
             <connections>
+                <outlet property="phoneTextField" destination="TsJ-WV-ewt" id="NPy-aA-weg"/>
                 <outlet property="pwdTextField" destination="co1-tk-qzq" id="hjn-eJ-df9"/>
-                <outlet property="userNameTextField" destination="TsJ-WV-ewt" id="odV-uo-Jn0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -1,5 +1,5 @@
 //
-//  FindPwdVC.h
+//  PushDetailVC.h
 //  BaseProject
 //
 //  Created by GeekRRK on 2016/12/20.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FindPwdVC : UIViewController
+@interface BPPushDetailVC : UIViewController
 
 @end

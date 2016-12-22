@@ -1,5 +1,5 @@
 //
-//  ChangePwdVC.h
+//  SuggestionVC.h
 //  BaseProject
 //
 //  Created by GeekRRK on 2016/12/20.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChangePwdVC : UIViewController
+@interface BPSuggestionVC : UIViewController
 
 @end

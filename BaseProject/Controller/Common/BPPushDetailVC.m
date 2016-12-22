@@ -1,46 +1,38 @@
 //
-//  FindPwdVC.m
+//  PushDetailVC.m
 //  BaseProject
 //
 //  Created by GeekRRK on 2016/12/20.
 //  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
-#import "FindPwdVC.h"
+#import "BPPushDetailVC.h"
 #import <MBProgressHUD.h>
 
-@interface FindPwdVC ()
+@interface BPPushDetailVC ()
 
 @end
 
-@implementation FindPwdVC
+@implementation BPPushDetailVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"找回密码";
+    self.title = @"推送详情";
 }
 
-- (IBAction)clickConfirmBtn:(id)sender {
-    // 找回密码
-    NSString *api = SERVER_ADDRESS API_FIND_PWD;
+- (void)requestPushDetail {
+    NSString *api = SERVER_ADDRESS API_PUSH_DETAIL;
     
-    NSString *mobile = @"手机号";      // 必选
-    NSString *code = @"验证码";        // 必选
-    NSString *password = @"密码";      // 必选
+    NSString *push_id = @"推送内容id";  // 必选
     
-    // NSDictionary *param = @{FIXED_PARAMS, @"mobile":@"13865250636", @"code":@"4348", @"password":[BPUtil md5:@"222222"]};
-    
-    NSDictionary *param = @{FIXED_PARAMS,
-                            @"mobile":mobile,
-                            @"code":code,
-                            @"password":[BPUtil md5:password]};
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"id":push_id} copyItems:YES];
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [BPInterface request:api param:param success:^(NSDictionary *responseObject) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         
         if ([responseObject[@"status"] intValue] == 0) {
-            // 修改密码成功
+            
         } else {
             [BPUtil showMessage:responseObject[@"content"]];
         }

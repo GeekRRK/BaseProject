@@ -15,15 +15,15 @@
 #import <Masonry.h>
 #import "BPWebViewVC.h"
 #import "BPThirdParty.h"
-#import "RegisterVC.h"
-#import "LoginVC.h"
-#import "ThirdPartyBindingVC.h"
-#import "FindPwdVC.h"
-#import "ChangePwdVC.h"
-#import "ChangeUserInfoVC.h"
-#import "SuggestionVC.h"
-#import "WebDetailVC.h"
-#import "PushDetailVC.h"
+#import "BPRegisterVC.h"
+#import "BPLoginVC.h"
+#import "BPThirdPartyBindingVC.h"
+#import "BPFindPwdVC.h"
+#import "BPChangePwdVC.h"
+#import "BPChangeUserInfoVC.h"
+#import "BPSuggestionVC.h"
+#import "BPWebDetailVC.h"
+#import "BPPushDetailVC.h"
 
 static float alpha = 1;
 static float baseMinY = 0;
@@ -132,31 +132,31 @@ static float baseMaxY = 160 - 64;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.row == 0) {
-        RegisterVC *registerVC = [[RegisterVC alloc] init];
+        BPRegisterVC *registerVC = [[BPRegisterVC alloc] init];
         [self.navigationController pushViewController:registerVC animated:YES];
     } else if (indexPath.row == 1) {
-        LoginVC *loginVC = [[LoginVC alloc] init];
+        BPLoginVC *loginVC = [[BPLoginVC alloc] init];
         [self.navigationController pushViewController:loginVC animated:YES];
     } else if (indexPath.row == 2) {
-        ThirdPartyBindingVC *bindingVC = [[ThirdPartyBindingVC alloc] init];
+        BPThirdPartyBindingVC *bindingVC = [[BPThirdPartyBindingVC alloc] init];
         [self.navigationController pushViewController:bindingVC animated:YES];
     } else if (indexPath.row == 3) {
-        FindPwdVC *findPwdVC = [[FindPwdVC alloc] init];
+        BPFindPwdVC *findPwdVC = [[BPFindPwdVC alloc] init];
         [self.navigationController pushViewController:findPwdVC animated:YES];
     } else if (indexPath.row == 4) {
-        ChangePwdVC *changePwdVC = [[ChangePwdVC alloc] init];
+        BPChangePwdVC *changePwdVC = [[BPChangePwdVC alloc] init];
         [self.navigationController pushViewController:changePwdVC animated:YES];
     } else if (indexPath.row == 5) {
-        ChangeUserInfoVC *changeUserInfo = [[ChangeUserInfoVC alloc] init];
+        BPChangeUserInfoVC *changeUserInfo = [[BPChangeUserInfoVC alloc] init];
         [self.navigationController pushViewController:changeUserInfo animated:YES];
     } else if (indexPath.row == 6) {
-        SuggestionVC *suggestionVC = [[SuggestionVC alloc] init];
+        BPSuggestionVC *suggestionVC = [[BPSuggestionVC alloc] init];
         [self.navigationController pushViewController:suggestionVC animated:YES];
     } else if (indexPath.row == 7) {
-        WebDetailVC *webDetailVC = [[WebDetailVC alloc] init];
+        BPWebDetailVC *webDetailVC = [[BPWebDetailVC alloc] init];
         [self.navigationController pushViewController:webDetailVC animated:YES];
     } else if (indexPath.row == 8) {
-        PushDetailVC *pushDetailVC = [[PushDetailVC alloc] init];
+        BPPushDetailVC *pushDetailVC = [[BPPushDetailVC alloc] init];
         [self.navigationController pushViewController:pushDetailVC animated:YES];
     }
 }

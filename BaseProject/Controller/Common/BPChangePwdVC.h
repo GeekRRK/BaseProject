@@ -1,5 +1,5 @@
 //
-//  ChangeUserInfoVC.h
+//  ChangePwdVC.h
 //  BaseProject
 //
 //  Created by GeekRRK on 2016/12/20.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChangeUserInfoVC : UIViewController
+@interface BPChangePwdVC : UIViewController
 
 @end

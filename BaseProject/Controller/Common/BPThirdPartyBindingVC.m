@@ -6,13 +6,13 @@
 //  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
-#import "ThirdPartyBindingVC.h"
+#import "BPThirdPartyBindingVC.h"
 
-@interface ThirdPartyBindingVC ()
+@interface BPThirdPartyBindingVC ()
 
 @end
 
-@implementation ThirdPartyBindingVC
+@implementation BPThirdPartyBindingVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

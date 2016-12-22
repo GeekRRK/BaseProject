@@ -1,5 +1,5 @@
 //
-//  WebDetailVC.h
+//  ChangeUserInfoVC.h
 //  BaseProject
 //
 //  Created by GeekRRK on 2016/12/20.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WebDetailVC : UIViewController
+@interface BPChangeUserInfoVC : UIViewController
 
 @end
