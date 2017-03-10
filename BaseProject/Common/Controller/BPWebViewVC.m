@@ -37,4 +37,30 @@
     [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
+- (void)exchangeJS {
+    JSContext *context = [_webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+   
+    context[@"CallAppNativeMethod"] = ^() {
+        NSLog(@"+++++++Begin Log+++++++");
+        NSArray *args = [JSContext currentArguments];
+        
+        NSMutableArray *receiveParams = [[NSMutableArray alloc] init];
+        int i = 0;
+        for (JSValue *jsVal in args) {
+            NSLog(@"%@", jsVal);
+            
+            NSString *param = [NSString stringWithFormat:@"%@", jsVal];
+            [receiveParams addObject:param];
+            
+            ++i;
+        }
+        
+        NSLog(@"+++++++End Log+++++++");
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+    
+        });
+    };
+}
+
 @end
