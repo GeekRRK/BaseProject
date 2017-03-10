@@ -35,6 +35,8 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [MBProgressHUD hideHUDForView:self.view animated:YES];
+    
+    [self exchangeJS];
 }
 
 - (void)exchangeJS {
@@ -58,7 +60,7 @@
         NSLog(@"+++++++End Log+++++++");
         
         dispatch_async(dispatch_get_main_queue(), ^{
-    
+            [BPUtil showMessage:[NSString stringWithFormat:@"%@", receiveParams]];
         });
     };
 }
