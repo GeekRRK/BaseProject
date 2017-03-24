@@ -8,6 +8,7 @@
 
 #import "BPWebViewVC.h"
 #import <MBProgressHUD.h>
+#import <JavaScriptCore/JavaScriptCore.h>
 
 @interface BPWebViewVC () <UIWebViewDelegate>
 
@@ -60,7 +61,7 @@
         NSLog(@"+++++++End Log+++++++");
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [BPUtil showMessage:[NSString stringWithFormat:@"%@", receiveParams]];
+//            [BPUtil showMessage:[NSString stringWithFormat:@"%@", receiveParams]];
         });
     };
 }

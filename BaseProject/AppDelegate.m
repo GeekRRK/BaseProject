@@ -13,6 +13,8 @@
 #import <WXTabBarController.h>
 #import "BPThirdParty.h"
 #import "JPUSHService.h"
+#import "BPTabbarController.h"
+#import "BPNavigationController.h"
 
 //#define WXTabBar
 
