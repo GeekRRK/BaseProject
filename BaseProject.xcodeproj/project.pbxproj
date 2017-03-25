@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		61218FB71E83ED39001D38E8 /* BPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61218FB41E83ED39001D38E8 /* BPNavigationController.m */; };
 		61218FB81E83ED39001D38E8 /* BPTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61218FB61E83ED39001D38E8 /* BPTabbarController.m */; };
+		61BB3E711E8675D400D863B4 /* BPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BB3E701E8675D400D863B4 /* BPUtil.m */; };
 		AE51FF581E08BD9B00B76BE0 /* BPLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51FF561E08BD9B00B76BE0 /* BPLoginVC.m */; };
 		AE51FF591E08BD9B00B76BE0 /* BPLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE51FF571E08BD9B00B76BE0 /* BPLoginVC.xib */; };
 		AE51FF5D1E08BDAF00B76BE0 /* BPRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51FF5B1E08BDAF00B76BE0 /* BPRegisterVC.m */; };
@@ -105,6 +106,9 @@
 		61218FB41E83ED39001D38E8 /* BPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPNavigationController.m; sourceTree = "<group>"; };
 		61218FB51E83ED39001D38E8 /* BPTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTabbarController.h; sourceTree = "<group>"; };
 		61218FB61E83ED39001D38E8 /* BPTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTabbarController.m; sourceTree = "<group>"; };
+		61BB3E6F1E8675D400D863B4 /* BPUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPUtil.h; sourceTree = "<group>"; };
+		61BB3E701E8675D400D863B4 /* BPUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPUtil.m; sourceTree = "<group>"; };
+		61BB3E721E86766200D863B4 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		A64EFFB3F224598667B2063F /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		AE473E3A1DCD684900016040 /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE51FF551E08BD9B00B76BE0 /* BPLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPLoginVC.h; sourceTree = "<group>"; };
@@ -293,6 +297,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		61BB3E6E1E8675CB00D863B4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				61BB3E6F1E8675D400D863B4 /* BPUtil.h */,
+				61BB3E701E8675D400D863B4 /* BPUtil.m */,
+				61BB3E721E86766200D863B4 /* PrefixHeader.pch */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		AE473E311DCD684900016040 = {
 			isa = PBXGroup;
 			children = (
@@ -362,6 +376,7 @@
 		AE80F7811DFA96A300D2B3D7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				61BB3E6E1E8675CB00D863B4 /* Util */,
 				AE80F78D1DFA96A300D2B3D7 /* Object */,
 				AE80F7861DFA96A300D2B3D7 /* Model */,
 				AE80F7901DFA96A300D2B3D7 /* View */,
@@ -811,6 +826,7 @@
 				AE80F79D1DFA96A300D2B3D7 /* BPAddressModel.m in Sources */,
 				AE8999601DDC522E00FF768E /* NSData+AES.m in Sources */,
 				AE65032D1E08C9B00001A633 /* BPFindPwdVC.m in Sources */,
+				61BB3E711E8675D400D863B4 /* BPUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

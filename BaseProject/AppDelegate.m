@@ -11,7 +11,6 @@
 #import "VideoVC.h"
 #import "MeVC.h"
 #import <WXTabBarController.h>
-#import "BPThirdParty.h"
 #import "JPUSHService.h"
 #import "BPTabbarController.h"
 #import "BPNavigationController.h"
@@ -27,10 +26,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    NSLog(@"%@", CACHE_DIR);
-    
     [self setupRootVC];
-    [[BPThirdParty shareInstance] setupThirdParty:launchOptions];
     
     /*
     NSString *api = SERVER_ADDRESS API_CHANGE_AVATAR;

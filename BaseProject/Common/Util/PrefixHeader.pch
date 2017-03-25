@@ -1,0 +1,40 @@
+//
+//  PrefixHeader.pch
+//  BaseProject
+//
+//  Created by GeekRRK on 16/11/5.
+//  Copyright © 2016年 GeekRRK. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "AppDelegate.h"
+#import <YYModel.h>
+#import "BPUtil.h"
+#import "AppDelegate.h"
+#import <WXApi.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
+#import <CocoaLumberjack/DDLogMacros.h>
+
+#define MAS_SHORTHAND
+
+// Util
+#define LOCALSTR(str)               NSLocalizedString(str, nil)
+#define APPDELEGATE                 ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+#define EmptyString(str) (str == nil || [str isKindOfClass:[NSNull class]] || str.length == 0 ? YES : NO)
+
+// Color
+#define COLOR_NAVIGATION_BAR_TINT          [BPUtil colorWithHexString:@"333333"]
+
+// Size
+#define SCREENWIDTH                         [[UIScreen mainScreen] bounds].size.width
+#define SCREENHEIGHT                        [[UIScreen mainScreen] bounds].size.height
+
+// iPhone
+#define IPad ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad ? YES : NO)
+
+#endif /* PrefixHeader_pch */
