@@ -11,6 +11,8 @@
 
 @interface BPUtil : NSObject
 
++ (void)showMessage:(NSString *)message;
+
 + (UIImage *)image:(UIImage*)image byScalingToSize:(CGSize)targetSize;
 
 + (int)getAgeFromBirthday:(NSString *)birthday;

@@ -37,4 +37,7 @@
 // iPhone
 #define IPad ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad ? YES : NO)
 
+#define SERVER_ADDRESS @""
+#define API_ADDR @""
+
 #endif /* PrefixHeader_pch */

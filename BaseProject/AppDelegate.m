@@ -96,7 +96,7 @@
         navVC.navigationBar.tintColor = [UIColor whiteColor];
         navVC.navigationBar.translucent = NO;
         [navVC.navigationBar setTitleTextAttributes:
-         @{NSFontAttributeName:[UIFont systemFontOfSize:BP_NAVBAR_TITLE_FONTSIZE], NSForegroundColorAttributeName:[UIColor whiteColor]}];
+         @{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
         
         NSString *imgName = tabItemImages[i];
         NSString *selImgName = [[NSString alloc] initWithFormat:@"%@_sel", tabItemImages[i]];
@@ -107,7 +107,7 @@
         
         [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}
                                                  forState:UIControlStateNormal];
-        [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:BP_COLOR_GREEN}
+        [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor greenColor]}
                                                  forState:UIControlStateSelected];
         
         [navCtrls addObject:navVC];
@@ -117,7 +117,7 @@
     UITabBarController *tabBarVC = [[UITabBarController alloc] init];
     tabBarVC.viewControllers = navCtrls;
     tabBarVC.tabBar.barTintColor = [UIColor blackColor];
-    tabBarVC.tabBar.tintColor = BP_COLOR_GREEN;
+    tabBarVC.tabBar.tintColor = [UIColor greenColor];
     tabBarVC.tabBar.translucent = NO;
     
     self.window.rootViewController = tabBarVC;
@@ -147,8 +147,6 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // Required, iOS 7 Support
     [JPUSHService handleRemoteNotification:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
-    
-    [BPUtil dealWithAPNs:userInfo];
 }
 
 @end
