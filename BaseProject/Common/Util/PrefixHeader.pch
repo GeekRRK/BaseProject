@@ -40,4 +40,6 @@
 #define SERVER_ADDRESS @""
 #define API_ADDR @""
 
+#define FIXED_PARAMS @""
+
 #endif /* PrefixHeader_pch */
