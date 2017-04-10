@@ -15,8 +15,6 @@
 #import "BPTabbarController.h"
 #import "BPNavigationController.h"
 
-//#define WXTabBar
-
 @interface AppDelegate ()
 
 @end
@@ -28,22 +26,17 @@
     
     [self setupRootVC];
     
-    /*
-    NSString *api = SERVER_ADDRESS API_CHANGE_AVATAR;
-    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{} copyItems:YES];
-    [param setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
-    
-    NSString *path = [CACHE_DIR stringByAppendingPathComponent:@"avatar.png"];
-    [BPInterface request2UploadFile:api files:@{@"avatar":path} param:param success:^(BPResponseModel *responseObject) {
-        NSLog(@"%@", responseObject);
-    } failure:^(NSError *error) {
-        NSLog(@"%@", error.localizedDescription);
-    }];
-     */
-    
     return YES;
 }
 
+- (void)setupRootVC {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    BPTabbarController *tabVC = [[BPTabbarController alloc] init];
+    self.window.rootViewController = tabVC;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -69,68 +62,6 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
-
-#pragma mark - rootViewController
-
-- (void)setupRootVC {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    
-    HomepageVC *homepageVC = [[HomepageVC alloc] init];
-    VideoVC *videoVC = [[VideoVC alloc] init];
-    MeVC *meVC = [[MeVC alloc] init];
-    
-    NSArray *vcs = @[homepageVC, videoVC, meVC];
-    NSArray *titles = @[LOCALSTR(@"Homepage"), LOCALSTR(@"Video"), LOCALSTR(@"Me")];
-    NSArray *tabItemImages = @[@"tabbar_homepage", @"tabbar_video", @"tabbar_me"];
-    
-    NSMutableArray *navCtrls = [[NSMutableArray alloc] init];
-    for (int i = 0; i < vcs.count; ++i) {
-        UIViewController *itemVC = vcs[i];
-        itemVC.title = titles[i];
-        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:itemVC];
-        navVC.navigationBar.barTintColor = [UIColor blackColor];
-        navVC.navigationBar.tintColor = [UIColor whiteColor];
-        navVC.navigationBar.translucent = NO;
-        [navVC.navigationBar setTitleTextAttributes:
-         @{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
-        
-        NSString *imgName = tabItemImages[i];
-        NSString *selImgName = [[NSString alloc] initWithFormat:@"%@_sel", tabItemImages[i]];
-        navVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:titles[i]
-                                                         image:[[UIImage imageNamed:imgName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
-                                                 selectedImage:[[UIImage imageNamed:selImgName]
-                                                                imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-        
-        [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}
-                                                 forState:UIControlStateNormal];
-        [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor greenColor]}
-                                                 forState:UIControlStateSelected];
-        
-        [navCtrls addObject:navVC];
-    }
- 
-#ifndef WXTabBar
-    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
-    tabBarVC.viewControllers = navCtrls;
-    tabBarVC.tabBar.barTintColor = [UIColor blackColor];
-    tabBarVC.tabBar.tintColor = [UIColor greenColor];
-    tabBarVC.tabBar.translucent = NO;
-    
-    self.window.rootViewController = tabBarVC;
-#else
-    WXTabBarController *tabBarVC = [[WXTabBarController alloc] init];
-    tabBarVC.viewControllers = navCtrls;
-    tabBarVC.tabBar.barTintColor = [UIColor blackColor];
-    tabBarVC.tabBar.tintColor = BP_COLOR_GREEN;
-    tabBarVC.tabBar.translucent = NO;
-    UINavigationController *tabBarNavVC = [[UINavigationController alloc] initWithRootViewController:tabBarVC];
-    
-    self.window.rootViewController = tabBarNavVC;
-#endif
 }
 
 #pragma mark - APNs

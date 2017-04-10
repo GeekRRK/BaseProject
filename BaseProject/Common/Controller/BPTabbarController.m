@@ -11,8 +11,8 @@
     self.tabBar.barTintColor = [UIColor blackColor];
     self.tabBar.tintColor = [UIColor whiteColor];
     self.tabBar.translucent = NO;
-    [self addChildViewControllers];
     [self setupNavigationBackItem];
+    [self addChildViewControllers];
 }
 
 - (void)setupNavigationBackItem {
@@ -36,6 +36,22 @@
     BPNavigationController *navi = [[BPNavigationController alloc] initWithRootViewController:vc];
     navi.interactivePopGestureRecognizer.enabled = YES;
     [self addChildViewController:navi];
+}
+
+- (void)addChildViewControllers{
+    UIViewController *vc1 = [[UIViewController alloc] init];
+    UIViewController *vc2 = [[UIViewController alloc] init];
+    UIViewController *vc3 = [[UIViewController alloc] init];
+    UIViewController *vc4 = [[UIViewController alloc] init];
+    
+    NSArray *vcs = @[vc1, vc2, vc3, vc4];
+    NSArray *titles = @[@"首页", @"新闻", @"视频", @"我的"];
+    NSArray *tabItemImages = @[@"tabbar_home", @"tabbar_me", @"tabbar_video", @"tabbar_me"];
+    NSArray *tabSelectedItemImages = @[@"tabbar_home_sel", @"tabbar_me_sel", @"tabbar_video_sel",  @"tabbar_me_sel"];
+    
+    for (int i = 0; i < vcs.count; ++i) {
+        [self addChildVC:vcs[i] withTitle:titles[i] withImage:tabItemImages[i] withSelectedImage:tabSelectedItemImages[i]];
+    }
 }
 
 @end
