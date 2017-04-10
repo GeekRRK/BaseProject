@@ -10,6 +10,9 @@
 		61218FB71E83ED39001D38E8 /* BPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61218FB41E83ED39001D38E8 /* BPNavigationController.m */; };
 		61218FB81E83ED39001D38E8 /* BPTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61218FB61E83ED39001D38E8 /* BPTabbarController.m */; };
 		61BB3E711E8675D400D863B4 /* BPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BB3E701E8675D400D863B4 /* BPUtil.m */; };
+		61EA32EE1E9B159100F4C1EA /* BPInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EA32ED1E9B159100F4C1EA /* BPInterface.m */; };
+		61EA32F11E9B15A900F4C1EA /* BPResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EA32F01E9B15A900F4C1EA /* BPResponseModel.m */; };
+		61EA32F41E9B18D200F4C1EA /* BPBasicNaviVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EA32F31E9B18D200F4C1EA /* BPBasicNaviVC.m */; };
 		AE51FF581E08BD9B00B76BE0 /* BPLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51FF561E08BD9B00B76BE0 /* BPLoginVC.m */; };
 		AE51FF591E08BD9B00B76BE0 /* BPLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE51FF571E08BD9B00B76BE0 /* BPLoginVC.xib */; };
 		AE51FF5D1E08BDAF00B76BE0 /* BPRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51FF5B1E08BDAF00B76BE0 /* BPRegisterVC.m */; };
@@ -109,6 +112,12 @@
 		61BB3E6F1E8675D400D863B4 /* BPUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPUtil.h; sourceTree = "<group>"; };
 		61BB3E701E8675D400D863B4 /* BPUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPUtil.m; sourceTree = "<group>"; };
 		61BB3E721E86766200D863B4 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		61EA32EC1E9B159100F4C1EA /* BPInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPInterface.h; sourceTree = "<group>"; };
+		61EA32ED1E9B159100F4C1EA /* BPInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPInterface.m; sourceTree = "<group>"; };
+		61EA32EF1E9B15A900F4C1EA /* BPResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPResponseModel.h; sourceTree = "<group>"; };
+		61EA32F01E9B15A900F4C1EA /* BPResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPResponseModel.m; sourceTree = "<group>"; };
+		61EA32F21E9B18D200F4C1EA /* BPBasicNaviVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPBasicNaviVC.h; sourceTree = "<group>"; };
+		61EA32F31E9B18D200F4C1EA /* BPBasicNaviVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPBasicNaviVC.m; sourceTree = "<group>"; };
 		A64EFFB3F224598667B2063F /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		AE473E3A1DCD684900016040 /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE51FF551E08BD9B00B76BE0 /* BPLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPLoginVC.h; sourceTree = "<group>"; };
@@ -302,6 +311,10 @@
 			children = (
 				61BB3E6F1E8675D400D863B4 /* BPUtil.h */,
 				61BB3E701E8675D400D863B4 /* BPUtil.m */,
+				61EA32EC1E9B159100F4C1EA /* BPInterface.h */,
+				61EA32ED1E9B159100F4C1EA /* BPInterface.m */,
+				61EA32EF1E9B15A900F4C1EA /* BPResponseModel.h */,
+				61EA32F01E9B15A900F4C1EA /* BPResponseModel.m */,
 				61BB3E721E86766200D863B4 /* PrefixHeader.pch */,
 			);
 			path = Util;
@@ -388,6 +401,8 @@
 		AE80F7821DFA96A300D2B3D7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				61EA32F21E9B18D200F4C1EA /* BPBasicNaviVC.h */,
+				61EA32F31E9B18D200F4C1EA /* BPBasicNaviVC.m */,
 				61218FB31E83ED39001D38E8 /* BPNavigationController.h */,
 				61218FB41E83ED39001D38E8 /* BPNavigationController.m */,
 				61218FB51E83ED39001D38E8 /* BPTabbarController.h */,
@@ -805,11 +820,14 @@
 				AED10FB51DE68D6700D0C7EE /* WJItemsControlView.m in Sources */,
 				AE51FF581E08BD9B00B76BE0 /* BPLoginVC.m in Sources */,
 				AE80F7C41DFA99B700D2B3D7 /* BPAlertView.m in Sources */,
+				61EA32F41E9B18D200F4C1EA /* BPBasicNaviVC.m in Sources */,
 				AE6503371E08CAB60001A633 /* BPChangeUserInfoVC.m in Sources */,
 				AEC6C2CC1DD17B0F00F9ABA0 /* HZQPickerView.m in Sources */,
 				AE9D85131DCDA60300CAF67F /* main.m in Sources */,
 				AEFC48141DE45EC5000B7772 /* UIView+Draw.m in Sources */,
+				61EA32EE1E9B159100F4C1EA /* BPInterface.m in Sources */,
 				AE65034B1E08D2320001A633 /* BPThirdPartyBindingVC.m in Sources */,
+				61EA32F11E9B15A900F4C1EA /* BPResponseModel.m in Sources */,
 				AE78A90A1DD4709900869859 /* BadCode.m in Sources */,
 				AE6503281E08C8760001A633 /* BPChangePwdVC.m in Sources */,
 				AE80F7C61DFA99B700D2B3D7 /* BPTouchScrollView.m in Sources */,

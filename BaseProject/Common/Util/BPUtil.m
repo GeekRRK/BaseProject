@@ -1,15 +1,31 @@
 //
-//  IFUtil.m
-//  IDFace
+//  BPUtil.m
+//  BaseProject
 //
-//  Created by UGOMEDIA on 2017/1/13.
-//  Copyright © 2017年 UgoMedia. All rights reserved.
+//  Created by GeekRRK on 16/4/7.
+//  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
 #import "BPUtil.h"
-#import <AVFoundation/AVFoundation.h>
+#import <CommonCrypto/CommonCrypto.h>
+
+#define IMAGE_MAX_SIZE_WIDTH 640
+#define IMAGE_MAX_SIZE_GEIGHT 960
 
 @implementation BPUtil
+
++ (void)switchLocalizedLanguage {
+    NSArray *langArr1 = [[NSUserDefaults standardUserDefaults] valueForKey:@"AppleLanguages"];
+    NSString *language1 = langArr1.firstObject;
+    NSLog(@"Before switch：%@", language1);
+    
+    NSArray *lans = @[@"zh-Hans"];
+    [[NSUserDefaults standardUserDefaults] setObject:lans forKey:@"AppleLanguages"];
+    
+    NSArray *langArr2 = [[NSUserDefaults standardUserDefaults] valueForKey:@"AppleLanguages"];
+    NSString *language2 = langArr2.firstObject;
+    NSLog(@"After switch：%@", language2);
+}
 
 + (void)showMessage:(NSString *)message {
     if (message == nil || [message isEqualToString:@""]) {
@@ -43,147 +59,115 @@
         [showview removeFromSuperview];
     }];
 }
+
++ (UIColor *)colorWithHexString:(NSString *)stringToConvert {
+    NSString *cString = [[stringToConvert stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     
-+ (UIImage *)image:(UIImage*)image byScalingToSize:(CGSize)targetSize {
-    UIImage *sourceImage = image;
-    UIImage *newImage = nil;
+    if ([cString length] < 6)
+        return [UIColor whiteColor];
+    if ([cString hasPrefix:@"#"])
+        cString = [cString substringFromIndex:1];
+    if ([cString length] != 6)
+        return [UIColor whiteColor];;
     
-    UIGraphicsBeginImageContext(targetSize);
+    NSRange range;
+    range.location = 0;
+    range.length = 2;
+    NSString *rString = [cString substringWithRange:range];
+    range.location = 2;
+    NSString *gString = [cString substringWithRange:range];
+    range.location = 4;
+    NSString *bString = [cString substringWithRange:range];
+    unsigned int r, g, b;
     
-    CGRect thumbnailRect = CGRectZero;
-    thumbnailRect.origin = CGPointZero;
-    thumbnailRect.size.width  = targetSize.width;
-    thumbnailRect.size.height = targetSize.height;
+    [[NSScanner scannerWithString:rString] scanHexInt:&r];
+    [[NSScanner scannerWithString:gString] scanHexInt:&g];
+    [[NSScanner scannerWithString:bString] scanHexInt:&b];
     
-    [sourceImage drawInRect:thumbnailRect];
-    
-    newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return newImage ;
+    return [UIColor colorWithRed:((float) r / 255.0f)
+                           green:((float) g / 255.0f)
+                            blue:((float) b / 255.0f)
+                           alpha:1.0f];
 }
 
-+ (int)getAgeFromBirthday:(NSString *)birthday {
-    //计算年龄
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-    //生日
-    NSDate *birthDay = [dateFormatter dateFromString:birthday];
-    //当前时间
-    NSString *currentDateStr = [dateFormatter stringFromDate:[NSDate date]];
-    NSDate *currentDate = [dateFormatter dateFromString:currentDateStr];
-    NSLog(@"currentDate %@ birthDay %@",currentDateStr,birthday);
-    NSTimeInterval time=[currentDate timeIntervalSinceDate:birthDay];
-    int age = ((int)time)/(3600*24*365);
-    
-    return age;
++ (NSString *)md5:(NSString *)str {
+    const char *cStr = [str UTF8String];
+    unsigned char result[16];
+    CC_MD5(cStr, (CC_LONG)strlen(cStr), result);
+    return [NSString stringWithFormat:
+            @"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",
+            result[0], result[1], result[2], result[3],
+            result[4], result[5], result[6], result[7],
+            result[8], result[9], result[10], result[11],
+            result[12], result[13], result[14], result[15]
+            ];
 }
 
-+ (UIImage*) getVideoPreViewImage:(NSString *)videoPath {
-    NSURL *url = [NSURL URLWithString:videoPath];
-    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:url options:nil];
-    AVAssetImageGenerator *gen = [[AVAssetImageGenerator alloc] initWithAsset:asset];
-    gen.appliesPreferredTrackTransform = YES;
-    CMTime time = CMTimeMakeWithSeconds(0, 1);
-    NSError *error = nil;
-    CMTime actualTime;
-    CGImageRef image = [gen copyCGImageAtTime:time actualTime:&actualTime error:&error];
-    UIImage *img = [[UIImage alloc] initWithCGImage:image];
-    CGImageRelease(image);
-    
-    return img;
++ (NSString *)getFilePathBy:(NSString *)fileName {
+    NSArray  *paths  =  NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [paths objectAtIndex:0];
+    return [docDir stringByAppendingPathComponent:fileName];
 }
 
-+ (UIImage *)getVideoFirstImage:(NSString *)videoPath {
-    NSURL *videoURL;
-    
-    if ([videoPath hasPrefix:@"http"]) {
-        videoURL = [NSURL URLWithString:videoPath];
-    } else {
-        videoURL = [NSURL fileURLWithPath:[CACHE_DIR stringByAppendingPathComponent:videoPath]];
-    }
-    
-    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:videoURL options:nil];
-    NSParameterAssert(asset);
-    AVAssetImageGenerator *assetImageGenerator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
-    assetImageGenerator.appliesPreferredTrackTransform = YES;
-    assetImageGenerator.apertureMode = AVAssetImageGeneratorApertureModeEncodedPixels;
-    
-    CGImageRef thumbnailImageRef = NULL;
-    CFTimeInterval thumbnailImageTime = 0;
-    NSError *thumbnailImageGenerationError = nil;
-    thumbnailImageRef = [assetImageGenerator copyCGImageAtTime:CMTimeMake(thumbnailImageTime, 15) actualTime:NULL error:&thumbnailImageGenerationError];
-    
-    if (!thumbnailImageRef)
-        NSLog(@"thumbnailImageGenerationError %@", thumbnailImageGenerationError);
-    
-    UIImage *thumbnailImage = thumbnailImageRef ? [[UIImage alloc] initWithCGImage:thumbnailImageRef] : nil;
-    //NSData *imageData = UIImagePNGRepresentation(thumbnailImage);
-    CGImageRelease(thumbnailImageRef);
-    
-    return thumbnailImage;
-}
-
-+ (UIImage *)getLocalVideoFirstImage:(NSString *)videoPath {
-    NSURL * videoURL = [NSURL fileURLWithPath:videoPath];
-    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:videoURL options:nil];
-    NSParameterAssert(asset);
-    AVAssetImageGenerator *assetImageGenerator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
-    assetImageGenerator.appliesPreferredTrackTransform = YES;
-    assetImageGenerator.apertureMode = AVAssetImageGeneratorApertureModeEncodedPixels;
-    
-    CGImageRef thumbnailImageRef = NULL;
-    CFTimeInterval thumbnailImageTime = 0;
-    NSError *thumbnailImageGenerationError = nil;
-    thumbnailImageRef = [assetImageGenerator copyCGImageAtTime:CMTimeMake(thumbnailImageTime, 15) actualTime:NULL error:&thumbnailImageGenerationError];
-    
-    if (!thumbnailImageRef)
-        NSLog(@"thumbnailImageGenerationError %@", thumbnailImageGenerationError);
-    
-    UIImage *thumbnailImage = thumbnailImageRef ? [[UIImage alloc] initWithCGImage:thumbnailImageRef] : nil;
-    //NSData *imageData = UIImagePNGRepresentation(thumbnailImage);
-    CGImageRelease(thumbnailImageRef);
-    
-    return thumbnailImage;
-}
-
-+ (UIViewController *)getCurrentVC{
-    UIViewController *result = nil;
-    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
-    if (window.windowLevel != UIWindowLevelNormal)
-    {
-        NSArray *windows = [[UIApplication sharedApplication] windows];
-        for(UIWindow * tmpWin in windows)
-        {
-            if(tmpWin.windowLevel == UIWindowLevelNormal)
-            {
-                window = tmpWin;
-                break;
-            }
++ (NSMutableDictionary *)readDictBy:(NSString *)fileName {
+    NSString *filepath = [BPUtil getFilePathBy:fileName];
+    NSMutableDictionary *apps = [[NSMutableDictionary alloc] initWithContentsOfFile:filepath];
+    if(apps == nil){
+        apps = [[NSMutableDictionary alloc] init];
+        if([apps writeToFile:filepath atomically:YES]){
+            apps = [[NSMutableDictionary alloc] initWithContentsOfFile:filepath];
         }
     }
-    UIView *frontView = [[window subviews] objectAtIndex:0];
-    id nextResponder = [frontView nextResponder];
-    if ([nextResponder isKindOfClass:[UIViewController class]]){
-        result = nextResponder;
-    }else{
-        result = window.rootViewController;
-    }
-    return result;
+    
+    return apps;
 }
 
-+ (UIImage *)snapshot {
-    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {
-        UIGraphicsBeginImageContextWithOptions(APPDELEGATE.window.bounds.size, NO, [UIScreen mainScreen].scale);
-    } else {
-        UIGraphicsBeginImageContext(APPDELEGATE.window.bounds.size);
++ (void)writeDict:(NSDictionary *)dict to:(NSString *)fileName {
+    NSString *path = [BPUtil getFilePathBy:fileName];
+    [dict writeToFile:path atomically:YES];
+}
+
++ (void)deleteFileByName:(NSString *)fileName {
+    NSString *filePath = [BPUtil getFilePathBy:fileName];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    [fileManager removeItemAtPath:filePath error:nil];
+}
+
++ (NSString *)getNowTimeStamp {
+    NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval a=[dat timeIntervalSince1970];
+    NSString *timeString = [NSString stringWithFormat:@"%.0f", a];
+    return timeString;
+}
+
++ (UIImage *)fitSmallImage:(UIImage *)image {
+    if (nil == image)
+    {
+        return nil;
     }
-    
-    [APPDELEGATE.window.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    if (image.size.width<IMAGE_MAX_SIZE_WIDTH && image.size.height<IMAGE_MAX_SIZE_GEIGHT)
+    {
+        return image;
+    }
+    CGSize size = [BPUtil fitsize:image.size];
+    UIGraphicsBeginImageContext(size);
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+    [image drawInRect:rect];
+    UIImage *newing = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
-    return image;
+    return newing;
+}
+
++ (CGSize)fitsize:(CGSize)thisSize {
+#define IMAGE_MAX_SIZE_WIDTH 640
+#define IMAGE_MAX_SIZE_GEIGHT 960
+    if(thisSize.width == 0 && thisSize.height ==0)
+        return CGSizeMake(0, 0);
+    CGFloat wscale = thisSize.width/IMAGE_MAX_SIZE_WIDTH;
+    CGFloat hscale = thisSize.height/IMAGE_MAX_SIZE_GEIGHT;
+    CGFloat scale = (wscale>hscale)?wscale:hscale;
+    CGSize newSize = CGSizeMake(thisSize.width/scale, thisSize.height/scale);
+    return newSize;
 }
 
 @end

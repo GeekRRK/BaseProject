@@ -19,6 +19,7 @@
 #import <WXApi.h>
 #import <CocoaLumberjack/CocoaLumberjack.h>
 #import <CocoaLumberjack/DDLogMacros.h>
+#import "BPInterface.h"
 
 #define MAS_SHORTHAND
 
@@ -40,6 +41,6 @@
 #define SERVER_ADDRESS @""
 #define API_ADDR @""
 
-#define FIXED_PARAMS @""
+#define CACHE_DIR [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
 
 #endif /* PrefixHeader_pch */

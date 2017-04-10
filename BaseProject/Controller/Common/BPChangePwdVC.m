@@ -38,7 +38,7 @@
         [BPUtil showMessage:@"请输入新密码"]; return nil;
     }
     
-    NSDictionary *params = @{FIXED_PARAMS,
+    NSDictionary *params = @{
                              @"mobile":phone,
                              @"password":[BPUtil md5:pwd],
                              @"oldpassword":[BPUtil md5:oldPwd]};
@@ -47,17 +47,17 @@
 }
 
 - (IBAction)clickChangePwdBtn:(id)sender {
-    NSString *api = SERVER_ADDRESS API_CHANGE_PWD;
+    NSString *api = SERVER_ADDRESS;
     NSDictionary *params = [self pwdParams];
     if (params) {
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        [BPInterface request:api param:params success:^(NSDictionary *responseObject) {
+        [BPInterface request:api param:params success:^(BPResponseModel *responseObject) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
             
-            if ([responseObject[@"status"] intValue] == 0) {
+            if (responseObject.status == 0) {
                 
             } else {
-                [BPUtil showMessage:responseObject[@"content"]];
+                [BPUtil showMessage:responseObject.content];
             }
         } failure:^(NSError *error) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];

@@ -37,9 +37,9 @@
         [BPUtil showMessage:@"请输入意见内容"]; return nil;
     }
     
-    NSString *userid = [[NSUserDefaults standardUserDefaults] objectForKey:USERID];
+    NSString *userid = [[NSUserDefaults standardUserDefaults] objectForKey:@""];
     
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS,
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithDictionary:@{
                                                                                     @"userid":userid,
                                                                                     @"context":context,
                                                                                     @"email":email,
@@ -49,18 +49,18 @@
 }
 
 - (IBAction)clickSubmitBtn:(id)sender {
-    NSString *api = SERVER_ADDRESS API_SUGGEST;
+    NSString *api = SERVER_ADDRESS;
     
     NSDictionary *params = [self suggestionParams];
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [BPInterface request:api param:params success:^(NSDictionary *responseObject) {
+    [BPInterface request:api param:params success:^(BPResponseModel *responseObject) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         
-        if ([responseObject[@"status"] intValue] == 0) {
+        if (responseObject.status == 0) {
             
         } else {
-            [BPUtil showMessage:responseObject[@"content"]];
+            [BPUtil showMessage:responseObject.content];
         }
     } failure:^(NSError *error) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];

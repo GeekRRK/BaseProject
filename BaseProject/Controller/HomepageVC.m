@@ -14,7 +14,6 @@
 #import "NextVC.h"
 #import <Masonry.h>
 #import "BPWebViewVC.h"
-#import "BPThirdParty.h"
 #import "BPRegisterVC.h"
 #import "BPLoginVC.h"
 #import "BPThirdPartyBindingVC.h"

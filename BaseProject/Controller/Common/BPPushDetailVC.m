@@ -21,20 +21,20 @@
 }
 
 - (void)requestPushDetail {
-    NSString *api = SERVER_ADDRESS API_PUSH_DETAIL;
+    NSString *api = SERVER_ADDRESS;
     
     NSString *push_id = @"推送内容id";  // 必选
     
-    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"id":push_id} copyItems:YES];
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{@"id":push_id} copyItems:YES];
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [BPInterface request:api param:param success:^(NSDictionary *responseObject) {
+    [BPInterface request:api param:param success:^(BPResponseModel *responseObject) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         
-        if ([responseObject[@"status"] intValue] == 0) {
+        if (responseObject.status == 0) {
             
         } else {
-            [BPUtil showMessage:responseObject[@"content"]];
+            [BPUtil showMessage:responseObject.content];
         }
     } failure:^(NSError *error) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];

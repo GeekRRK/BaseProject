@@ -28,19 +28,14 @@
 }
 
 - (void)requestUserInfo {
-    NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:TOKEN];
-    NSString *api = SERVER_ADDRESS API_USERINFO;
-    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"token":TOKEN} copyItems:YES];
-    [param setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
-    
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [BPInterface request:token param:param success:^(NSDictionary *responseObject) {
+    [BPInterface request:@"" param:@{} success:^(BPResponseModel *responseObject) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         
-        if ([responseObject[@"status"] intValue] == 0) {
+        if (responseObject.status == 0) {
             // 处理获取的用户信息
         } else {
-            [BPUtil showMessage:responseObject[@"content"]];
+            [BPUtil showMessage:responseObject.content];
         }
     } failure:^(NSError *error) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
@@ -56,20 +51,18 @@
     NSString *provinceid = @"";                         // 省份id，可选
     NSString *cityid = @"";                             // 城市id，可选
     
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS,
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithDictionary:@{
                                                                                     @"name":name,
                                                                                     @"email":email,
                                                                                     @"sex":sex,
                                                                                     @"province_id":provinceid,
                                                                                     @"city_id":cityid} copyItems:YES];
     
-    [params setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
-    
     return params;
 }
 
 - (IBAction)clickChangeBtn:(id)sender {
-    NSString *api = SERVER_ADDRESS API_MODIFY_USERINFO;
+    NSString *api = SERVER_ADDRESS;
     NSDictionary *params = [self userInfoParams];
     
     NSString *imgPath = [CACHE_DIR stringByAppendingPathComponent:@"avatar.jpg"];
@@ -77,13 +70,13 @@
     
     if (params || files) {
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        [BPInterface request2UploadFile:api files:files param:params success:^(NSDictionary *responseObject) {
+        [BPInterface request2UploadFile:api files:files param:params success:^(BPResponseModel *responseObject) {
             
             [MBProgressHUD hideHUDForView:self.view animated:YES];
-            if ([responseObject[@"status"] intValue] == 0) {
+            if (responseObject.status == 0) {
                 
             } else {
-                [BPUtil showMessage:responseObject[@"content"]];
+                [BPUtil showMessage:responseObject.content];
             }
         } failure:^(NSError *error) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];

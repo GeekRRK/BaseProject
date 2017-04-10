@@ -74,7 +74,7 @@
         [BPUtil showMessage:@"请选择城市"]; return nil;
     }
 
-    NSDictionary *params = @{FIXED_PARAMS,
+    NSDictionary *params = @{
                             @"mobile":phone,                    // 手机号，必选
                             @"password":[BPUtil md5:pwd],       // 密码，必选，需要进行md5
                             @"code":code,                       // 验证码，必选
@@ -91,15 +91,15 @@
 }
 
 - (IBAction)clickRegisterBtn:(id)sender {
-    NSString *api = SERVER_ADDRESS API_REGISTER;
+    NSString *api = SERVER_ADDRESS;
     NSDictionary *params = [self registrationParams];
     if (params) {
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        [BPInterface request:api param:params success:^(NSDictionary *responseObject) {
-            if ([responseObject[@"status"] intValue] == 0) {
+        [BPInterface request:api param:params success:^(BPResponseModel *responseObject) {
+            if (responseObject.status == 0) {
                 NSLog(@"%@", responseObject);
             } else {
-                [BPUtil showMessage:responseObject[@"content"]];
+                [BPUtil showMessage:responseObject.content];
             }
             
             [MBProgressHUD hideHUDForView:self.view animated:YES];
@@ -112,24 +112,24 @@
 }
 
 - (IBAction)clickCodeBtn:(id)sender {
-    NSString *api = SERVER_ADDRESS API_VERIFICATION_TOKEN;
+    NSString *api = SERVER_ADDRESS;
     NSString *phone = _phoneTextField.text;  // 必选
     
     if (EmptyString(phone)) {
         [BPUtil showMessage:@"请输入手机号"]; return;
     }
     
-    NSDictionary *param = @{FIXED_PARAMS, @"mobile":phone};
+    NSDictionary *param = @{@"mobile":phone};
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [BPInterface request:api param:param success:^(NSDictionary *responseObject) {
+    [BPInterface request:api param:param success:^(BPResponseModel *responseObject) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         
-        if ([responseObject[@"status"] intValue] == 0) {
+        if (responseObject.status == 0) {
             // 获取成功
             [self startCountDown];
         } else {
-            [BPUtil showMessage:responseObject[@"content"]];
+            [BPUtil showMessage:responseObject.content];
         }
     } failure:^(NSError *error) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
@@ -140,19 +140,19 @@
 
 - (void)requestProvinces {
     // 省市列表
-    NSString *api = SERVER_ADDRESS API_PROVINCE_CITY;
+    NSString *api = SERVER_ADDRESS;
     
-    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS} copyItems:YES];
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{} copyItems:YES];
     
     [MBProgressHUD hideHUDForView:self.view animated:YES];
-    [BPInterface request:api param:param success:^(NSDictionary *responseObject) {
+    [BPInterface request:api param:param success:^(BPResponseModel *responseObject) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         
-        if ([responseObject[@"status"] intValue] == 0) {
+        if (responseObject.status == 0) {
             // 把获取的省市转换成BPAddressModel的数组
-            _provinces = [BPAddressModel yy_modelWithDictionary:responseObject[@"content"]];
+            _provinces = [BPAddressModel yy_modelWithDictionary:responseObject.content];
         } else {
-            [BPUtil showMessage:responseObject[@"content"]];
+            [BPUtil showMessage:responseObject.content];
         }
     } failure:^(NSError *error) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];

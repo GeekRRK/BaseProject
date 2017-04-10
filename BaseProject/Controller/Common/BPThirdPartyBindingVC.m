@@ -20,14 +20,13 @@
 }
 
 - (IBAction)clickBindingBtn:(id)sender {
-    // 第三方绑定
-    NSString *launchAdApi = SERVER_ADDRESS API_BIND_THIRDPARTY;
-    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"platform":@"WX", @"openid":@"o3LILj1K6teKK8Z6WSatN7MP8Zqo", @"device":@"IOS"} copyItems:YES];
-    [BPInterface request:launchAdApi param:launchAdParam success:^(NSDictionary *responseObject) {
-        if ([responseObject[@"status"] intValue] == 0) {
+    NSString *launchAdApi = SERVER_ADDRESS;
+    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{@"platform":@"WX", @"openid":@"o3LILj1K6teKK8Z6WSatN7MP8Zqo", @"device":@"IOS"} copyItems:YES];
+    [BPInterface request:launchAdApi param:launchAdParam success:^(BPResponseModel *responseObject) {
+        if (responseObject.status == 0) {
             NSLog(@"%@", responseObject);
         } else {
-            [BPUtil showMessage:responseObject[@"content"]];
+            [BPUtil showMessage:responseObject.content];
         }
     } failure:^(NSError *error) {
         [BPUtil showMessage:error.localizedDescription];
@@ -35,14 +34,13 @@
 }
 
 - (IBAction)clickUnbindingBtn:(id)sender {
-    // 第三方解绑
-    NSString *launchAdApi = SERVER_ADDRESS API_UNBIND_THIRDPARTY;
-    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"platform":@"WX", @"openid":@"o3LILj1K6teKK8Z6WSatN7MP8Zqo", @"device":@"IOS"} copyItems:YES];
-    [BPInterface request:launchAdApi param:launchAdParam success:^(NSDictionary *responseObject) {
-        if ([responseObject[@"status"] intValue] == 0) {
+    NSString *launchAdApi = SERVER_ADDRESS;
+    NSMutableDictionary *launchAdParam = [[NSMutableDictionary alloc] initWithDictionary:@{@"platform":@"WX", @"openid":@"o3LILj1K6teKK8Z6WSatN7MP8Zqo", @"device":@"IOS"} copyItems:YES];
+    [BPInterface request:launchAdApi param:launchAdParam success:^(BPResponseModel *responseObject) {
+        if (responseObject.status == 0) {
             NSLog(@"%@", responseObject);
         } else {
-            [BPUtil showMessage:responseObject[@"content"]];
+            [BPUtil showMessage:responseObject.content];
         }
     } failure:^(NSError *error) {
         [BPUtil showMessage:error.localizedDescription];

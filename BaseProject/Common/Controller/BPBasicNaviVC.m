@@ -6,15 +6,15 @@
 //  Copyright © 2017年 UgoMedia. All rights reserved.
 //
 
-#import "BPNavigationController.h"
+#import "BPBasicNaviVC.h"
 
-@interface BPNavigationController ()
+@interface BPBasicNaviVC ()
 
 @end
 
-@implementation BPNavigationController
+@implementation BPBasicNaviVC
 
-- (void)viewDidLoad {
+-(void)viewDidLoad{
     [self.navigationBar setTintColor:[UIColor whiteColor]];
     [self.navigationBar setBarTintColor:[UIColor blackColor]];
     self.navigationBar.translucent = NO;
@@ -22,11 +22,24 @@
      @{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
 
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    if (self.viewControllers.count > 0) {
+-(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    if (self.viewControllers.count>0) {
         viewController.hidesBottomBarWhenPushed=YES;
     }
     [super pushViewController:viewController animated:animated];
 }
+
+-(void)buttonBack{
+    [self popViewControllerAnimated:YES];
+}
+
+//- (UIViewController*)childViewControllerForStatusBarStyle{
+//    return self.topViewController;
+//}
+//
+//- (UIStatusBarStyle)preferredStatusBarStyle{
+//    UIViewController*topVC = self.topViewController;
+//    return [topVC preferredStatusBarStyle];
+//}
 
 @end

@@ -40,7 +40,7 @@
         [BPUtil showMessage:@"两次输入密码不一致"]; return nil;
     }
     
-    NSDictionary *params = @{FIXED_PARAMS,
+    NSDictionary *params = @{
                              @"mobile":phone,                    // 手机号，必选
                              @"code":code,                       // 验证码，必选
                              @"password":[BPUtil md5:pwd]};      // 密码，必选
@@ -49,18 +49,18 @@
 }
 
 - (IBAction)clickConfirmBtn:(id)sender {
-    NSString *api = SERVER_ADDRESS API_FIND_PWD;
+    NSString *api = SERVER_ADDRESS;
     NSDictionary *params = [self pwdParams];
     
     if (params) {
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        [BPInterface request:api param:params success:^(NSDictionary *responseObject) {
+        [BPInterface request:api param:params success:^(BPResponseModel *responseObject) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
             
-            if ([responseObject[@"status"] intValue] == 0) {
+            if (responseObject.status == 0) {
                 
             } else {
-                [BPUtil showMessage:responseObject[@"content"]];
+                [BPUtil showMessage:responseObject.content];
             }
         } failure:^(NSError *error) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];

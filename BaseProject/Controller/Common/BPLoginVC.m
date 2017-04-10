@@ -7,7 +7,6 @@
 //
 
 #import "BPLoginVC.h"
-#import "BPThirdParty.h"
 #import <MBProgressHUD.h>
 
 @interface BPLoginVC ()
@@ -35,7 +34,7 @@
         [BPUtil showMessage:@"请输入密码"]; return nil;
     }
     
-    NSDictionary *params = @{FIXED_PARAMS,
+    NSDictionary *params = @{
                              @"mobile":phone,                   // 必选
                              @"password":[BPUtil md5:pwd],      // 必选
                              @"device":device};                 // 必选，IOS
@@ -44,18 +43,18 @@
 }
 
 - (IBAction)clickLoginBtn:(id)sender {
-    NSString *api = SERVER_ADDRESS API_LOGIN;
+    NSString *api = SERVER_ADDRESS;
     NSDictionary *params = [self loginParams];
     
     if (params) {
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        [BPInterface request:api param:params success:^(NSDictionary *responseObject) {
+        [BPInterface request:api param:params success:^(BPResponseModel *responseObject) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
             
-            if ([responseObject[@"status"] intValue] == 0) {
-                [BPUtil saveLoginInfo:responseObject[@"content"]];
+            if (responseObject.status == 0) {
+                
             } else {
-                [BPUtil showMessage:responseObject[@"content"]];
+                [BPUtil showMessage:responseObject.content];
             }
         } failure:^(NSError *error) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
@@ -66,7 +65,7 @@
 }
 
 - (IBAction)clickThirdPartyBtn:(UIButton *)sender {    
-    [[BPThirdParty shareInstance] loginWithThirdParty:sender];
+    
 }
 
 @end

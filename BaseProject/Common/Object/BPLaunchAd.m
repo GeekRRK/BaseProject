@@ -47,19 +47,17 @@
         [self show];
     }
     
-    NSString *api = SERVER_ADDRESS API_LAUNCH_AD;
-    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS} copyItems:YES];
-    [BPInterface request:api param:param success:^(NSDictionary *responseObject) {
-        if ([responseObject[@"status"] intValue] == 0) {
-            _curAdDict = responseObject[@"info"];
-            
+    NSString *api = SERVER_ADDRESS;
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{} copyItems:YES];
+    [BPInterface request:api param:param success:^(BPResponseModel *responseObject) {
+        if (responseObject.status == 0) {
             if (_curAdDict == nil || _curAdDict.count == 0) {
                 [BPUtil deleteFileByName:AD_INFO];
             } else {
                 [self asyncDownloadAdImageWithUrl:_curAdDict[@"imgurl"] imageName:AD_IMG_NAME];
             }
         } else {
-            [BPUtil showMessage:responseObject[@"content"]];
+            [BPUtil showMessage:responseObject.content];
         }
     } failure:^(NSError *error) {
         [BPUtil showMessage:error.localizedDescription];
@@ -95,18 +93,17 @@
 
 - (void)requestLaunchAdDetail {
     // 开屏广告详情
-    NSString *api = SERVER_ADDRESS API_LAUNCHAD_DETAIL;
+    NSString *api = SERVER_ADDRESS;
     
     NSString *adId = @"广告id";
     
-    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS, @"id":adId} copyItems:YES];
-    [api setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{@"id":adId} copyItems:YES];
     
-    [BPInterface request:api param:param success:^(NSDictionary *responseObject) {
-        if ([responseObject[@"status"] intValue] == 0) {
+    [BPInterface request:api param:param success:^(BPResponseModel *responseObject) {
+        if (responseObject.status == 0) {
             // 获取到广告详情进行处理
         } else {
-            [BPUtil showMessage:responseObject[@"content"]];
+            [BPUtil showMessage:responseObject.content];
         }
     } failure:^(NSError *error) {
         [BPUtil showMessage:error.localizedDescription];

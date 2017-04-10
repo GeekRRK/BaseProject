@@ -23,7 +23,7 @@
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [BPInterface request:api
                    param:params
-                 success:^(NSDictionary *responseObject) {
+                 success:^(BPResponseModel *responseObject) {
                      [MBProgressHUD hideHUDForView:self.view animated:YES];
                      
                      NSLog(@"%@", responseObject);

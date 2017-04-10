@@ -30,11 +30,11 @@
     
     /*
     NSString *api = SERVER_ADDRESS API_CHANGE_AVATAR;
-    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{FIXED_PARAMS} copyItems:YES];
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{} copyItems:YES];
     [param setValuesForKeysWithDictionary:[BPUtil getUserParamDict]];
     
     NSString *path = [CACHE_DIR stringByAppendingPathComponent:@"avatar.png"];
-    [BPInterface request2UploadFile:api files:@{@"avatar":path} param:param success:^(NSDictionary *responseObject) {
+    [BPInterface request2UploadFile:api files:@{@"avatar":path} param:param success:^(BPResponseModel *responseObject) {
         NSLog(@"%@", responseObject);
     } failure:^(NSError *error) {
         NSLog(@"%@", error.localizedDescription);

@@ -2,8 +2,8 @@
 //  BPUtil.h
 //  BaseProject
 //
-//  Created by GeekRRK on 2017/1/13.
-//  Copyright © 2017年 GeekRRK. All rights reserved.
+//  Created by GeekRRK on 16/4/7.
+//  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -12,21 +12,14 @@
 @interface BPUtil : NSObject
 
 + (void)showMessage:(NSString *)message;
-
-+ (UIImage *)image:(UIImage*)image byScalingToSize:(CGSize)targetSize;
-
-+ (int)getAgeFromBirthday:(NSString *)birthday;
-
-+ (UIImage*) getVideoPreViewImage:(NSString *)videoPath;
-
-+ (UIImage *)getLocalVideoFirstImage:(NSString *)videoPath;
-
-+ (UIImage *)getVideoFirstImage:(NSString *)videoPath;
-
-+ (UIViewController *)getCurrentVC;
-
-+ (BOOL)isTodayWithDateStr:(NSString *)dateStr;
-
-+ (UIImage *)snapshot;
++ (UIColor *)colorWithHexString:(NSString *)stringToConvert;
++ (NSString *)md5:(NSString *)str;
++ (NSString *)getFilePathBy:(NSString *)fileName;
++ (NSMutableDictionary *)readDictBy:(NSString *)fileName;
++ (void)writeDict:(NSDictionary *)dict to:(NSString *)fileName;
++ (void)deleteFileByName:(NSString *)fileName;
++ (NSString *)getNowTimeStamp;
++ (UIImage *)fitSmallImage:(UIImage *)image;
++ (CGSize)fitsize:(CGSize)thisSize;
 
 @end
