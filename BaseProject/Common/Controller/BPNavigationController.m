@@ -3,7 +3,7 @@
 //  Topwinner
 //
 //  Created by apple on 17/2/21.
-//  Copyright © 2017年 UgoMedia. All rights reserved.
+//  Copyright © 2017年 GeekRRK. All rights reserved.
 //
 
 #import "BPNavigationController.h"

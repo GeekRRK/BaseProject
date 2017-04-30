@@ -1,5 +1,5 @@
 //
-//  NXHWebViewVC.h
+//  GeekRRKWebViewVC.h
 //  iFan
 //
 //  Created by GeekRRK on 16/7/21.
