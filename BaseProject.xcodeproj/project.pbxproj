@@ -656,7 +656,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = UgoMedia;
+				ORGANIZATIONNAME = GeekRRK;
 				TargetAttributes = {
 					AE473E391DCD684900016040 = {
 						CreatedOnToolsVersion = 8.0;
