@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		61218FB71E83ED39001D38E8 /* BPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61218FB41E83ED39001D38E8 /* BPNavigationController.m */; };
 		61218FB81E83ED39001D38E8 /* BPTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61218FB61E83ED39001D38E8 /* BPTabbarController.m */; };
+		61E90CFE1EB5800B0090741F /* BPSegBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E90CFB1EB5800B0090741F /* BPSegBtn.m */; };
+		61E90CFF1EB5800B0090741F /* BPSegTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E90CFD1EB5800B0090741F /* BPSegTitleView.m */; };
 		61EA32FD1E9B1F8100F4C1EA /* BPInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EA32F61E9B1F8100F4C1EA /* BPInterface.m */; };
 		61EA32FE1E9B1F8100F4C1EA /* BPLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EA32F81E9B1F8100F4C1EA /* BPLaunchAd.m */; };
 		61EA32FF1E9B1F8100F4C1EA /* BPResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EA32FA1E9B1F8100F4C1EA /* BPResponseModel.m */; };
@@ -108,6 +110,10 @@
 		61218FB41E83ED39001D38E8 /* BPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPNavigationController.m; sourceTree = "<group>"; };
 		61218FB51E83ED39001D38E8 /* BPTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTabbarController.h; sourceTree = "<group>"; };
 		61218FB61E83ED39001D38E8 /* BPTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTabbarController.m; sourceTree = "<group>"; };
+		61E90CFA1EB5800B0090741F /* BPSegBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPSegBtn.h; sourceTree = "<group>"; };
+		61E90CFB1EB5800B0090741F /* BPSegBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPSegBtn.m; sourceTree = "<group>"; };
+		61E90CFC1EB5800B0090741F /* BPSegTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPSegTitleView.h; sourceTree = "<group>"; };
+		61E90CFD1EB5800B0090741F /* BPSegTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPSegTitleView.m; sourceTree = "<group>"; };
 		61EA32F51E9B1F8100F4C1EA /* BPInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPInterface.h; sourceTree = "<group>"; };
 		61EA32F61E9B1F8100F4C1EA /* BPInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPInterface.m; sourceTree = "<group>"; };
 		61EA32F71E9B1F8100F4C1EA /* BPLaunchAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPLaunchAd.h; sourceTree = "<group>"; };
@@ -416,6 +422,10 @@
 		AE80F7901DFA96A300D2B3D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				61E90CFA1EB5800B0090741F /* BPSegBtn.h */,
+				61E90CFB1EB5800B0090741F /* BPSegBtn.m */,
+				61E90CFC1EB5800B0090741F /* BPSegTitleView.h */,
+				61E90CFD1EB5800B0090741F /* BPSegTitleView.m */,
 				AE80F7BD1DFA99B700D2B3D7 /* BPAlertView.h */,
 				AE80F7BE1DFA99B700D2B3D7 /* BPAlertView.m */,
 				AE80F7BF1DFA99B700D2B3D7 /* BPAlertView.xib */,
@@ -783,6 +793,7 @@
 			files = (
 				61EA32FF1E9B1F8100F4C1EA /* BPResponseModel.m in Sources */,
 				AEFC48131DE45EC5000B7772 /* HHAlertView.m in Sources */,
+				61E90CFF1EB5800B0090741F /* BPSegTitleView.m in Sources */,
 				AE9D85241DCDCDFD00CAF67F /* UIViewController+InjectStatisticSpot.m in Sources */,
 				61EA32FD1E9B1F8100F4C1EA /* BPInterface.m in Sources */,
 				AE9D850C1DCDA60300CAF67F /* AppDelegate.m in Sources */,
@@ -817,6 +828,7 @@
 				AE6503411E08CF780001A633 /* BPWebDetailVC.m in Sources */,
 				61EA32FE1E9B1F8100F4C1EA /* BPLaunchAd.m in Sources */,
 				61EA33001E9B1F8100F4C1EA /* BPUtil.m in Sources */,
+				61E90CFE1EB5800B0090741F /* BPSegBtn.m in Sources */,
 				61218FB81E83ED39001D38E8 /* BPTabbarController.m in Sources */,
 				AE80F79D1DFA96A300D2B3D7 /* BPAddressModel.m in Sources */,
 				AE8999601DDC522E00FF768E /* NSData+AES.m in Sources */,

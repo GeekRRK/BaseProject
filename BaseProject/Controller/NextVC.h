@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NextVC : UIViewController
+@interface NextVC : UITabBarController
 
 @end
