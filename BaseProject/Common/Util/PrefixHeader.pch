@@ -16,9 +16,8 @@
 #import <YYModel.h>
 #import "BPUtil.h"
 #import "AppDelegate.h"
-#import <WXApi.h>
 #import <CocoaLumberjack/CocoaLumberjack.h>
-#import <CocoaLumberjack/DDLogMacros.h>
+#import <CocoaLumberjack/DDMultiFormatter.h>
 #import "BPInterface.h"
 
 #define MAS_SHORTHAND

@@ -32,7 +32,7 @@
     NSString *eventID = configDict[targetName][@"ControlEventIDs"][actionString];
     
     if (eventID) {
-//        DDLogInfo(@"\n***Hook success.\n[1]action:%@\n[2]target:%@\n[3]event:%@", NSStringFromSelector(action), target, eventID);
+        DDLogInfo(@"\n***Hook success.\n[1]action:%@\n[2]target:%@\n[3]event:%@", NSStringFromSelector(action), target, eventID);
     }
 }
 

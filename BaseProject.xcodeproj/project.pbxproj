@@ -9,13 +9,10 @@
 /* Begin PBXBuildFile section */
 		61218FB71E83ED39001D38E8 /* BPNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 61218FB41E83ED39001D38E8 /* BPNavVC.m */; };
 		61218FB81E83ED39001D38E8 /* BPTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 61218FB61E83ED39001D38E8 /* BPTabVC.m */; };
-		61EA32FD1E9B1F8100F4C1EA /* BPInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EA32F61E9B1F8100F4C1EA /* BPInterface.m */; };
-		61EA32FE1E9B1F8100F4C1EA /* BPLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EA32F81E9B1F8100F4C1EA /* BPLaunchAd.m */; };
-		61EA32FF1E9B1F8100F4C1EA /* BPResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EA32FA1E9B1F8100F4C1EA /* BPResponseModel.m */; };
-		61EA33001E9B1F8100F4C1EA /* BPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EA32FC1E9B1F8100F4C1EA /* BPUtil.m */; };
-		AE6503531E0923630001A633 /* iOS集成常用第三方.docx in Resources */ = {isa = PBXBuildFile; fileRef = AE6503521E0923630001A633 /* iOS集成常用第三方.docx */; };
-		AE78A9071DD4276700869859 /* Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = AE78A9061DD4276700869859 /* Guide.docx */; };
-		AE78A90A1DD4709900869859 /* BadCode.m in Sources */ = {isa = PBXBuildFile; fileRef = AE78A9091DD4709900869859 /* BadCode.m */; };
+		61E90D0A1EB6CB3D0090741F /* BPInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E90D021EB6CB3D0090741F /* BPInterface.m */; };
+		61E90D0B1EB6CB3D0090741F /* BPLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E90D041EB6CB3D0090741F /* BPLaunchAd.m */; };
+		61E90D0C1EB6CB3D0090741F /* BPResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E90D061EB6CB3D0090741F /* BPResponseModel.m */; };
+		61E90D0D1EB6CB3D0090741F /* BPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E90D081EB6CB3D0090741F /* BPUtil.m */; };
 		AE80F79E1DFA96A300D2B3D7 /* BPUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE80F78A1DFA96A300D2B3D7 /* BPUserModel.m */; };
 		AE80F7C61DFA99B700D2B3D7 /* BPTouchScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE80F7C11DFA99B700D2B3D7 /* BPTouchScrollView.m */; };
 		AE80F7C71DFA99B700D2B3D7 /* BPTouchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE80F7C31DFA99B700D2B3D7 /* BPTouchTableView.m */; };
@@ -71,20 +68,17 @@
 		61218FB41E83ED39001D38E8 /* BPNavVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPNavVC.m; sourceTree = "<group>"; };
 		61218FB51E83ED39001D38E8 /* BPTabVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTabVC.h; sourceTree = "<group>"; };
 		61218FB61E83ED39001D38E8 /* BPTabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTabVC.m; sourceTree = "<group>"; };
-		61EA32F51E9B1F8100F4C1EA /* BPInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPInterface.h; sourceTree = "<group>"; };
-		61EA32F61E9B1F8100F4C1EA /* BPInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPInterface.m; sourceTree = "<group>"; };
-		61EA32F71E9B1F8100F4C1EA /* BPLaunchAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPLaunchAd.h; sourceTree = "<group>"; };
-		61EA32F81E9B1F8100F4C1EA /* BPLaunchAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPLaunchAd.m; sourceTree = "<group>"; };
-		61EA32F91E9B1F8100F4C1EA /* BPResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPResponseModel.h; sourceTree = "<group>"; };
-		61EA32FA1E9B1F8100F4C1EA /* BPResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPResponseModel.m; sourceTree = "<group>"; };
-		61EA32FB1E9B1F8100F4C1EA /* BPUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPUtil.h; sourceTree = "<group>"; };
-		61EA32FC1E9B1F8100F4C1EA /* BPUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPUtil.m; sourceTree = "<group>"; };
+		61E90D011EB6CB3D0090741F /* BPInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPInterface.h; sourceTree = "<group>"; };
+		61E90D021EB6CB3D0090741F /* BPInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPInterface.m; sourceTree = "<group>"; };
+		61E90D031EB6CB3D0090741F /* BPLaunchAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPLaunchAd.h; sourceTree = "<group>"; };
+		61E90D041EB6CB3D0090741F /* BPLaunchAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPLaunchAd.m; sourceTree = "<group>"; };
+		61E90D051EB6CB3D0090741F /* BPResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPResponseModel.h; sourceTree = "<group>"; };
+		61E90D061EB6CB3D0090741F /* BPResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPResponseModel.m; sourceTree = "<group>"; };
+		61E90D071EB6CB3D0090741F /* BPUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPUtil.h; sourceTree = "<group>"; };
+		61E90D081EB6CB3D0090741F /* BPUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPUtil.m; sourceTree = "<group>"; };
+		61E90D091EB6CB3D0090741F /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		A64EFFB3F224598667B2063F /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		AE473E3A1DCD684900016040 /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE6503521E0923630001A633 /* iOS集成常用第三方.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iOS集成常用第三方.docx"; sourceTree = "<group>"; };
-		AE78A9061DD4276700869859 /* Guide.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Guide.docx; sourceTree = "<group>"; };
-		AE78A9081DD4709900869859 /* BadCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadCode.h; sourceTree = "<group>"; };
-		AE78A9091DD4709900869859 /* BadCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadCode.m; sourceTree = "<group>"; };
 		AE80F7891DFA96A300D2B3D7 /* BPUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPUserModel.h; sourceTree = "<group>"; };
 		AE80F78A1DFA96A300D2B3D7 /* BPUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPUserModel.m; sourceTree = "<group>"; };
 		AE80F7C01DFA99B700D2B3D7 /* BPTouchScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTouchScrollView.h; sourceTree = "<group>"; };
@@ -201,6 +195,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		61E90D001EB6CB3D0090741F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				61E90D011EB6CB3D0090741F /* BPInterface.h */,
+				61E90D021EB6CB3D0090741F /* BPInterface.m */,
+				61E90D031EB6CB3D0090741F /* BPLaunchAd.h */,
+				61E90D041EB6CB3D0090741F /* BPLaunchAd.m */,
+				61E90D051EB6CB3D0090741F /* BPResponseModel.h */,
+				61E90D061EB6CB3D0090741F /* BPResponseModel.m */,
+				61E90D071EB6CB3D0090741F /* BPUtil.h */,
+				61E90D081EB6CB3D0090741F /* BPUtil.m */,
+				61E90D091EB6CB3D0090741F /* PrefixHeader.pch */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		AE473E311DCD684900016040 = {
 			isa = PBXGroup;
 			children = (
@@ -225,10 +235,6 @@
 		AE78A9051DD4276700869859 /* Doc */ = {
 			isa = PBXGroup;
 			children = (
-				AE78A9061DD4276700869859 /* Guide.docx */,
-				AE78A9081DD4709900869859 /* BadCode.h */,
-				AE78A9091DD4709900869859 /* BadCode.m */,
-				AE6503521E0923630001A633 /* iOS集成常用第三方.docx */,
 			);
 			path = Doc;
 			sourceTree = "<group>";
@@ -236,14 +242,7 @@
 		AE80F7811DFA96A300D2B3D7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				61EA32F51E9B1F8100F4C1EA /* BPInterface.h */,
-				61EA32F61E9B1F8100F4C1EA /* BPInterface.m */,
-				61EA32F71E9B1F8100F4C1EA /* BPLaunchAd.h */,
-				61EA32F81E9B1F8100F4C1EA /* BPLaunchAd.m */,
-				61EA32F91E9B1F8100F4C1EA /* BPResponseModel.h */,
-				61EA32FA1E9B1F8100F4C1EA /* BPResponseModel.m */,
-				61EA32FB1E9B1F8100F4C1EA /* BPUtil.h */,
-				61EA32FC1E9B1F8100F4C1EA /* BPUtil.m */,
+				61E90D001EB6CB3D0090741F /* Util */,
 				AE80F7861DFA96A300D2B3D7 /* Model */,
 				AE80F7901DFA96A300D2B3D7 /* View */,
 				AE80F7821DFA96A300D2B3D7 /* Controller */,
@@ -462,10 +461,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEC02F8C1DD0532C00710A62 /* Localizable.strings in Resources */,
-				AE6503531E0923630001A633 /* iOS集成常用第三方.docx in Resources */,
 				AE9D850F1DCDA60300CAF67F /* Assets.xcassets in Resources */,
 				AE9D85101DCDA60300CAF67F /* LaunchScreen.storyboard in Resources */,
-				AE78A9071DD4276700869859 /* Guide.docx in Resources */,
 				AEC02F9F1DD059EA00710A62 /* avatar@2x.png in Resources */,
 				AE9D851E1DCDCD8800CAF67F /* UserStatistic.plist in Resources */,
 				AEC02F851DD04C1700710A62 /* InfoPlist.strings in Resources */,
@@ -509,7 +506,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C54FE7B3CBAF77D2D3D4AF7B /* [CP] Copy Pods Resources */ = {
@@ -534,25 +531,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61EA32FF1E9B1F8100F4C1EA /* BPResponseModel.m in Sources */,
+				61E90D0C1EB6CB3D0090741F /* BPResponseModel.m in Sources */,
 				AE9D85241DCDCDFD00CAF67F /* UIViewController+InjectStatisticSpot.m in Sources */,
-				61EA32FD1E9B1F8100F4C1EA /* BPInterface.m in Sources */,
 				AE9D850C1DCDA60300CAF67F /* AppDelegate.m in Sources */,
 				AE9D85271DCDD5BA00CAF67F /* BPCatchCrash.m in Sources */,
+				61E90D0B1EB6CB3D0090741F /* BPLaunchAd.m in Sources */,
 				AED10FBB1DE68DD900D0C7EE /* MeVC.m in Sources */,
 				AE9D851C1DCDCA7000CAF67F /* BPHookUtil.m in Sources */,
 				AE80F79E1DFA96A300D2B3D7 /* BPUserModel.m in Sources */,
 				AED7E7891DD301350034DDDE /* HomepageVC.m in Sources */,
 				AE9D85131DCDA60300CAF67F /* main.m in Sources */,
-				AE78A90A1DD4709900869859 /* BadCode.m in Sources */,
 				AE80F7C61DFA99B700D2B3D7 /* BPTouchScrollView.m in Sources */,
 				AE9D85231DCDCDFD00CAF67F /* UIControl+InjectStatisticSpot.m in Sources */,
+				61E90D0A1EB6CB3D0090741F /* BPInterface.m in Sources */,
 				61218FB71E83ED39001D38E8 /* BPNavVC.m in Sources */,
 				AED10FB81DE68DC200D0C7EE /* VideoVC.m in Sources */,
 				AE80F7C71DFA99B700D2B3D7 /* BPTouchTableView.m in Sources */,
-				61EA32FE1E9B1F8100F4C1EA /* BPLaunchAd.m in Sources */,
-				61EA33001E9B1F8100F4C1EA /* BPUtil.m in Sources */,
 				61218FB81E83ED39001D38E8 /* BPTabVC.m in Sources */,
+				61E90D0D1EB6CB3D0090741F /* BPUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,7 +713,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ED9B32BGG8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/BaseProject/Common/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BaseProject/Common/Util/PrefixHeader.pch";
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/BaseProject/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -739,7 +735,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ED9B32BGG8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/BaseProject/Common/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BaseProject/Common/Util/PrefixHeader.pch";
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/BaseProject/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

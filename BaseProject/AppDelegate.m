@@ -10,9 +10,7 @@
 #import "HomepageVC.h"
 #import "VideoVC.h"
 #import "MeVC.h"
-#import <WXTabBarController.h>
 #import "BPTabVC.h"
-#import "BPNavVC.h"
 
 @interface AppDelegate ()
 
