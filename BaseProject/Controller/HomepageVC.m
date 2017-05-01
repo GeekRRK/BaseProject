@@ -14,15 +14,6 @@
 #import "NextVC.h"
 #import <Masonry.h>
 #import "BPWebViewVC.h"
-#import "BPRegisterVC.h"
-#import "BPLoginVC.h"
-#import "BPThirdPartyBindingVC.h"
-#import "BPFindPwdVC.h"
-#import "BPChangePwdVC.h"
-#import "BPChangeUserInfoVC.h"
-#import "BPSuggestionVC.h"
-#import "BPWebDetailVC.h"
-#import "BPPushDetailVC.h"
 
 static float alpha = 1;
 static float baseMinY = 0;
@@ -125,39 +116,6 @@ static float baseMaxY = 160 - 64;
     cell.textLabel.text = _titles[indexPath.row];
     
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    if (indexPath.row == 0) {
-        BPRegisterVC *registerVC = [[BPRegisterVC alloc] init];
-        [self.navigationController pushViewController:registerVC animated:YES];
-    } else if (indexPath.row == 1) {
-        BPLoginVC *loginVC = [[BPLoginVC alloc] init];
-        [self.navigationController pushViewController:loginVC animated:YES];
-    } else if (indexPath.row == 2) {
-        BPThirdPartyBindingVC *bindingVC = [[BPThirdPartyBindingVC alloc] init];
-        [self.navigationController pushViewController:bindingVC animated:YES];
-    } else if (indexPath.row == 3) {
-        BPFindPwdVC *findPwdVC = [[BPFindPwdVC alloc] init];
-        [self.navigationController pushViewController:findPwdVC animated:YES];
-    } else if (indexPath.row == 4) {
-        BPChangePwdVC *changePwdVC = [[BPChangePwdVC alloc] init];
-        [self.navigationController pushViewController:changePwdVC animated:YES];
-    } else if (indexPath.row == 5) {
-        BPChangeUserInfoVC *changeUserInfo = [[BPChangeUserInfoVC alloc] init];
-        [self.navigationController pushViewController:changeUserInfo animated:YES];
-    } else if (indexPath.row == 6) {
-        BPSuggestionVC *suggestionVC = [[BPSuggestionVC alloc] init];
-        [self.navigationController pushViewController:suggestionVC animated:YES];
-    } else if (indexPath.row == 7) {
-        BPWebDetailVC *webDetailVC = [[BPWebDetailVC alloc] init];
-        [self.navigationController pushViewController:webDetailVC animated:YES];
-    } else if (indexPath.row == 8) {
-        BPPushDetailVC *pushDetailVC = [[BPPushDetailVC alloc] init];
-        [self.navigationController pushViewController:pushDetailVC animated:YES];
-    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
