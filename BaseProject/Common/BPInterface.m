@@ -8,8 +8,6 @@
 //  网络封装接口
 
 #import "BPInterface.h"
-#import "Base64.h"
-#import "NSData+AES.h"
 #import <AFURLSessionManager.h>
 #import "BPUtil.h"
 #import "BPResponseModel.h"

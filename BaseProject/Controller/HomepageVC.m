@@ -10,10 +10,8 @@
 #import "HZQPickerView.h"
 #import "BPTouchTableView.h"
 #import <SDCycleScrollView.h>
-#import "BPAlertView.h"
 #import "NextVC.h"
 #import <Masonry.h>
-#import "BPWebViewVC.h"
 
 static float alpha = 1;
 static float baseMinY = 0;

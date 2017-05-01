@@ -1,5 +1,4 @@
 #import "BPLaunchAd.h"
-#import "BPWebViewVC.h"
 
 #define AD_IMG_NAME @"BPAdImg.jpg"
 #define AD_INFO     @"BPAdInfo"
@@ -78,14 +77,12 @@
 
 - (void)clickAd {
     UIViewController* rootVC = [[UIApplication sharedApplication].delegate window].rootViewController;
-    BPWebViewVC *webVC = [[BPWebViewVC alloc] init];
-    BPWebModel *webModel = [BPWebModel yy_modelWithDictionary:_curAdDict];
-    webVC.webModel = webModel;
+    
     
     if ([rootVC isKindOfClass:[UITabBarController class]]) {
-        [rootVC.navigationController pushViewController:webVC animated:YES];
+        [rootVC.navigationController pushViewController:nil animated:YES];
     } else {
-        [(UINavigationController *)rootVC.navigationController pushViewController:webVC animated:YES];
+        [(UINavigationController *)rootVC.navigationController pushViewController:nil animated:YES];
     }
     
     [self hide];
