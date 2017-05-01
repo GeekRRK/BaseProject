@@ -6,13 +6,13 @@
 //  Copyright © 2017年 GeekRRK. All rights reserved.
 //
 
-#import "BPNavigationController.h"
+#import "BPNavVC.h"
 
-@interface BPNavigationController ()
+@interface BPNavVC ()
 
 @end
 
-@implementation BPNavigationController
+@implementation BPNavVC
 
 - (void)viewDidLoad {
     [self.navigationBar setTintColor:[UIColor whiteColor]];

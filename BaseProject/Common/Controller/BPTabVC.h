@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
-#import "BPNavigationController.h"
+#import "BPNavVC.h"
 
-@interface BPTabbarController : UITabBarController
+@interface BPTabVC : UITabBarController
 
 - (void)addChildViewControllers;
 

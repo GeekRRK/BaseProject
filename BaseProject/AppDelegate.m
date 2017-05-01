@@ -12,8 +12,8 @@
 #import "MeVC.h"
 #import <WXTabBarController.h>
 #import "JPUSHService.h"
-#import "BPTabbarController.h"
-#import "BPNavigationController.h"
+#import "BPTabVC.h"
+#import "BPNavVC.h"
 
 @interface AppDelegate ()
 
@@ -34,7 +34,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    BPTabbarController *tabVC = [[BPTabbarController alloc] init];
+    BPTabVC *tabVC = [[BPTabVC alloc] init];
     self.window.rootViewController = tabVC;
 }
 

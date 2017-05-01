@@ -10,7 +10,6 @@
 #import "HZQPickerView.h"
 #import "BPTouchTableView.h"
 #import <SDCycleScrollView.h>
-#import "NextVC.h"
 #import <Masonry.h>
 
 static float alpha = 1;

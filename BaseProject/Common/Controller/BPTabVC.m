@@ -1,10 +1,10 @@
-#import "BPTabbarController.h"
+#import "BPTabVC.h"
 
-@interface BPTabbarController ()
+@interface BPTabVC ()
 
 @end
 
-@implementation BPTabbarController
+@implementation BPTabVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,7 +33,7 @@
     vc.tabBarItem.image = [UIImage imageNamed:imageName];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImageName];
     
-    BPNavigationController *navi = [[BPNavigationController alloc] initWithRootViewController:vc];
+    BPNavVC *navi = [[BPNavVC alloc] initWithRootViewController:vc];
     navi.interactivePopGestureRecognizer.enabled = YES;
     [self addChildViewController:navi];
 }

@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		61218FB71E83ED39001D38E8 /* BPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61218FB41E83ED39001D38E8 /* BPNavigationController.m */; };
-		61218FB81E83ED39001D38E8 /* BPTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61218FB61E83ED39001D38E8 /* BPTabbarController.m */; };
+		61218FB71E83ED39001D38E8 /* BPNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 61218FB41E83ED39001D38E8 /* BPNavVC.m */; };
+		61218FB81E83ED39001D38E8 /* BPTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 61218FB61E83ED39001D38E8 /* BPTabVC.m */; };
 		61EA32FD1E9B1F8100F4C1EA /* BPInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EA32F61E9B1F8100F4C1EA /* BPInterface.m */; };
 		61EA32FE1E9B1F8100F4C1EA /* BPLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EA32F81E9B1F8100F4C1EA /* BPLaunchAd.m */; };
 		61EA32FF1E9B1F8100F4C1EA /* BPResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EA32FA1E9B1F8100F4C1EA /* BPResponseModel.m */; };
 		61EA33001E9B1F8100F4C1EA /* BPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EA32FC1E9B1F8100F4C1EA /* BPUtil.m */; };
-		AE5B32F11DEFC64D006159BD /* NextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5B32F01DEFC64D006159BD /* NextVC.m */; };
 		AE6503531E0923630001A633 /* iOS集成常用第三方.docx in Resources */ = {isa = PBXBuildFile; fileRef = AE6503521E0923630001A633 /* iOS集成常用第三方.docx */; };
 		AE78A9071DD4276700869859 /* Guide.docx in Resources */ = {isa = PBXBuildFile; fileRef = AE78A9061DD4276700869859 /* Guide.docx */; };
 		AE78A90A1DD4709900869859 /* BadCode.m in Sources */ = {isa = PBXBuildFile; fileRef = AE78A9091DD4709900869859 /* BadCode.m */; };
@@ -78,10 +77,10 @@
 
 /* Begin PBXFileReference section */
 		43C4864AB0CC3C3E1DEEE553 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
-		61218FB31E83ED39001D38E8 /* BPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPNavigationController.h; sourceTree = "<group>"; };
-		61218FB41E83ED39001D38E8 /* BPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPNavigationController.m; sourceTree = "<group>"; };
-		61218FB51E83ED39001D38E8 /* BPTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTabbarController.h; sourceTree = "<group>"; };
-		61218FB61E83ED39001D38E8 /* BPTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTabbarController.m; sourceTree = "<group>"; };
+		61218FB31E83ED39001D38E8 /* BPNavVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPNavVC.h; sourceTree = "<group>"; };
+		61218FB41E83ED39001D38E8 /* BPNavVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPNavVC.m; sourceTree = "<group>"; };
+		61218FB51E83ED39001D38E8 /* BPTabVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTabVC.h; sourceTree = "<group>"; };
+		61218FB61E83ED39001D38E8 /* BPTabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTabVC.m; sourceTree = "<group>"; };
 		61EA32F51E9B1F8100F4C1EA /* BPInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPInterface.h; sourceTree = "<group>"; };
 		61EA32F61E9B1F8100F4C1EA /* BPInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPInterface.m; sourceTree = "<group>"; };
 		61EA32F71E9B1F8100F4C1EA /* BPLaunchAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPLaunchAd.h; sourceTree = "<group>"; };
@@ -92,8 +91,6 @@
 		61EA32FC1E9B1F8100F4C1EA /* BPUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPUtil.m; sourceTree = "<group>"; };
 		A64EFFB3F224598667B2063F /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		AE473E3A1DCD684900016040 /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE5B32EF1DEFC64D006159BD /* NextVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextVC.h; sourceTree = "<group>"; };
-		AE5B32F01DEFC64D006159BD /* NextVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextVC.m; sourceTree = "<group>"; };
 		AE6503521E0923630001A633 /* iOS集成常用第三方.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iOS集成常用第三方.docx"; sourceTree = "<group>"; };
 		AE78A9061DD4276700869859 /* Guide.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Guide.docx; sourceTree = "<group>"; };
 		AE78A9081DD4709900869859 /* BadCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadCode.h; sourceTree = "<group>"; };
@@ -288,10 +285,10 @@
 		AE80F7821DFA96A300D2B3D7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				61218FB31E83ED39001D38E8 /* BPNavigationController.h */,
-				61218FB41E83ED39001D38E8 /* BPNavigationController.m */,
-				61218FB51E83ED39001D38E8 /* BPTabbarController.h */,
-				61218FB61E83ED39001D38E8 /* BPTabbarController.m */,
+				61218FB31E83ED39001D38E8 /* BPNavVC.h */,
+				61218FB41E83ED39001D38E8 /* BPNavVC.m */,
+				61218FB51E83ED39001D38E8 /* BPTabVC.h */,
+				61218FB61E83ED39001D38E8 /* BPTabVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -450,8 +447,6 @@
 				AED10FB71DE68DC200D0C7EE /* VideoVC.m */,
 				AED10FB91DE68DD900D0C7EE /* MeVC.h */,
 				AED10FBA1DE68DD900D0C7EE /* MeVC.m */,
-				AE5B32EF1DEFC64D006159BD /* NextVC.h */,
-				AE5B32F01DEFC64D006159BD /* NextVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -664,13 +659,12 @@
 				AE78A90A1DD4709900869859 /* BadCode.m in Sources */,
 				AE80F7C61DFA99B700D2B3D7 /* BPTouchScrollView.m in Sources */,
 				AE9D85231DCDCDFD00CAF67F /* UIControl+InjectStatisticSpot.m in Sources */,
-				61218FB71E83ED39001D38E8 /* BPNavigationController.m in Sources */,
+				61218FB71E83ED39001D38E8 /* BPNavVC.m in Sources */,
 				AED10FB81DE68DC200D0C7EE /* VideoVC.m in Sources */,
-				AE5B32F11DEFC64D006159BD /* NextVC.m in Sources */,
 				AE80F7C71DFA99B700D2B3D7 /* BPTouchTableView.m in Sources */,
 				61EA32FE1E9B1F8100F4C1EA /* BPLaunchAd.m in Sources */,
 				61EA33001E9B1F8100F4C1EA /* BPUtil.m in Sources */,
-				61218FB81E83ED39001D38E8 /* BPTabbarController.m in Sources */,
+				61218FB81E83ED39001D38E8 /* BPTabVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
