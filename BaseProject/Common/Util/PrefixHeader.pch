@@ -17,10 +17,10 @@
 #import "BPUtil.h"
 #import "AppDelegate.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
-#import <CocoaLumberjack/DDMultiFormatter.h>
 #import "BPInterface.h"
 
 #define MAS_SHORTHAND
+#define LOG_LEVEL_DEF DDLogFlagInfo
 
 // Util
 #define LOCALSTR(str)               NSLocalizedString(str, nil)
