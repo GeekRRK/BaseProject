@@ -17,6 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIButton *btn  = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 120, 80)];
+    btn.backgroundColor =  [UIColor redColor];
+    [btn addTarget:self action:@selector(jump2NextVC) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+}
+
+- (void)jump2NextVC {
+    UIViewController *vc = [[UIViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

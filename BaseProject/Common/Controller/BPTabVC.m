@@ -1,4 +1,7 @@
 #import "BPTabVC.h"
+#import "HomepageVC.h"
+#import "VideoVC.h"
+#import "MeVC.h"
 
 @interface BPTabVC ()
 
@@ -39,15 +42,14 @@
 }
 
 - (void)addChildViewControllers{
-    UIViewController *vc1 = [[UIViewController alloc] init];
-    UIViewController *vc2 = [[UIViewController alloc] init];
-    UIViewController *vc3 = [[UIViewController alloc] init];
-    UIViewController *vc4 = [[UIViewController alloc] init];
+    HomepageVC *vc1 = [[HomepageVC alloc] init];
+    VideoVC *vc2 = [[VideoVC alloc] init];
+    MeVC *vc3 = [[MeVC alloc] init];
     
-    NSArray *vcs = @[vc1, vc2, vc3, vc4];
-    NSArray *titles = @[@"首页", @"新闻", @"视频", @"我的"];
-    NSArray *tabItemImages = @[@"tabbar_home", @"tabbar_me", @"tabbar_video", @"tabbar_me"];
-    NSArray *tabSelectedItemImages = @[@"tabbar_home_sel", @"tabbar_me_sel", @"tabbar_video_sel",  @"tabbar_me_sel"];
+    NSArray *vcs = @[vc1, vc2, vc3];
+    NSArray *titles = @[@"首页", @"视频", @"我的"];
+    NSArray *tabItemImages = @[@"tabbar_home", @"tabbar_video", @"tabbar_me"];
+    NSArray *tabSelectedItemImages = @[@"tabbar_home_sel", @"tabbar_video_sel",  @"tabbar_me_sel"];
     
     for (int i = 0; i < vcs.count; ++i) {
         [self addChildVC:vcs[i] withTitle:titles[i] withImage:tabItemImages[i] withSelectedImage:tabSelectedItemImages[i]];
