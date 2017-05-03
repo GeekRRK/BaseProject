@@ -425,7 +425,7 @@
 				TargetAttributes = {
 					AE473E391DCD684900016040 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = ED9B32BGG8;
+						DevelopmentTeam = B5BXCD45E5;
 						ProvisioningStyle = Automatic;
 					};
 					AEC6C3031DD1A68900F9ABA0 = {
@@ -711,10 +711,10 @@
 			baseConfigurationReference = A64EFFB3F224598667B2063F /* Pods-BaseProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ED9B32BGG8;
+				DEVELOPMENT_TEAM = B5BXCD45E5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BaseProject/Common/Util/PrefixHeader.pch";
-				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/BaseProject/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -729,10 +729,10 @@
 			baseConfigurationReference = 43C4864AB0CC3C3E1DEEE553 /* Pods-BaseProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ED9B32BGG8;
+				DEVELOPMENT_TEAM = B5BXCD45E5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BaseProject/Common/Util/PrefixHeader.pch";
-				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/BaseProject/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

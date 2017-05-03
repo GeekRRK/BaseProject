@@ -80,9 +80,9 @@
     
     
     if ([rootVC isKindOfClass:[UITabBarController class]]) {
-        [rootVC.navigationController pushViewController:nil animated:YES];
+//        [rootVC.navigationController pushViewController:nil animated:YES];
     } else {
-        [(UINavigationController *)rootVC.navigationController pushViewController:nil animated:YES];
+//        [(UINavigationController *)rootVC.navigationController pushViewController:nil animated:YES];
     }
     
     [self hide];
