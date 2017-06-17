@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface BaseProjectTests : XCTestCase
+@interface PrototypeTests : XCTestCase
 
 @end
 
-@implementation BaseProjectTests
+@implementation PrototypeTests
 
 - (void)setUp {
     [super setUp];
