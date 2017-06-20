@@ -25,7 +25,6 @@
 		612180721EF5192200979A5E /* avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6121804A1EF5192200979A5E /* avatar@2x.png */; };
 		612180731EF5192200979A5E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6121804C1EF5192200979A5E /* InfoPlist.strings */; };
 		612180741EF5192200979A5E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6121804E1EF5192200979A5E /* Localizable.strings */; };
-		612180751EF5192200979A5E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 612180501EF5192200979A5E /* Info.plist */; };
 		612180761EF5192200979A5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 612180511EF5192200979A5E /* main.m */; };
 		612180771EF5192200979A5E /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = 612180541EF5192200979A5E /* LaunchScreen.strings */; };
 		6178042E1EF8B02E00A56AA6 /* BPCatchCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 617804261EF8B02E00A56AA6 /* BPCatchCrash.m */; };
@@ -357,7 +356,7 @@
 		AE473E321DCD684900016040 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = GeekRRK;
 				TargetAttributes = {
 					AE473E391DCD684900016040 = {
@@ -397,7 +396,6 @@
 				612180701EF5192200979A5E /* Assets.xcassets in Resources */,
 				617804321EF8B02E00A56AA6 /* UserStatistic.plist in Resources */,
 				612180731EF5192200979A5E /* InfoPlist.strings in Resources */,
-				612180751EF5192200979A5E /* Info.plist in Resources */,
 				612180771EF5192200979A5E /* LaunchScreen.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
