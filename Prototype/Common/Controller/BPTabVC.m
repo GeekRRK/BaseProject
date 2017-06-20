@@ -1,4 +1,5 @@
 #import "BPTabVC.h"
+#import "BPNavVC.h"
 #import "HomepageVC.h"
 #import "VideoVC.h"
 #import "MeVC.h"
@@ -15,7 +16,18 @@
     self.tabBar.tintColor = [UIColor whiteColor];
     self.tabBar.translucent = NO;
     [self setupNavigationBackItem];
-    [self addChildViewControllers];
+    
+    HomepageVC *vc1 = [[HomepageVC alloc] init];
+    VideoVC *vc2 = [[VideoVC alloc] init];
+    MeVC *vc3 = [[MeVC alloc] init];
+    
+    NSArray *vcs = @[vc1, vc2, vc3];
+    
+    NSArray *titles = @[@"首页", @"视频", @"我的"];
+    NSArray *tabItemImages = @[@"tabbar_home", @"tabbar_video", @"tabbar_me"];
+    NSArray *tabSelectedItemImages = @[@"tabbar_home_sel", @"tabbar_video_sel",  @"tabbar_me_sel"];
+    
+    [self addSubVCsWithVCs:vcs titles:titles imageNames:tabItemImages highlightedImageNames:tabSelectedItemImages];
 }
 
 - (void)setupNavigationBackItem {
@@ -30,7 +42,7 @@
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
 }
 
-- (void)addChildVC:(UIViewController*)vc withTitle:(NSString*)title withImage:(NSString*)imageName withSelectedImage:(NSString*)selectedImageName{
+- (void)addSubVC:(UIViewController*)vc withTitle:(NSString*)title withImage:(NSString*)imageName withSelectedImage:(NSString*)selectedImageName{
     vc.tabBarItem.title = title;
     vc.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:imageName];
@@ -41,18 +53,10 @@
     [self addChildViewController:navi];
 }
 
-- (void)addChildViewControllers{
-    HomepageVC *vc1 = [[HomepageVC alloc] init];
-    VideoVC *vc2 = [[VideoVC alloc] init];
-    MeVC *vc3 = [[MeVC alloc] init];
-    
-    NSArray *vcs = @[vc1, vc2, vc3];
-    NSArray *titles = @[@"首页", @"视频", @"我的"];
-    NSArray *tabItemImages = @[@"tabbar_home", @"tabbar_video", @"tabbar_me"];
-    NSArray *tabSelectedItemImages = @[@"tabbar_home_sel", @"tabbar_video_sel",  @"tabbar_me_sel"];
+- (void)addSubVCsWithVCs:(NSArray *)vcs titles:(NSArray *)titles imageNames:(NSArray *)imageNames highlightedImageNames:(NSArray *)highlightedImageNames {
     
     for (int i = 0; i < vcs.count; ++i) {
-        [self addChildVC:vcs[i] withTitle:titles[i] withImage:tabItemImages[i] withSelectedImage:tabSelectedItemImages[i]];
+        [self addSubVC:vcs[i] withTitle:titles[i] withImage:imageNames[i] withSelectedImage:highlightedImageNames[i]];
     }
 }
 

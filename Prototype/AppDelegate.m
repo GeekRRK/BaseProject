@@ -7,9 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "HomepageVC.h"
-#import "VideoVC.h"
-#import "MeVC.h"
 #import "BPTabVC.h"
 
 @interface AppDelegate ()
@@ -19,7 +16,6 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     
     [self setupRootVC];
     

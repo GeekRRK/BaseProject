@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6121805E1EF5192200979A5E /* BPCatchCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 6121801D1EF5192200979A5E /* BPCatchCrash.m */; };
-		6121805F1EF5192200979A5E /* BPHookUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6121801F1EF5192200979A5E /* BPHookUtil.m */; };
-		612180601EF5192200979A5E /* UIControl+InjectStatisticSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 612180211EF5192200979A5E /* UIControl+InjectStatisticSpot.m */; };
-		612180611EF5192200979A5E /* UIViewController+InjectStatisticSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 612180231EF5192200979A5E /* UIViewController+InjectStatisticSpot.m */; };
-		612180621EF5192200979A5E /* UserStatistic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 612180241EF5192200979A5E /* UserStatistic.plist */; };
 		612180631EF5192200979A5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 612180261EF5192200979A5E /* AppDelegate.m */; };
 		612180641EF5192200979A5E /* BPNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6121802A1EF5192200979A5E /* BPNavVC.m */; };
 		612180651EF5192200979A5E /* BPTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6121802C1EF5192200979A5E /* BPTabVC.m */; };
@@ -33,7 +28,11 @@
 		612180751EF5192200979A5E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 612180501EF5192200979A5E /* Info.plist */; };
 		612180761EF5192200979A5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 612180511EF5192200979A5E /* main.m */; };
 		612180771EF5192200979A5E /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = 612180541EF5192200979A5E /* LaunchScreen.strings */; };
-		612180781EF5192200979A5E /* img@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 612180571EF5192200979A5E /* img@2x.png */; };
+		6178042E1EF8B02E00A56AA6 /* BPCatchCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 617804261EF8B02E00A56AA6 /* BPCatchCrash.m */; };
+		6178042F1EF8B02E00A56AA6 /* BPHookUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 617804281EF8B02E00A56AA6 /* BPHookUtil.m */; };
+		617804301EF8B02E00A56AA6 /* UIControl+InjectStatisticSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 6178042A1EF8B02E00A56AA6 /* UIControl+InjectStatisticSpot.m */; };
+		617804311EF8B02E00A56AA6 /* UIViewController+InjectStatisticSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 6178042C1EF8B02E00A56AA6 /* UIViewController+InjectStatisticSpot.m */; };
+		617804321EF8B02E00A56AA6 /* UserStatistic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6178042D1EF8B02E00A56AA6 /* UserStatistic.plist */; };
 		AEC218E01DF4F8EE0072F6FF /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC218DF1DF4F8EE0072F6FF /* JavaScriptCore.framework */; };
 		AEC218E21DF4F8F80072F6FF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC218E11DF4F8F80072F6FF /* Security.framework */; };
 		AEC218E41DF4F8FF0072F6FF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC218E31DF4F8FF0072F6FF /* CoreLocation.framework */; };
@@ -54,16 +53,6 @@
 
 /* Begin PBXFileReference section */
 		1936E70BBB90DC4CC6F1C42A /* Pods-Prototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prototype.release.xcconfig"; path = "Pods/Target Support Files/Pods-Prototype/Pods-Prototype.release.xcconfig"; sourceTree = "<group>"; };
-		43C4864AB0CC3C3E1DEEE553 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
-		6121801C1EF5192200979A5E /* BPCatchCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPCatchCrash.h; sourceTree = "<group>"; };
-		6121801D1EF5192200979A5E /* BPCatchCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPCatchCrash.m; sourceTree = "<group>"; };
-		6121801E1EF5192200979A5E /* BPHookUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPHookUtil.h; sourceTree = "<group>"; };
-		6121801F1EF5192200979A5E /* BPHookUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPHookUtil.m; sourceTree = "<group>"; };
-		612180201EF5192200979A5E /* UIControl+InjectStatisticSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+InjectStatisticSpot.h"; sourceTree = "<group>"; };
-		612180211EF5192200979A5E /* UIControl+InjectStatisticSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+InjectStatisticSpot.m"; sourceTree = "<group>"; };
-		612180221EF5192200979A5E /* UIViewController+InjectStatisticSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+InjectStatisticSpot.h"; sourceTree = "<group>"; };
-		612180231EF5192200979A5E /* UIViewController+InjectStatisticSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+InjectStatisticSpot.m"; sourceTree = "<group>"; };
-		612180241EF5192200979A5E /* UserStatistic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserStatistic.plist; sourceTree = "<group>"; };
 		612180251EF5192200979A5E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		612180261EF5192200979A5E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		612180291EF5192200979A5E /* BPNavVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPNavVC.h; sourceTree = "<group>"; };
@@ -80,7 +69,6 @@
 		612180361EF5192200979A5E /* BPResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPResponseModel.m; sourceTree = "<group>"; };
 		612180371EF5192200979A5E /* BPUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPUtil.h; sourceTree = "<group>"; };
 		612180381EF5192200979A5E /* BPUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPUtil.m; sourceTree = "<group>"; };
-		612180391EF5192200979A5E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		6121803B1EF5192200979A5E /* BPTouchScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTouchScrollView.h; sourceTree = "<group>"; };
 		6121803C1EF5192200979A5E /* BPTouchScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTouchScrollView.m; sourceTree = "<group>"; };
 		6121803D1EF5192200979A5E /* BPTouchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTouchTableView.h; sourceTree = "<group>"; };
@@ -102,9 +90,17 @@
 		612180531EF5192200979A5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		612180551EF5192200979A5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		612180561EF5192200979A5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		612180581EF5192200979A5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hans"; path = "zh-Hans.lproj/img@2x.png"; sourceTree = "<group>"; };
+		617804251EF8B02E00A56AA6 /* BPCatchCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPCatchCrash.h; sourceTree = "<group>"; };
+		617804261EF8B02E00A56AA6 /* BPCatchCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPCatchCrash.m; sourceTree = "<group>"; };
+		617804271EF8B02E00A56AA6 /* BPHookUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPHookUtil.h; sourceTree = "<group>"; };
+		617804281EF8B02E00A56AA6 /* BPHookUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPHookUtil.m; sourceTree = "<group>"; };
+		617804291EF8B02E00A56AA6 /* UIControl+InjectStatisticSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+InjectStatisticSpot.h"; sourceTree = "<group>"; };
+		6178042A1EF8B02E00A56AA6 /* UIControl+InjectStatisticSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+InjectStatisticSpot.m"; sourceTree = "<group>"; };
+		6178042B1EF8B02E00A56AA6 /* UIViewController+InjectStatisticSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+InjectStatisticSpot.h"; sourceTree = "<group>"; };
+		6178042C1EF8B02E00A56AA6 /* UIViewController+InjectStatisticSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+InjectStatisticSpot.m"; sourceTree = "<group>"; };
+		6178042D1EF8B02E00A56AA6 /* UserStatistic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserStatistic.plist; sourceTree = "<group>"; };
+		617804331EF8B6BE00A56AA6 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		9FBC4273402698143B479E84 /* Pods-Prototype.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prototype.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Prototype/Pods-Prototype.debug.xcconfig"; sourceTree = "<group>"; };
-		A64EFFB3F224598667B2063F /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		AE473E3A1DCD684900016040 /* Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC218DF1DF4F8EE0072F6FF /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		AEC218E11DF4F8F80072F6FF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -121,8 +117,6 @@
 		AEC218FD1DF5029C0072F6FF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		AEC218FF1DF502A40072F6FF /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		AEC219011DF502AB0072F6FF /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
-		AED7E78A1DD30A980034DDDE /* libPods-BaseProject.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-BaseProject.a"; path = "../../../Library/Developer/Xcode/DerivedData/BaseProject-audinbsvkvdjnmeqxxonrzcsjhpb/Build/Products/Debug-iphonesimulator/libPods-BaseProject.a"; sourceTree = "<group>"; };
-		BB59F262626700FB9A0D14FB /* libPods-BaseProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9038D1A05D2C46A320A3601 /* libPods-Prototype.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Prototype.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -171,8 +165,6 @@
 				AEC218E31DF4F8FF0072F6FF /* CoreLocation.framework */,
 				AEC218E11DF4F8F80072F6FF /* Security.framework */,
 				AEC218DF1DF4F8EE0072F6FF /* JavaScriptCore.framework */,
-				AED7E78A1DD30A980034DDDE /* libPods-BaseProject.a */,
-				BB59F262626700FB9A0D14FB /* libPods-BaseProject.a */,
 				C9038D1A05D2C46A320A3601 /* libPods-Prototype.a */,
 			);
 			name = Frameworks;
@@ -181,40 +173,26 @@
 		6121801A1EF5192200979A5E /* Prototype */ = {
 			isa = PBXGroup;
 			children = (
-				6121801B1EF5192200979A5E /* AOP */,
 				612180251EF5192200979A5E /* AppDelegate.h */,
 				612180261EF5192200979A5E /* AppDelegate.m */,
 				612180271EF5192200979A5E /* Common */,
+				617804221EF8B00500A56AA6 /* Model */,
+				617804231EF8B00500A56AA6 /* View */,
 				6121803F1EF5192200979A5E /* Controller */,
 				612180461EF5192200979A5E /* Supporting Files */,
-				612180571EF5192200979A5E /* img@2x.png */,
 			);
 			path = Prototype;
-			sourceTree = "<group>";
-		};
-		6121801B1EF5192200979A5E /* AOP */ = {
-			isa = PBXGroup;
-			children = (
-				6121801C1EF5192200979A5E /* BPCatchCrash.h */,
-				6121801D1EF5192200979A5E /* BPCatchCrash.m */,
-				6121801E1EF5192200979A5E /* BPHookUtil.h */,
-				6121801F1EF5192200979A5E /* BPHookUtil.m */,
-				612180201EF5192200979A5E /* UIControl+InjectStatisticSpot.h */,
-				612180211EF5192200979A5E /* UIControl+InjectStatisticSpot.m */,
-				612180221EF5192200979A5E /* UIViewController+InjectStatisticSpot.h */,
-				612180231EF5192200979A5E /* UIViewController+InjectStatisticSpot.m */,
-				612180241EF5192200979A5E /* UserStatistic.plist */,
-			);
-			path = AOP;
 			sourceTree = "<group>";
 		};
 		612180271EF5192200979A5E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				612180281EF5192200979A5E /* Controller */,
-				6121802D1EF5192200979A5E /* Model */,
+				617804331EF8B6BE00A56AA6 /* PrefixHeader.pch */,
 				612180301EF5192200979A5E /* Util */,
+				617804241EF8B02E00A56AA6 /* AOP */,
+				6121802D1EF5192200979A5E /* Model */,
 				6121803A1EF5192200979A5E /* View */,
+				612180281EF5192200979A5E /* Controller */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -250,7 +228,6 @@
 				612180361EF5192200979A5E /* BPResponseModel.m */,
 				612180371EF5192200979A5E /* BPUtil.h */,
 				612180381EF5192200979A5E /* BPUtil.m */,
-				612180391EF5192200979A5E /* PrefixHeader.pch */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -294,14 +271,43 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		617804221EF8B00500A56AA6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		617804231EF8B00500A56AA6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		617804241EF8B02E00A56AA6 /* AOP */ = {
+			isa = PBXGroup;
+			children = (
+				617804251EF8B02E00A56AA6 /* BPCatchCrash.h */,
+				617804261EF8B02E00A56AA6 /* BPCatchCrash.m */,
+				617804271EF8B02E00A56AA6 /* BPHookUtil.h */,
+				617804281EF8B02E00A56AA6 /* BPHookUtil.m */,
+				617804291EF8B02E00A56AA6 /* UIControl+InjectStatisticSpot.h */,
+				6178042A1EF8B02E00A56AA6 /* UIControl+InjectStatisticSpot.m */,
+				6178042B1EF8B02E00A56AA6 /* UIViewController+InjectStatisticSpot.h */,
+				6178042C1EF8B02E00A56AA6 /* UIViewController+InjectStatisticSpot.m */,
+				6178042D1EF8B02E00A56AA6 /* UserStatistic.plist */,
+			);
+			path = AOP;
+			sourceTree = "<group>";
+		};
 		AE473E311DCD684900016040 = {
 			isa = PBXGroup;
 			children = (
 				6121801A1EF5192200979A5E /* Prototype */,
-				AE78A9051DD4276700869859 /* Doc */,
-				AE473E3B1DCD684900016040 /* Products */,
-				B61EDA4E8931488C1615D15E /* Pods */,
 				315306899ECF8F91C47784F0 /* Frameworks */,
+				B61EDA4E8931488C1615D15E /* Pods */,
+				AE473E3B1DCD684900016040 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -313,18 +319,9 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AE78A9051DD4276700869859 /* Doc */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Doc;
-			sourceTree = "<group>";
-		};
 		B61EDA4E8931488C1615D15E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A64EFFB3F224598667B2063F /* Pods-BaseProject.debug.xcconfig */,
-				43C4864AB0CC3C3E1DEEE553 /* Pods-BaseProject.release.xcconfig */,
 				9FBC4273402698143B479E84 /* Pods-Prototype.debug.xcconfig */,
 				1936E70BBB90DC4CC6F1C42A /* Pods-Prototype.release.xcconfig */,
 			);
@@ -395,11 +392,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				612180711EF5192200979A5E /* LaunchScreen.storyboard in Resources */,
-				612180781EF5192200979A5E /* img@2x.png in Resources */,
 				612180741EF5192200979A5E /* Localizable.strings in Resources */,
 				612180721EF5192200979A5E /* avatar@2x.png in Resources */,
 				612180701EF5192200979A5E /* Assets.xcassets in Resources */,
-				612180621EF5192200979A5E /* UserStatistic.plist in Resources */,
+				617804321EF8B02E00A56AA6 /* UserStatistic.plist in Resources */,
 				612180731EF5192200979A5E /* InfoPlist.strings in Resources */,
 				612180751EF5192200979A5E /* Info.plist in Resources */,
 				612180771EF5192200979A5E /* LaunchScreen.strings in Resources */,
@@ -461,21 +457,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				612180611EF5192200979A5E /* UIViewController+InjectStatisticSpot.m in Sources */,
 				6121806C1EF5192200979A5E /* BPTouchTableView.m in Sources */,
 				612180691EF5192200979A5E /* BPResponseModel.m in Sources */,
-				6121805F1EF5192200979A5E /* BPHookUtil.m in Sources */,
+				6178042E1EF8B02E00A56AA6 /* BPCatchCrash.m in Sources */,
 				612180671EF5192200979A5E /* BPInterface.m in Sources */,
 				612180661EF5192200979A5E /* BPUserModel.m in Sources */,
 				6121806B1EF5192200979A5E /* BPTouchScrollView.m in Sources */,
-				6121805E1EF5192200979A5E /* BPCatchCrash.m in Sources */,
-				612180601EF5192200979A5E /* UIControl+InjectStatisticSpot.m in Sources */,
 				6121806D1EF5192200979A5E /* HomepageVC.m in Sources */,
 				612180651EF5192200979A5E /* BPTabVC.m in Sources */,
+				6178042F1EF8B02E00A56AA6 /* BPHookUtil.m in Sources */,
 				612180641EF5192200979A5E /* BPNavVC.m in Sources */,
 				6121806E1EF5192200979A5E /* MeVC.m in Sources */,
 				612180631EF5192200979A5E /* AppDelegate.m in Sources */,
 				612180681EF5192200979A5E /* BPLaunchAd.m in Sources */,
+				617804301EF8B02E00A56AA6 /* UIControl+InjectStatisticSpot.m in Sources */,
+				617804311EF8B02E00A56AA6 /* UIViewController+InjectStatisticSpot.m in Sources */,
 				6121806F1EF5192200979A5E /* VideoVC.m in Sources */,
 				612180761EF5192200979A5E /* main.m in Sources */,
 				6121806A1EF5192200979A5E /* BPUtil.m in Sources */,
@@ -526,14 +522,6 @@
 				612180551EF5192200979A5E /* zh-Hans */,
 			);
 			name = LaunchScreen.strings;
-			sourceTree = "<group>";
-		};
-		612180571EF5192200979A5E /* img@2x.png */ = {
-			isa = PBXVariantGroup;
-			children = (
-				612180581EF5192200979A5E /* zh-Hans */,
-			);
-			name = "img@2x.png";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -640,7 +628,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B5BXCD45E5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Prototype/Common/Util/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Prototype/Common/PrefixHeader.pch";
 				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/Prototype/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -658,7 +646,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B5BXCD45E5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Prototype/Common/Util/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Prototype/Common/PrefixHeader.pch";
 				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/Prototype/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

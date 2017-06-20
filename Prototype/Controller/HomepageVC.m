@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"主页";
     
     UIButton *btn  = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 120, 80)];
     btn.backgroundColor =  [UIColor redColor];
