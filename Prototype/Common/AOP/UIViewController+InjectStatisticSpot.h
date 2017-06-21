@@ -1,6 +1,6 @@
 //
 //  UIViewController+InjectStatisticSpot.h
-//  BaseProject
+//  Prototype
 //
 //  Created by GeekRRK on 16/4/22.
 //  Copyright © 2016年 GeekRRK. All rights reserved.

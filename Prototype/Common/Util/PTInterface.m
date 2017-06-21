@@ -1,25 +1,25 @@
 //
-//  BPInterface.m
-//  BaseProject
+//  PTInterface.h
+//  Prototype
 //
 //  Created by GeekRRK on 16/11/5.
 //  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 //  网络封装接口
 
-#import "BPInterface.h"
+#import "PTInterface.h"
 #import <AFURLSessionManager.h>
-#import "BPUtil.h"
-#import "BPResponseModel.h"
+#import "PTUtil.h"
+#import "PTResponseModel.h"
 
-#define BPDEBUG
-#ifndef BPDEBUG
+#define PTDEBUG
+#ifndef PTDEBUG
 #define SERVER_ADDRESS @""
 #else
 #define SERVER_ADDRESS @""
 #endif
 
-@implementation BPInterface
+@implementation PTInterface
 
 + (AFURLSessionManager *)shareURLSessionMgr {
     static AFURLSessionManager *URLSessionMgr;
@@ -43,17 +43,17 @@
     NSURL *URL = [NSURL URLWithString:api];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
     [request setHTTPMethod:@"POST"];
-    NSString *paramURL = [BPInterface convertParam2URL:param];
+    NSString *paramURL = [PTInterface convertParam2URL:param];
     NSData *paramData = [paramURL dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
     [request setHTTPBody:paramData];
     
-    NSURLSessionDataTask *dataTask = [[BPInterface shareURLSessionMgr] dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+    NSURLSessionDataTask *dataTask = [[PTInterface shareURLSessionMgr] dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         if (error) {
             failureBlock(error);
         } else {
             NSDictionary *resDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
             
-            BPResponseModel *responseModel = [[BPResponseModel alloc] init];
+            PTResponseModel *responseModel = [[PTResponseModel alloc] init];
             responseModel.status = [resDict[@"status"] intValue];
             responseModel.content = resDict[@"content"];
             
@@ -99,13 +99,13 @@
         }
     } error:nil];
     
-    NSURLSessionUploadTask *uploadTask = [[BPInterface shareURLSessionMgr] uploadTaskWithStreamedRequest:request progress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+    NSURLSessionUploadTask *uploadTask = [[PTInterface shareURLSessionMgr] uploadTaskWithStreamedRequest:request progress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         if (error) {
             failureBlock(error);
         } else {
             NSDictionary *resDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
             
-            BPResponseModel *responseModel = [[BPResponseModel alloc] init];
+            PTResponseModel *responseModel = [[PTResponseModel alloc] init];
             responseModel.status = [resDict[@"status"] intValue];
             responseModel.content = resDict[@"content"];
             

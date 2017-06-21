@@ -1,14 +1,14 @@
-#import "BPTabVC.h"
-#import "BPNavVC.h"
+#import "PTTabVC.h"
+#import "PTNavVC.h"
 #import "HomepageVC.h"
 #import "VideoVC.h"
 #import "MeVC.h"
 
-@interface BPTabVC ()
+@interface PTTabVC ()
 
 @end
 
-@implementation BPTabVC
+@implementation PTTabVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -48,7 +48,7 @@
     vc.tabBarItem.image = [UIImage imageNamed:imageName];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImageName];
     
-    BPNavVC *navi = [[BPNavVC alloc] initWithRootViewController:vc];
+    PTNavVC *navi = [[PTNavVC alloc] initWithRootViewController:vc];
     navi.interactivePopGestureRecognizer.enabled = YES;
     [self addChildViewController:navi];
 }

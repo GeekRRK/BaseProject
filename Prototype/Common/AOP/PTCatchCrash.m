@@ -1,15 +1,15 @@
 //
-//  BPCatchCrash.m
-//  BaseProject
+//  PTCatchCrash.m
+//  Prototype
 //
 //  Created by GeekRRK on 16/11/5.
 //  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 //  http://www.jianshu.com/p/ea1e6b210b27
 
-#import "BPCatchCrash.h"
+#import "PTCatchCrash.h"
 
-@implementation BPCatchCrash
+@implementation PTCatchCrash
 
 void uncaughtExceptionHandler(NSException *exception) {
     NSDateFormatter *formatter =[[NSDateFormatter alloc] init];

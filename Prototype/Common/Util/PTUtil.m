@@ -1,18 +1,18 @@
 //
-//  BPUtil.m
-//  BaseProject
+//  PTUtil.m
+//  Prototype
 //
 //  Created by GeekRRK on 16/4/7.
 //  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
-#import "BPUtil.h"
+#import "PTUtil.h"
 #import <CommonCrypto/CommonCrypto.h>
 
 #define IMAGE_MAX_SIZE_WIDTH 640
 #define IMAGE_MAX_SIZE_GEIGHT 960
 
-@implementation BPUtil
+@implementation PTUtil
 
 + (void)switchLocalizedLanguage {
     NSArray *langArr1 = [[NSUserDefaults standardUserDefaults] valueForKey:@"AppleLanguages"];
@@ -110,7 +110,7 @@
 }
 
 + (NSMutableDictionary *)readDictBy:(NSString *)fileName {
-    NSString *filepath = [BPUtil getFilePathBy:fileName];
+    NSString *filepath = [PTUtil getFilePathBy:fileName];
     NSMutableDictionary *apps = [[NSMutableDictionary alloc] initWithContentsOfFile:filepath];
     if(apps == nil){
         apps = [[NSMutableDictionary alloc] init];
@@ -123,12 +123,12 @@
 }
 
 + (void)writeDict:(NSDictionary *)dict to:(NSString *)fileName {
-    NSString *path = [BPUtil getFilePathBy:fileName];
+    NSString *path = [PTUtil getFilePathBy:fileName];
     [dict writeToFile:path atomically:YES];
 }
 
 + (void)deleteFileByName:(NSString *)fileName {
-    NSString *filePath = [BPUtil getFilePathBy:fileName];
+    NSString *filePath = [PTUtil getFilePathBy:fileName];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     [fileManager removeItemAtPath:filePath error:nil];
 }
@@ -149,7 +149,7 @@
     {
         return image;
     }
-    CGSize size = [BPUtil fitsize:image.size];
+    CGSize size = [PTUtil fitsize:image.size];
     UIGraphicsBeginImageContext(size);
     CGRect rect = CGRectMake(0, 0, size.width, size.height);
     [image drawInRect:rect];

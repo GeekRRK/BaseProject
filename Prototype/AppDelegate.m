@@ -1,13 +1,13 @@
 //
 //  AppDelegate.m
-//  BaseProject
+//  Prototype
 //
 //  Created by GeekRRK on 16/11/5.
 //  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "BPTabVC.h"
+#import "PTTabVC.h"
 
 @interface AppDelegate ()
 
@@ -27,7 +27,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    BPTabVC *tabVC = [[BPTabVC alloc] init];
+    PTTabVC *tabVC = [[PTTabVC alloc] init];
     self.window.rootViewController = tabVC;
 }
 

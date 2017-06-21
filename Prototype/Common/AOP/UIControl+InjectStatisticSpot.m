@@ -1,13 +1,13 @@
 //
 //  UIControl+InjectStatisticSpot.m
-//  BaseProject
+//  Prototype
 //
 //  Created by GeekRRK on 16/4/22.
 //  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
 #import "UIControl+InjectStatisticSpot.h"
-#import "BPHookUtil.h"
+#import "PTHookUtil.h"
 
 @implementation UIControl (InjectStatisticSpot)
 
@@ -16,7 +16,7 @@
     dispatch_once(&onceToken, ^{
         SEL originalSelector = @selector(sendAction:to:forEvent:);
         SEL swizzledSelector = @selector(swiz_sendAction:to:forEvent:);
-        [BPHookUtil swizzlingInClass:[self class] originalSelector:originalSelector swizzledSelector:swizzledSelector];
+        [PTHookUtil swizzlingInClass:[self class] originalSelector:originalSelector swizzledSelector:swizzledSelector];
     });
 }
 
@@ -28,7 +28,7 @@
 - (void)performUserStatisticAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
     NSString *actionString = NSStringFromSelector(action);
     NSString *targetName = NSStringFromClass([target class]);
-    NSDictionary *configDict = [BPHookUtil dictionaryFromUserStatisticsConfigPlist];
+    NSDictionary *configDict = [PTHookUtil dictionaryFromUserStatisticsConfigPlist];
     NSString *eventID = configDict[targetName][@"ControlEventIDs"][actionString];
     
     if (eventID) {

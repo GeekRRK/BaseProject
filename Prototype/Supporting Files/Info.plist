@@ -44,9 +44,9 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Please allow BaseProject to access your Camera</string>
+	<string>Please allow Prototype to access your Camera</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Please allow BaseProject to access your Photo Library</string>
+	<string>Please allow Prototype to access your Photo Library</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

@@ -1,14 +1,14 @@
 //
-//  BPTouchScrollView.m
-//  BaseProject
+//  PTTouchScrollView.m
+//  Prototype
 //
 //  Created by GeekRRK on 16/6/12.
 //  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
-#import "BPTouchScrollView.h"
+#import "PTTouchScrollView.h"
 
-@implementation BPTouchScrollView
+@implementation PTTouchScrollView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];

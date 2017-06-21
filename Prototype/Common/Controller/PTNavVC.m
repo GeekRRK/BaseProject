@@ -1,18 +1,18 @@
 //
-//  BPBasicNaviVC.m
+//  PTBasicNaviVC.m
 //  Topwinner
 //
 //  Created by apple on 17/2/21.
 //  Copyright © 2017年 GeekRRK. All rights reserved.
 //
 
-#import "BPNavVC.h"
+#import "PTNavVC.h"
 
-@interface BPNavVC ()
+@interface PTNavVC ()
 
 @end
 
-@implementation BPNavVC
+@implementation PTNavVC
 
 - (void)viewDidLoad {
     [self.navigationBar setTintColor:[UIColor whiteColor]];

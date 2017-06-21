@@ -1,9 +1,9 @@
 /* 
   InfoPlist.strings
-  BaseProject
+  Prototype
 
   Created by GeekRRK on 16/11/7.
   Copyright © 2016年 GeekRRK. All rights reserved.
 */
 
-CFBundleDisplayName = "BaseProject";
+CFBundleDisplayName = "Prototype";

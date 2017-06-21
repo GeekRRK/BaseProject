@@ -1,13 +1,13 @@
 //
 //  UIViewController+InjectStatisticSpot.m
-//  BaseProject
+//  Prototype
 //
 //  Created by GeekRRK on 16/4/22.
 //  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
 #import "UIViewController+InjectStatisticSpot.h"
-#import "BPHookUtil.h"
+#import "PTHookUtil.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
 @implementation UIViewController (InjectStatisticSpot)
@@ -17,11 +17,11 @@
     dispatch_once(&onceToken, ^{
         SEL originalSelector = @selector(viewWillAppear:);
         SEL swizzledSelector = @selector(swiz_viewWillAppear:);
-        [BPHookUtil swizzlingInClass:[self class] originalSelector:originalSelector swizzledSelector:swizzledSelector];
+        [PTHookUtil swizzlingInClass:[self class] originalSelector:originalSelector swizzledSelector:swizzledSelector];
         
         SEL orignalDisappearSelector = @selector(viewWillDisappear:);
         SEL swizzledDisappearSelector = @selector(swiz_viewWillDisappear:);
-        [BPHookUtil swizzlingInClass:[self class] originalSelector:orignalDisappearSelector swizzledSelector:swizzledDisappearSelector];
+        [PTHookUtil swizzlingInClass:[self class] originalSelector:orignalDisappearSelector swizzledSelector:swizzledDisappearSelector];
     });
 }
 
@@ -50,7 +50,7 @@
 }
 
 - (NSString *)pageEventID:(BOOL)bEnterPage {
-    NSDictionary *configDict = [BPHookUtil dictionaryFromUserStatisticsConfigPlist];
+    NSDictionary *configDict = [PTHookUtil dictionaryFromUserStatisticsConfigPlist];
     NSString *selfClassName = NSStringFromClass([self class]);
     
     return configDict[selfClassName][@"PageEventIDs"][bEnterPage ? @"Enter" : @"Leave"];

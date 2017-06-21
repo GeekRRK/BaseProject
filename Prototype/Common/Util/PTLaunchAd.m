@@ -1,9 +1,9 @@
-#import "BPLaunchAd.h"
+#import "PTLaunchAd.h"
 
-#define AD_IMG_NAME @"BPAdImg.jpg"
-#define AD_INFO     @"BPAdInfo"
+#define AD_IMG_NAME @"PTAdImg.jpg"
+#define AD_INFO     @"PTAdInfo"
 
-@interface BPLaunchAd ()
+@interface PTLaunchAd ()
 
 @property (strong, nonatomic) UIWindow *window;
 @property (assign, nonatomic) int countdown;
@@ -15,7 +15,7 @@
 
 @end
 
-@implementation BPLaunchAd
+@implementation PTLaunchAd
 
 + (void)load {
     //[self shareInstance];
@@ -41,25 +41,25 @@
 }
 
 - (void)checkNewAd {
-    _oldAdDict = [BPUtil readDictBy:AD_INFO];
+    _oldAdDict = [PTUtil readDictBy:AD_INFO];
     if (_oldAdDict != nil && _oldAdDict.count > 0) {
         [self show];
     }
     
     NSString *api = SERVER_ADDRESS;
     NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{} copyItems:YES];
-    [BPInterface request:api param:param success:^(BPResponseModel *responseObject) {
+    [PTInterface request:api param:param success:^(PTResponseModel *responseObject) {
         if (responseObject.status == 0) {
             if (_curAdDict == nil || _curAdDict.count == 0) {
-                [BPUtil deleteFileByName:AD_INFO];
+                [PTUtil deleteFileByName:AD_INFO];
             } else {
                 [self asyncDownloadAdImageWithUrl:_curAdDict[@"imgurl"] imageName:AD_IMG_NAME];
             }
         } else {
-            [BPUtil showMessage:responseObject.content];
+            [PTUtil showMessage:responseObject.content];
         }
     } failure:^(NSError *error) {
-        [BPUtil showMessage:error.localizedDescription];
+        [PTUtil showMessage:error.localizedDescription];
     }];
 }
 
@@ -96,14 +96,14 @@
     
     NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{@"id":adId} copyItems:YES];
     
-    [BPInterface request:api param:param success:^(BPResponseModel *responseObject) {
+    [PTInterface request:api param:param success:^(PTResponseModel *responseObject) {
         if (responseObject.status == 0) {
             // 获取到广告详情进行处理
         } else {
-            [BPUtil showMessage:responseObject.content];
+            [PTUtil showMessage:responseObject.content];
         }
     } failure:^(NSError *error) {
-        [BPUtil showMessage:error.localizedDescription];
+        [PTUtil showMessage:error.localizedDescription];
     }];
 }
 
@@ -126,7 +126,7 @@
 - (void)setupSubviews:(UIWindow*)window {
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:window.bounds];
     
-    NSString *imgPath = [BPUtil getFilePathBy:AD_IMG_NAME];
+    NSString *imgPath = [PTUtil getFilePathBy:AD_IMG_NAME];
     imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfFile:imgPath]];
     
     imageView.userInteractionEnabled = YES;
@@ -165,9 +165,9 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
         UIImage *image = [UIImage imageWithData:data];
-        NSString *filePath = [BPUtil getFilePathBy:imageName];
+        NSString *filePath = [PTUtil getFilePathBy:imageName];
         if ([UIImagePNGRepresentation(image) writeToFile:filePath atomically:YES]) {
-            [BPUtil writeDict:_curAdDict to:AD_INFO];
+            [PTUtil writeDict:_curAdDict to:AD_INFO];
         }else{
             NSLog(@"保存图片失败");
         }

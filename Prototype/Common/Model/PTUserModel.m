@@ -1,15 +1,15 @@
 //
 //  UserModel.m
-//  BaseProject
+//  Prototype
 //
 //  Created by GeekRRK on 16/11/5.
 //  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 //  模型结合YYModel示例
 
-#import "BPUserModel.h"
+#import "PTUserModel.h"
 
-@implementation BPUserModel
+@implementation PTUserModel
 
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{@"m_id" : @"id"};

@@ -1,14 +1,14 @@
 //
-//  BPHookUtil.m
-//  BaseProject
+//  PTHookUtil.m
+//  Prototype
 //
 //  Created by GeekRRK on 16/11/5.
 //  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
-#import "BPHookUtil.h"
+#import "PTHookUtil.h"
 
-@implementation BPHookUtil
+@implementation PTHookUtil
 
 + (void)swizzlingInClass:(Class)class originalSelector:(SEL)originalSelector swizzledSelector:(SEL)swizzledSelector {
     Method originalMethod = class_getInstanceMethod(class, originalSelector);

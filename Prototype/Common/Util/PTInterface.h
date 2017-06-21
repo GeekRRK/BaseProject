@@ -1,18 +1,18 @@
 //
-//  BPInterface.h
-//  BaseProject
+//  PTInterface.h
+//  Prototype
 //
 //  Created by GeekRRK on 16/11/5.
 //  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "BPResponseModel.h"
+#import "PTResponseModel.h"
 
-typedef void (^SuccessBlock)(BPResponseModel *responseModel);
+typedef void (^SuccessBlock)(PTResponseModel *responseModel);
 typedef void (^FailureBlock)(NSError *error);
 
-@interface BPInterface : NSObject
+@interface PTInterface : NSObject
 
 + (void)request:(NSString *)api
           param:(NSDictionary *)param
