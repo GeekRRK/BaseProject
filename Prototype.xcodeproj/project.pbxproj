@@ -49,9 +49,9 @@
 		AEC219021DF502AB0072F6FF /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC219011DF502AB0072F6FF /* libresolv.tbd */; };
 		F663FDDE6A140783FF58A0C5 /* libPods-Prototype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9038D1A05D2C46A320A3601 /* libPods-Prototype.a */; };
 		F803CB631F43D6B100D0F808 /* PTCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F803CB621F43D6B100D0F808 /* PTCodeView.m */; };
-		F803CB661F43D6D100D0F808 /* PTXibView.m in Sources */ = {isa = PBXBuildFile; fileRef = F803CB651F43D6D100D0F808 /* PTXibView.m */; };
-		F803CB681F43D6DD00D0F808 /* PTXibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F803CB671F43D6DD00D0F808 /* PTXibView.xib */; };
 		F803CB6B1F43D8CB00D0F808 /* PTCodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F803CB6A1F43D8CB00D0F808 /* PTCodeModel.m */; };
+		F83AE1871F43E70A001524FB /* PTXibView.m in Sources */ = {isa = PBXBuildFile; fileRef = F83AE1861F43E70A001524FB /* PTXibView.m */; };
+		F83AE1891F43E723001524FB /* PTXibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F83AE1881F43E723001524FB /* PTXibView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,11 +123,11 @@
 		C9038D1A05D2C46A320A3601 /* libPods-Prototype.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Prototype.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F803CB611F43D6B100D0F808 /* PTCodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTCodeView.h; sourceTree = "<group>"; };
 		F803CB621F43D6B100D0F808 /* PTCodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTCodeView.m; sourceTree = "<group>"; };
-		F803CB641F43D6D100D0F808 /* PTXibView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTXibView.h; sourceTree = "<group>"; };
-		F803CB651F43D6D100D0F808 /* PTXibView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTXibView.m; sourceTree = "<group>"; };
-		F803CB671F43D6DD00D0F808 /* PTXibView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PTXibView.xib; sourceTree = "<group>"; };
 		F803CB691F43D8CB00D0F808 /* PTCodeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTCodeModel.h; sourceTree = "<group>"; };
 		F803CB6A1F43D8CB00D0F808 /* PTCodeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTCodeModel.m; sourceTree = "<group>"; };
+		F83AE1851F43E70A001524FB /* PTXibView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTXibView.h; sourceTree = "<group>"; };
+		F83AE1861F43E70A001524FB /* PTXibView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTXibView.m; sourceTree = "<group>"; };
+		F83AE1881F43E723001524FB /* PTXibView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTXibView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,9 +251,9 @@
 				6121803E1EF5192200979A5E /* PTTouchTableView.m */,
 				F803CB611F43D6B100D0F808 /* PTCodeView.h */,
 				F803CB621F43D6B100D0F808 /* PTCodeView.m */,
-				F803CB641F43D6D100D0F808 /* PTXibView.h */,
-				F803CB651F43D6D100D0F808 /* PTXibView.m */,
-				F803CB671F43D6DD00D0F808 /* PTXibView.xib */,
+				F83AE1851F43E70A001524FB /* PTXibView.h */,
+				F83AE1861F43E70A001524FB /* PTXibView.m */,
+				F83AE1881F43E723001524FB /* PTXibView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -392,7 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F803CB681F43D6DD00D0F808 /* PTXibView.xib in Resources */,
+				F83AE1891F43E723001524FB /* PTXibView.xib in Resources */,
 				612180711EF5192200979A5E /* LaunchScreen.storyboard in Resources */,
 				612180741EF5192200979A5E /* Localizable.strings in Resources */,
 				612180721EF5192200979A5E /* avatar@2x.png in Resources */,
@@ -465,6 +465,7 @@
 				612180671EF5192200979A5E /* PTInterface.m in Sources */,
 				612180661EF5192200979A5E /* PTUserModel.m in Sources */,
 				6121806B1EF5192200979A5E /* PTTouchScrollView.m in Sources */,
+				F83AE1871F43E70A001524FB /* PTXibView.m in Sources */,
 				6121806D1EF5192200979A5E /* HomepageVC.m in Sources */,
 				612180651EF5192200979A5E /* PTTabVC.m in Sources */,
 				6178042F1EF8B02E00A56AA6 /* PTHookUtil.m in Sources */,
@@ -474,7 +475,6 @@
 				612180681EF5192200979A5E /* PTLaunchAd.m in Sources */,
 				617804301EF8B02E00A56AA6 /* UIControl+InjectStatisticSpot.m in Sources */,
 				617804311EF8B02E00A56AA6 /* UIViewController+InjectStatisticSpot.m in Sources */,
-				F803CB661F43D6D100D0F808 /* PTXibView.m in Sources */,
 				6121806F1EF5192200979A5E /* VideoVC.m in Sources */,
 				612180761EF5192200979A5E /* main.m in Sources */,
 				6121806A1EF5192200979A5E /* PTUtil.m in Sources */,

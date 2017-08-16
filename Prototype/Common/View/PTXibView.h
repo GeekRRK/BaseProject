@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PTCodeModel.h"
 
 @interface PTXibView : UIView
+
+@property (strong, nonatomic) PTCodeModel *codeModel;
+
++ (instancetype)viewWithModel:(PTCodeModel *)codeModel;
 
 @end
