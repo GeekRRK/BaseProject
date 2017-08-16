@@ -48,6 +48,10 @@
 		AEC219001DF502A40072F6FF /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC218FF1DF502A40072F6FF /* UserNotifications.framework */; };
 		AEC219021DF502AB0072F6FF /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC219011DF502AB0072F6FF /* libresolv.tbd */; };
 		F663FDDE6A140783FF58A0C5 /* libPods-Prototype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9038D1A05D2C46A320A3601 /* libPods-Prototype.a */; };
+		F803CB631F43D6B100D0F808 /* PTCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F803CB621F43D6B100D0F808 /* PTCodeView.m */; };
+		F803CB661F43D6D100D0F808 /* PTXibView.m in Sources */ = {isa = PBXBuildFile; fileRef = F803CB651F43D6D100D0F808 /* PTXibView.m */; };
+		F803CB681F43D6DD00D0F808 /* PTXibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F803CB671F43D6DD00D0F808 /* PTXibView.xib */; };
+		F803CB6B1F43D8CB00D0F808 /* PTCodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F803CB6A1F43D8CB00D0F808 /* PTCodeModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +121,13 @@
 		AEC218FF1DF502A40072F6FF /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		AEC219011DF502AB0072F6FF /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		C9038D1A05D2C46A320A3601 /* libPods-Prototype.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Prototype.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F803CB611F43D6B100D0F808 /* PTCodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTCodeView.h; sourceTree = "<group>"; };
+		F803CB621F43D6B100D0F808 /* PTCodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTCodeView.m; sourceTree = "<group>"; };
+		F803CB641F43D6D100D0F808 /* PTXibView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTXibView.h; sourceTree = "<group>"; };
+		F803CB651F43D6D100D0F808 /* PTXibView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTXibView.m; sourceTree = "<group>"; };
+		F803CB671F43D6DD00D0F808 /* PTXibView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PTXibView.xib; sourceTree = "<group>"; };
+		F803CB691F43D8CB00D0F808 /* PTCodeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTCodeModel.h; sourceTree = "<group>"; };
+		F803CB6A1F43D8CB00D0F808 /* PTCodeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTCodeModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,8 +186,6 @@
 				612180251EF5192200979A5E /* AppDelegate.h */,
 				612180261EF5192200979A5E /* AppDelegate.m */,
 				612180271EF5192200979A5E /* Common */,
-				617804221EF8B00500A56AA6 /* Model */,
-				617804231EF8B00500A56AA6 /* View */,
 				6121803F1EF5192200979A5E /* Controller */,
 				612180461EF5192200979A5E /* Supporting Files */,
 			);
@@ -212,6 +221,8 @@
 			children = (
 				6121802E1EF5192200979A5E /* PTUserModel.h */,
 				6121802F1EF5192200979A5E /* PTUserModel.m */,
+				F803CB691F43D8CB00D0F808 /* PTCodeModel.h */,
+				F803CB6A1F43D8CB00D0F808 /* PTCodeModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -238,6 +249,11 @@
 				6121803C1EF5192200979A5E /* PTTouchScrollView.m */,
 				6121803D1EF5192200979A5E /* PTTouchTableView.h */,
 				6121803E1EF5192200979A5E /* PTTouchTableView.m */,
+				F803CB611F43D6B100D0F808 /* PTCodeView.h */,
+				F803CB621F43D6B100D0F808 /* PTCodeView.m */,
+				F803CB641F43D6D100D0F808 /* PTXibView.h */,
+				F803CB651F43D6D100D0F808 /* PTXibView.m */,
+				F803CB671F43D6DD00D0F808 /* PTXibView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -268,20 +284,6 @@
 				612180541EF5192200979A5E /* LaunchScreen.strings */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		617804221EF8B00500A56AA6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		617804231EF8B00500A56AA6 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		617804241EF8B02E00A56AA6 /* AOP */ = {
@@ -390,6 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F803CB681F43D6DD00D0F808 /* PTXibView.xib in Resources */,
 				612180711EF5192200979A5E /* LaunchScreen.storyboard in Resources */,
 				612180741EF5192200979A5E /* Localizable.strings in Resources */,
 				612180721EF5192200979A5E /* avatar@2x.png in Resources */,
@@ -455,6 +458,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F803CB631F43D6B100D0F808 /* PTCodeView.m in Sources */,
 				6121806C1EF5192200979A5E /* PTTouchTableView.m in Sources */,
 				612180691EF5192200979A5E /* PTResponseModel.m in Sources */,
 				6178042E1EF8B02E00A56AA6 /* PTCatchCrash.m in Sources */,
@@ -470,9 +474,11 @@
 				612180681EF5192200979A5E /* PTLaunchAd.m in Sources */,
 				617804301EF8B02E00A56AA6 /* UIControl+InjectStatisticSpot.m in Sources */,
 				617804311EF8B02E00A56AA6 /* UIViewController+InjectStatisticSpot.m in Sources */,
+				F803CB661F43D6D100D0F808 /* PTXibView.m in Sources */,
 				6121806F1EF5192200979A5E /* VideoVC.m in Sources */,
 				612180761EF5192200979A5E /* main.m in Sources */,
 				6121806A1EF5192200979A5E /* PTUtil.m in Sources */,
+				F803CB6B1F43D8CB00D0F808 /* PTCodeModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

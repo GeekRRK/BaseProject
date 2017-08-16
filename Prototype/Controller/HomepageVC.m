@@ -7,6 +7,7 @@
 //
 
 #import "HomepageVC.h"
+#import "PTCodeView.h"
 
 @interface HomepageVC ()
 
@@ -23,6 +24,13 @@
     btn.backgroundColor =  [UIColor redColor];
     [btn addTarget:self action:@selector(jump2NextVC) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
+    
+    PTCodeView *codeView = [[PTCodeView alloc] initWithFrame:CGRectMake(100, 100 + 80 + 20, 120, 80)];
+    [self.view addSubview:codeView];
+    
+    PTCodeModel *codeModel = [[PTCodeModel alloc] init];
+    codeModel.title = @"Button";
+    codeView.codeModel =codeModel;
 }
 
 - (void)jump2NextVC {
