@@ -9,6 +9,7 @@
 #import "HomepageVC.h"
 #import "PTCodeView.h"
 #import "PTXibView.h"
+#import "PTCollectionVC.h"
 
 @interface HomepageVC ()
 
@@ -41,7 +42,8 @@
 }
 
 - (void)jump2NextVC {
-    UIViewController *vc = [[UIViewController alloc] init];
+    PTCollectionVC *vc = ALLOC_INIT(PTCollectionVC);
+    [vc setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

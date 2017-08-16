@@ -17,7 +17,9 @@
 @implementation PTCodeView
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame: frame]) {
+    self = [super initWithFrame: frame];
+    
+    if (self) {
         self.backgroundColor = [UIColor blackColor];
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -26,11 +28,9 @@
         button.titleLabel.font = [UIFont systemFontOfSize:14];
         [self addSubview: button];
         _button = button; //将self.button指向这个button保证在layoutSubviews中可以访问
-        
-        return self;
     }
     
-    return nil;
+    return self;
 }
 
 - (void)layoutSubviews {
