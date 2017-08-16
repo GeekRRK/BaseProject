@@ -170,4 +170,19 @@
     return newSize;
 }
 
++ (void)blurView:(UIView *)view {
+    if (!UIAccessibilityIsReduceTransparencyEnabled()) {
+        view.backgroundColor = [UIColor clearColor];
+        
+        UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+        blurEffectView.frame = view.bounds;
+        blurEffectView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        
+        [view addSubview:blurEffectView];
+    } else {
+        view.backgroundColor = [UIColor blackColor];
+    }
+}
+
 @end
