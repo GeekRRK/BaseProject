@@ -18,11 +18,16 @@
 #import "AppDelegate.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 #import "PTInterface.h"
+#define MAS_SHORTHAND
+#import <Masonry.h>
 
 // Util
 #define LOCALSTR(str)               NSLocalizedString(str, nil)
 #define APPDELEGATE                 ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 #define EmptyString(str) (str == nil || [str isKindOfClass:[NSNull class]] || str.length == 0 ? YES : NO)
+#define ALLOC_INIT(Type)                 [[Type alloc] init]
+#define ALLOC_INIT_FRAME(Type, frame)     [[Type alloc] initWithFrame:frame]
+#define LOADNIB(Type)              [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(Type) owner:nil options:nil] firstObject]
 
 // Color
 #define COLOR_NAVIGATION_BAR_TINT          [PTUtil colorWithHexString:@"333333"]

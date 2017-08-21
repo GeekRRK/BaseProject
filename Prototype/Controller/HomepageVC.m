@@ -7,6 +7,9 @@
 //
 
 #import "HomepageVC.h"
+#import "PTCodeView.h"
+#import "PTXibView.h"
+#import "PTCollectionVC.h"
 
 @interface HomepageVC ()
 
@@ -23,10 +26,24 @@
     btn.backgroundColor =  [UIColor redColor];
     [btn addTarget:self action:@selector(jump2NextVC) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
+    
+    PTCodeView *codeView = [[PTCodeView alloc] initWithFrame:CGRectMake(100, CGRectGetMaxY(btn.frame) + 20, 120, 80)];
+    [self.view addSubview:codeView];
+    
+    PTCodeModel *codeModel = [[PTCodeModel alloc] init];
+    codeModel.title = @"CButton";
+    codeView.codeModel = codeModel;
+    
+    PTCodeModel *xibModel = [[PTCodeModel alloc] init];
+    xibModel.title = @"XButton";
+    PTXibView *xibView = [PTXibView viewWithModel:xibModel];
+    xibView.frame = CGRectMake(100, CGRectGetMaxY(codeView.frame) + 20, 120, 80);
+    [self.view addSubview:xibView];
 }
 
 - (void)jump2NextVC {
-    UIViewController *vc = [[UIViewController alloc] init];
+    PTCollectionVC *vc = ALLOC_INIT(PTCollectionVC);
+    [vc setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
