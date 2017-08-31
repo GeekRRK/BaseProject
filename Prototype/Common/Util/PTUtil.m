@@ -170,19 +170,34 @@
     return newSize;
 }
 
-+ (void)blurView:(UIView *)view {
++ (void)blurBehindView:(UIView *)view alpha:(CGFloat)alpha radius:(CGFloat)radius effectStyle:(UIBlurEffectStyle)effectStyle {
     if (!UIAccessibilityIsReduceTransparencyEnabled()) {
-        view.backgroundColor = [UIColor clearColor];
-        
-        UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:effectStyle];
         UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
-        blurEffectView.frame = view.bounds;
+        blurEffectView.frame = view.frame;
+        blurEffectView.alpha = alpha;
         blurEffectView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        
-        [view addSubview:blurEffectView];
-    } else {
-        view.backgroundColor = [UIColor blackColor];
+        blurEffectView.layer.cornerRadius = radius;
+        blurEffectView.layer.masksToBounds = YES;
+        [view.superview insertSubview:blurEffectView belowSubview:view];
+//        [blurEffectView makeConstraints:^(MASConstraintMaker *make) {
+//            make.leading.equalTo(view);
+//            make.trailing.equalTo(view);
+//            make.top.equalTo(view);
+//            make.bottom.equalTo(view);
+//        }];
     }
+}
+
++ (void)buildNavBar:(UINavigationBar *)navBar {
+    navBar.tintColor = [UIColor whiteColor];
+    navBar.translucent = NO;
+    [navBar setBackgroundImage:[UIImage imageNamed:@"nav_bg"] forBarMetrics:UIBarMetricsDefault];
+    navBar.backIndicatorImage = [UIImage imageNamed:@"backarrow"];
+    navBar.backIndicatorTransitionMaskImage = [UIImage imageNamed:@"backarrow"];
+    navBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                  [UIColor whiteColor], NSForegroundColorAttributeName,
+                                  [UIFont fontWithName:@"PingFangSC-Regular" size:16.0], NSFontAttributeName,nil];
 }
 
 @end
