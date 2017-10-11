@@ -200,4 +200,15 @@
                                   [UIFont fontWithName:@"PingFangSC-Regular" size:16.0], NSFontAttributeName,nil];
 }
 
++ (UIImage*)cutToHeight:(float)fixedHeight image:(UIImage *)image {
+    int yPos = (image.size.height-fixedHeight)/2;
+    
+    CGRect clippedRect  = CGRectMake(0, yPos, image.size.width, fixedHeight);
+    CGImageRef imageRef = CGImageCreateWithImageInRect([image CGImage], clippedRect);
+    UIImage *newImage   = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    
+    return newImage;
+}
+
 @end
