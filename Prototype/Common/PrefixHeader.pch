@@ -6,6 +6,36 @@
 //  Copyright © 2016年 GeekRRK. All rights reserved.
 //
 
+/*
+UIWebView高度自适应
+searchviewcontroller
+自定义UICollectionView
+layoutsubviews、drawrect、loadview、viewdidload等方法调用顺序和时机
+
+阻力滑动选项卡
+弹出框/SheetView/PickerVeiw/菜单选项卡/自动消息提示框
+自定义TabBar高度样式，滑动动画，转场过渡动画，滑动tabbar
+选择图片按最近图片最先展示
+
+nscoding nscopying
+CoreData
+动画动效
+深入多线程，并行串行队列
+Instruments
+Runtime
+Jenkins
+iOS系统核心库，底层
+系统网络核心NSURLConnection等，HTTP，HTTPS
+剖析常用第三方代码
+
+搭建git服务器
+抓包
+开源几种协议
+设计模式
+http协议
+https协议
+*/
+
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
