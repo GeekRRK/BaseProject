@@ -27,6 +27,7 @@ Jenkins
 iOS系统核心库，底层
 系统网络核心NSURLConnection等，HTTP，HTTPS
 剖析常用第三方代码
+AppStore搜索排名
 
 搭建git服务器
 抓包
