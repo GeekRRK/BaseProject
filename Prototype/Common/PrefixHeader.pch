@@ -23,13 +23,14 @@ CoreData
 深入多线程，并行串行队列
 Instruments
 Runtime
-Jenkins
+Jenkins持续集成
 iOS系统核心库，底层
 系统网络核心NSURLConnection等，HTTP，HTTPS
 剖析常用第三方代码
 AppStore搜索排名
 
 搭建git服务器
+git协作流程
 抓包
 开源几种协议
 设计模式
