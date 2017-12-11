@@ -63,6 +63,43 @@
     [dataTask resume];
 }
 
++ (void)request:(NSString *)api
+          header:(NSDictonary *)header
+          param:(NSDictionary *)param
+        success:(SuccessBlock)successBlock
+        failure:(FailureBlock)failureBlock {
+    
+    api = [SERVER_ADDRESS stringByAppendingString:api];
+    
+    NSURL *URL = [NSURL URLWithString:api];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
+    [request setHTTPMethod:@"POST"];
+    NSString *paramURL = [PTInterface convertParam2URL:param];
+    NSData *paramData = [paramURL dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+            
+    for (NSString *key in header) {
+        NSString *value = header[key];
+        [request setValue:value forHTTPHeaderField:key];
+    }
+            
+    [request setHTTPBody:paramData];
+    
+    NSURLSessionDataTask *dataTask = [[PTInterface shareURLSessionMgr] dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        if (error) {
+            failureBlock(error);
+        } else {
+            NSDictionary *resDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+            
+            PTResponseModel *responseModel = [[PTResponseModel alloc] init];
+            responseModel.status = [resDict[@"status"] intValue];
+            responseModel.content = resDict[@"content"];
+            
+            successBlock(responseModel);
+        }
+    }];
+    [dataTask resume];
+}
+
 + (void)request2UploadFile:(NSString *)api
                      files:(NSDictionary *)files
                      param:(NSDictionary *)param
