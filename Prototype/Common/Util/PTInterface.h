@@ -19,6 +19,12 @@ typedef void (^FailureBlock)(NSError *error);
         success:(SuccessBlock)successBlock
         failure:(FailureBlock)failureBlock;
 
++ (void)request:(NSString *)api
+          header:(NSDictonary *)header
+          param:(NSDictionary *)param
+        success:(SuccessBlock)successBlock
+        failure:(FailureBlock)failureBlock;
+                  
 + (void)request2UploadFile:(NSString *)api
                      files:(NSDictionary *)files
                      param:(NSDictionary *)param
